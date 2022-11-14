@@ -1,0 +1,44 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+// $font-size-root: 20px;
+@import "./scss/fade.scss";
+@import "./scss/size.scss";
+@import "./scss/treeview.scss";
+@import "./scss/main.scss";
+@import "./scss/button.scss";
+@import "./scss/typography.scss";
+@import "./scss/header.scss";
+@import "./scss/progressbar.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee');
+
+$body-font-family: "ABeeZee";
+$heading-font-family: "ABeeZee";
+$title-font: sans-serif;
+
+.word-wrap-normal{
+    word-wrap: normal;
+    word-break: keep-all;
+    text-align:justify;
+    text-justify:inter-character;
+}
+
+.v-carousel .theme--dark.v-btn.v-btn--icon .mdi-circle {
+    color: #000;
+}
+
+.text-alignment {
+	line-height: 1.5rem;
+	letter-spacing: 0.025em;
+}
+
+.theme--light.v-sheet .no-color {
+    background-color: transparent;
+    border-color: transparent;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.label-icon{
+    height: 0 !important;
+}

@@ -1,0 +1,17 @@
+@media screen and (max-width: 1264px) {
+	.heading {
+		font-size: 22vw;
+	}
+	.head {
+		line-height: 18vw;
+	}
+}
+@media screen and (min-width: 1264px) {
+	.heading {
+		font-size: 12vw;
+	}
+	.head {
+		letter-spacing: 0.1vw;
+		line-height: 10vw;
+	}
+}

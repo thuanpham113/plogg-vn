@@ -1,0 +1,15 @@
+$header-height: 80px;
+$progress-indicator-height: 6px;
+$vue-color: #fc4097;
+.progress-indicator-wrapper {
+	z-index: 5;
+	position: fixed;
+	height: $progress-indicator-height;
+	background-color: #eee;
+	width: 100%;
+	top: $header-height;
+	.progress-indicator {
+		height: $progress-indicator-height;
+		background: $vue-color;
+	}
+}

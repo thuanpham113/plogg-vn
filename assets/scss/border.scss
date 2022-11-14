@@ -1,0 +1,15 @@
+$borderStyle: (dotted, solid, dashed, double);
+
+@each $style in $borderStyle {
+	.border-#{$style} {
+		border-style: $style !important;
+	}
+}
+
+$borderWidths: (thin, medium, thick);
+
+@each $width in $borderWidths {
+	.border-#{$width} {
+		border-width: $width !important;
+	}
+}

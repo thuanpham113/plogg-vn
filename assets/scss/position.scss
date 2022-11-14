@@ -1,0 +1,30 @@
+$positions: (relative, absolute, fixed);
+$distances: (0, 1, 2, 3, 4, 5);
+
+@each $position in $positions {
+	.position-#{$position} {
+		position: $position !important;
+	}
+}
+
+@each $distance in $distances {
+	.z-#{$distance} {
+		z-index: $distance * 10 !important;
+	}
+
+	.l-#{$distance} {
+		left: $distance * 5px !important;
+	}
+
+	.r-#{$distance} {
+		right: $distance * 5px !important;
+	}
+
+	.t-#{$distance} {
+		top: $distance * 5px !important;
+	}
+
+	.b-#{$distance} {
+		bottom: $distance * 5px !important;
+	}
+}

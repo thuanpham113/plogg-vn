@@ -1,0 +1,30 @@
+.tab-button {
+	background-color: grey;
+	width: 10px;
+	height: 10px;
+}
+.transition {
+	display: inline-block;
+	color: white;
+}
+
+.transition::after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 3px !important;
+	background: black !important;
+	transition: width 0.2s;
+}
+
+.transition:hover::after {
+	width: 100%;
+	transition: width 0.2s;
+}
+.transition:before {
+	opacity: 0 !important;
+}
+.transition .v-ripple__container {
+	opacity: 0 !important;
+}
+
