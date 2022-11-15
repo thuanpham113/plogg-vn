@@ -155,11 +155,11 @@ export default {
 			},
 			{
 				title: "Our services",
-				link: "/components1",
+				link: "/Our services",
 			},
 			{
 				title: "Careers",
-				link: "/components2",
+				link: "/sparklines",
 			},
 		],
 		texts: [
