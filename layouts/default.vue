@@ -220,6 +220,9 @@ export default {
 .transition::after {
 	background: white !important;
 }
+.v-app-bar {
+	z-index: 100	
+}
 </style>
 
 <i18n>
