@@ -29,9 +29,16 @@
 				</v-card-title>
 
 				<v-card-title class=" black--text">
+<<<<<<< Updated upstream
 					<v-col cols="10" :class="$vuetify.breakpoint.smAndDown
 					? 'h6 font-weight-bold text-center pl-9'
 					: 'h6 mx-12'">
+=======
+					<v-col :cols="$vuetify.breakpoint.smAndDown ? ' ' : '11'"
+					 :class="$vuetify.breakpoint.smAndDown
+					? 'subtitle-1 text-center '
+					: 'h6 mx-1 px-5'">
+>>>>>>> Stashed changes
 						{{ $t("title.4") }}
 					</v-col>
 				</v-card-title>

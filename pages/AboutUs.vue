@@ -1,5 +1,4 @@
 <template>
-
     <v-sheet>
         <v-layout class="py-16 ma-16">
             <template>
@@ -231,7 +230,7 @@ export default {
 }
 
 .content img {
-    max-width: 30%;
+    // max-width: 30%;
 }
 </style>
 <i18n>

@@ -16,16 +16,26 @@
             {{ $t("title.2") }}
           </v-col>
 
+<<<<<<< Updated upstream
           <v-col cols="5" 
             :class="$vuetify.breakpoint.smAndDown ? 'h6 text-center' : 'h6 mx-16 grey--text'">
+=======
+          <v-col :cols="$vuetify.breakpoint.smAndDown ? '' : '5'"  
+            :class="$vuetify.breakpoint.smAndDown ? 'subtitle-1 text-center white--text' : 'h6 mx-16 grey--text'">
+>>>>>>> Stashed changes
             {{ $t("title.3") }}
           </v-col>
          
           <v-col :cols="$vuetify.breakpoint.smAndDown ? '12' : '12'" class="d-flex justify-start ">
               <v-hover  v-slot="{ hover }">
                 <v-btn 
+<<<<<<< Updated upstream
                   :class=" $vuetify.breakpoint.smAndDown ? 'rounded-lg white--text' : 'rounded-lg black--text mx-16 mt-6'" 
                   :height="$vuetify.breakpoint.smAndDown ? '20' : '55'" href="https://www.google.com/intl/vi/gmail/about/"
+=======
+                  :class=" $vuetify.breakpoint.smAndDown ? 'rounded-lg white--text d-flex justify-center' : 'rounded-lg black--text mx-16 mt-6 '" 
+                  :height="$vuetify.breakpoint.smAndDown ? '50' : '55'" 
+>>>>>>> Stashed changes
                   :color="hover ? 'grey darken-1' : 'cyan lighten-3'">
                   <div>{{ $t("button") }}</div>
                 </v-btn>
@@ -37,19 +47,31 @@
 
 			  <div  class="py-16 mx-16"  v-for="(header, index) in headers" :key="index">
           
+<<<<<<< Updated upstream
             <v-card-title class="justify-center">
               <div class="h4 mx-16 ">
+=======
+            <v-card-title class="justify-center mt-16">
+              <div 
+              :class="$vuetify.breakpoint.smAndDown ? 'subtitle-1 text-center font-weight-bold' : 'text-center h5 mx-16 pa-5 '">
+>>>>>>> Stashed changes
                 {{ header.title1}}
               </div>
             </v-card-title>
 
+<<<<<<< Updated upstream
             <v-card-title class=" black--text">
               <v-col   :class="$vuetify.breakpoint.smAndDown
               ? 'h6 font-weight-bold text-center pl-9'
+=======
+            <div class=" black--text mt-5">
+              <v-col   :class="$vuetify.breakpoint.smAndDown
+              ? 'subtitle-1  text-center '
+>>>>>>> Stashed changes
               : 'h6  text-center  mx-1'">
                 {{ header.title2}}
               </v-col>
-            </v-card-title>
+            </div>
 			</div>
 		</template>
 
