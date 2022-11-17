@@ -20,9 +20,9 @@
 							<v-btn :class="
 							$vuetify.breakpoint.smAndDown
 								? 'rounded-lg white--text'
-								: 'rounded-lg black--text'
+								: 'rounded-lg white--text'
 							" :color="hover ? 'grey darken-1' : 'cyan lighten-3'"
-							:height="$vuetify.breakpoint.smAndDown ? '20' : '55'" href="https://www.google.com/intl/vi/gmail/about/">
+							:height="$vuetify.breakpoint.smAndDown ? '40' : '55'" href="https://www.google.com/intl/vi/gmail/about/">
 							<div class="font-weight-black h7">{{ $t("button.2") }}</div>
 							</v-btn>
 						</v-hover>
@@ -75,7 +75,7 @@ export default {};
 		  "2":"Abonnez-vous à notre newsletter et ne manquez jamais nos mises à jour."
 		  },
 		  "button":{
-		  "2":""
+		  "2":"Collaboration ici"
 		  }
 	  }
   }

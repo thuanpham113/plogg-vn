@@ -1,25 +1,34 @@
 <template>
 	<v-sheet
-		color="white"
-		:class="['d-flex flex-row-reverse my-16', $vuetify.breakpoint.smAndDown ? 'mt-5' : 'd-column-reverse align-center justify-end']"
+		:class="
+			$vuetify.breakpoint.smAndDown
+				? 'd-flex flex-column flex-md-row align-center justify-center my-16'
+				: 'd-column-reverse align-center justify-end d-flex flex-row-reverse my-16'
+		"
 	>
 		<v-img
 			class="px-16"
-			max-width="45%"
+			:max-width="$vuetify.breakpoint.smAndDown ? '80%' : '50%'"
 			contain
 			src="/Graphic-desig.png"
 		/>
 
-		<div class="w-55 px-16 d-flex flex-column">
+		<div :class="$vuetify.breakpoint.smAndDown ? '' : 'px-16 w-60'">
 			<div class="d-flex flex-row">
 				<v-img
-					:class="$vuetify.breakpoint.smAndDown ? 'mt-5' : ''"
+					:class="$vuetify.breakpoint.smAndDown ? 'mt-5 ' : ''"
 					max-height="70"
 					max-width="70"
 					contain
 					src="/3ddd.jpg"
 				/>
-				<h2 class="grey--text mt-5">
+				<h2
+					:class="
+						$vuetify.breakpoint.smAndDown
+							? 'grey--text text-center mt-12 mx-6'
+							: 'grey--text mt-5'
+					"
+				>
 					3D graphic design
 				</h2>
 			</div>
@@ -49,13 +58,15 @@
 						:class="
 							$vuetify.breakpoint.smAndDown
 								? 'rounded-lg white--text'
-								: 'rounded-lg black--text'
+								: 'rounded-lg white--text'
 						"
 						:color="hover ? 'grey darken-1' : 'cyan lighten-3'"
 						:height="$vuetify.breakpoint.smAndDown ? '45' : '55'"
-						href="https://www.google.com/intl/vi/gmail/about/"
+						:to="localePath(`/Build word`)"
 					>
-						<div class="font-weight-black h7">{{ $t("button.2") }}</div>
+						<div class="font-weight-black h7">
+							{{ $t("button.1") }}
+						</div>
 					</v-btn>
 				</v-hover>
 			</div>
@@ -77,7 +88,7 @@ export default {};
 		"2":"Turn your ideas into the 3D graphic designs that "
 		},
 		"button":{
-		"2":"Built your world"
+		"1":"Built your world"
 		}
 
 	},
@@ -87,7 +98,7 @@ export default {};
 		"2":"Abonnez-vous à notre newsletter et ne manquez jamais nos mises à jour."
 		},
 	"button":{
-		"2":"Built your world"
+		"1":"Built your world"
 		}
 	}
 }

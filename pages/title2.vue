@@ -1,6 +1,6 @@
 <template>
 	<v-layout column align-center class="my-16">
-        <v-col class="my-16">
+        <v-col cols="7" class="my-16">
             <v-layout justify-center>
                 <div class="font-weight-bold text-h2 mb-16">
                     {{ $t("title.1") }}

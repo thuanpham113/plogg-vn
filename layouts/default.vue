@@ -159,7 +159,7 @@ export default {
 			},
 			{
 				title: "Careers",
-				link: "/sparklines",
+				link: "/careers",
 			},
 		],
 		texts: [

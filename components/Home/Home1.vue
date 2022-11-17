@@ -1,9 +1,5 @@
 <template>
-<<<<<<< Updated upstream
-	<div class="container">
-=======
     <div class="container">
->>>>>>> Stashed changes
 
         <div class="content"></div>
     </div>
@@ -33,6 +29,10 @@ export default {
             "/slile2.jpg",
             "/slile5.jpg",
             "/slile2.jpg",
+            "/slile6.jpg",
+            "/slile8.jpg",
+            "/slile9.jpg",
+            "/slile7.jpg",
             "/slile1.jpg",
         ],
         current: 1,

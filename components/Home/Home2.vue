@@ -1,9 +1,8 @@
 <template>
 	<v-sheet
-		color="white"
-		class="d-flex flex-column flex-md-row align-center justify-center my-16"
-	>
-		<v-img class="px-16" max-width="45%" contain src="/Software-Development.png" />
+		class="d-flex flex-column flex-md-row align-center justify-center my-16">
+		<v-img class="px-16" 
+		:max-width="$vuetify.breakpoint.smAndDown ? '80%' : '45%'" contain src="/Software-Development.png" />
 
 		<div
 			:class="['d-flex flex-column',
@@ -12,7 +11,11 @@
 					: 'black--text align-end w-55 px-16'
 			]"
 		>
-			<h2 class="grey--text">
+			<h2 :class="
+					$vuetify.breakpoint.smAndDown
+						? 'grey--text text-center py-6'
+						: 'grey--text '
+				" >
 				Software development <v-icon size="50">mdi-xml</v-icon>
 			</h2>
 
@@ -42,11 +45,12 @@
 						:class="
 							$vuetify.breakpoint.smAndDown
 								? 'rounded-lg white--text'
-								: 'rounded-lg black--text'
+								: 'rounded-lg white--text'
 						"
 						:color="hover ? 'grey darken-1' : 'cyan lighten-3'"
 						:height="$vuetify.breakpoint.smAndDown ? '45' : '55'"
-						href="https://www.google.com/intl/vi/gmail/about/"
+						:to="localePath(`/Start dream`)"
+						
 					>
 						<div class="font-weight-black h7">{{ $t("button.2") }}</div>
 					</v-btn>

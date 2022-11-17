@@ -1,27 +1,27 @@
 <template>
-	<v-sheet color:="white" class="d-flex vh-100 justify-center align-center">
+	<v-sheet
+	color:="white"
+	:class="$vuetify.breakpoint.smAndDown ? 'ml-16 py-5':'d-flex align-center vh100'">
 		<div
 			column
-			:class=" $vuetify.breakpoint.smAndDown ? 'black--text w-80' : 'black--text pl-16 w-50'"
+			:class=" $vuetify.breakpoint.smAndDown ? ' w-80' : 'black--text pl-16 w-50'"
 		>
 			<div :class="
 				[
 					'd-flex'
 					,$vuetify.breakpoint.smAndDown
-					? 'h6 font-weight-bold text-center pl-9'
+					? 'h6 font-weight-bold text-center '
 					: 'h3 font-weight-bold mt-10 flex-column'
 				]
 			">
 				<div>
 					{{ $t("title.1") }}
 				</div>
-				<div>
-					Plogg Vietnam
-				</div>
+			
 			</div>
 			<div :class="
 				$vuetify.breakpoint.smAndDown
-				? 'mt-2  text-center'
+				? 'py-6 text-center'
 				: 'h6 mb-11 my-5'
 			">
 				{{ $t("title.2") }}
@@ -32,21 +32,23 @@
 						:class="
 						$vuetify.breakpoint.smAndDown
 							? 'rounded-lg white--text'
-							: 'rounded-lg black--text'
+							: 'rounded-lg white--text'
 						"
 						:color="hover ? 'grey darken-1' : 'cyan lighten-3'"
-						:height="$vuetify.breakpoint.smAndDown ? '45' : '50'"
+						:height="$vuetify.breakpoint.smAndDown ? '40' : '55'"
 						dense
 						href="/AboutUs"
 					>
-						<div class="font-weight-black h7">{{ $t("button.2") }}</div>
+						<div class="font-weight-black h7">{{ $t("button.1") }}</div>
 					</v-btn>
 				</v-hover>
 			</div>
 		</div>
-		<v-img contain class="mx-16" aspect-ratio="1" :width="$vuetify.breakpoint.smAndDown ? '50%' : '40%'"
-			src="logo 2.png">
-		</v-img>
+		
+		<v-img contain class="mx-2" aspect-ratio="1" :width="$vuetify.breakpoint.smAndDown ? '70%' : '40%'"
+			src="logo 2.png"/>
+		
+	
 	</v-sheet>
 </template>
 
@@ -61,16 +63,16 @@ export default {};
 {
 	"en": {
 		"title":{
-		"1":"Welcome to",
+		"1":"Welcome to Plogg VietNam,",
 		"2":"The best Information Technology Services company that you need to boost your success."
 		},
 		"button":{
-		"2":"Who are we ?"
+		"1":"Who are we ?"
 		}
 	},
 	"fr": {
 		"title": {
-		"1":"bienvenue à",
+		"1":"Bienvenue sur Plogg Vietnam,",
 		"2":"Abonnez-vous à notre newsletter et ne manquez jamais nos mises à jour."
 		},
 		"button":{

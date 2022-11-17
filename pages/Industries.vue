@@ -147,6 +147,7 @@ export default {
 {
 	"en": {
 		"form1":{
+			
 			"banking" :"Banking and Financial service",
 			"text1s": " We provide high-quality applications of technology such as cloud computing, mobile, big data,... that contribute to transforming the entire real world into digital composite. From there, creating economic efficiency, catching up with scientific and technological trends, improving quality to meet common standards in the banking sector.",
 
@@ -155,8 +156,10 @@ export default {
 
 			"human":"Human Resources",
 			"text3s":"Technology will help business organizations improve their HR department's time management methods and subsequently improve work efficiency. Website-based technology is also being widely used for most common operations in human resource management such as timekeeping, salary calculation, employee information management,..."
+		
 		},
 		"form2":{
+			
 			"healthcare": "Healthcare",
 			"text1s" : "With the development of IT, the medical profession can quickly absorb new knowledge of mankind without worrying about geographical distance. IT makes it convenient for users to monitor health, such as integrating analysis tools to reduce the error rate in drug use, guiding preventive monitoring or warning of unusual events about doubt of health.",
 
@@ -165,6 +168,7 @@ export default {
 
 			"customer":"Customer Services",
 			"text3s" : "For customer service, IT is one of the best solutions that support businesses to quickly reach customers, capture customer's value, and drive customer satisfaction. We provide essential services to assist businesses in this. Working with us, you will have the advantages of getting closer to your customers at a low cost, delivering better customer results and increasing customer retention."
+
 		},
 		"add": "We Are the Big Players in Technology Services for Your Field",
 		"button":"Collaboration here",
@@ -172,14 +176,14 @@ export default {
 	},
 	"fr": {
 		"form1":{
-			"banking" :"Banking and Financial service",
-			"text1s": " We provide high-quality applications of technology such as cloud computing, mobile, big data,... that contribute to transforming the entire real world into digital composite. From there, creating economic efficiency, catching up with scientific and technological trends, improving quality to meet common standards in the banking sector.",
+			"banking" :"Service bancaire et financier",
+			"text1s": " Nous fournissons des applications technologiques de haute qualité telles que le cloud computing, le mobile, le big data,... qui contribuent à transformer tout le monde réel en composite numérique. De là, créer de l'efficacité économique, rattraper les tendances scientifiques et technologiques, améliorer la qualité pour répondre aux normes communes dans le secteur bancaire.",
 
-			"retail":"Retail",
-			"text2s": "Currently, retail businesses are gradually shifting to the trend of online sales. Developing technology brings authentic experiences to people, creating convenience and satisfaction. And Ploggvn will give you all the tools to create that miracle.",
+			"retail":"Détail",
+			"text2s": "CActuellement, les commerces de détail se tournent progressivement vers la tendance des ventes en ligne. Le développement de la technologie apporte des expériences authentiques aux gens, créant commodité et satisfaction. Et Ploggvn vous donnera tous les outils pour créer ce miracle.",
 
-			"human":"Human Resources",
-			"text3s":"Technology will help business organizations improve their HR department's time management methods and subsequently improve work efficiency. Website-based technology is also being widely used for most common operations in human resource management such as timekeeping, salary calculation, employee information management,..."
+			"human": "Ressources humaines",
+			"text3s": "La technologie aidera les entreprises à améliorer les méthodes de gestion du temps de leur service RH et, par la suite, à améliorer l'efficacité du travail. La technologie basée sur le site Web est également largement utilisée pour les opérations les plus courantes dans la gestion des ressources humaines telles que la comptabilisation du temps, le calcul des salaires, la gestion des informations sur les employés, etc.."
 		},
 		"form2":{
 			"healthcare": "Soins de santé",
@@ -192,8 +196,8 @@ export default {
 			"text3s" : "Pour le service client, l'informatique est l'une des meilleures solutions qui aide les entreprises à atteindre rapidement les clients, à capturer la valeur du client et à stimuler la satisfaction client. Nous fournissons des services essentiels pour aider les entreprises dans ce domaine. En travaillant avec nous, vous aurez les avantages de vous rapprocher de vos clients à moindre coût, d'obtenir de meilleurs résultats clients et d'augmenter la fidélisation de la clientèle."
 		},
 		"add": "Nous sommes les grands acteurs des services technologiques pour votre domaine",
-		"button":"Collaboration ici",
-		"text":"Dites-nous tout ce dont vous aviez besoin !"
+		"button": "Collaboration ici",
+		"text": "Dites-nous tout ce dont vous aviez besoin !"
 	}
 }
 </i18n>

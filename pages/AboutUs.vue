@@ -237,22 +237,26 @@ export default {
    {
        "en": {
            "title":{
-               "1":"Who are we?",
-               "2":"We are Plogg Vietnam - a part of Plogg Ca. We established in 2022. Plogg Vietnam is anInternational Technology Service Company which located in Vietnam. We provides many professional IT services to support from small business to large coroperation. Plogg Vietnam is specialised in developing website, software, and designing 3D. We also provide many more services related to IT to help our customers reach the pinnacle of glory.",
-               "3":"We are Plogg Team!",
-               "4":"We are always working to bring you the most suitable software solutions.We always believe that a successful product must help customers solve current problems, and further, contribute to the development of their businesses. Useful products, satisfied customers, growing businesses, are our service roadmap.",
-               "5":"Our mission",
-               "6":"We bring the most professional IT services to support businesses meet their success by creating the optional solution and providing high-quality technology to exceed customers' expectation. ",
-               "9":"Our achievements",
-               "10":"Our members"
+               "1" : "Who are we?",
+               "2" : "We are Plogg Vietnam - a part of Plogg Ca. We established in 2022. Plogg Vietnam is anInternational Technology Service Company which located in Vietnam. We provides many professional IT services to support from small business to large coroperation. Plogg Vietnam is specialised in developing website, software, and designing 3D. We also provide many more services related to IT to help our customers reach the pinnacle of glory.",
+               "3" : "We are Plogg Team!",
+               "4" : "We are always working to bring you the most suitable software solutions.We always believe that a successful product must help customers solve current problems, and further, contribute to the development of their businesses. Useful products, satisfied customers, growing businesses, are our service roadmap.",
+               "5" : "Our mission",
+               "6" : "We bring the most professional IT services to support businesses meet their success by creating the optional solution and providing high-quality technology to exceed customers' expectation. ",
+               "9" : "Our achievements",
+               "10" : "Our members"
                }
        },
        "fr": {
            "title":{
-               "1":"Qui sommes nous?",
-               "2":"Nous sommes Plogg Vietnam - une partie de Plogg Ca.Nous avons établi en 2022. Plogg Vietnam est un Société internationale de services technologiquesqui se trouve au Vietnam. Nous fournissons de nombreux services informatiques professionnels pour soutenir de la petite entreprise à la grande coopération. Plogg Vietnam est spécialisé dans le développement de sites Web, de logiciels et de conception 3D. Nous fournissons également de nombreux autres services liés à l'informatique pour aider nos clients à atteindre le sommet de la gloire.",
-               "3":"Nous sommes l'équipe Plogg !",
-               "4":"Nous travaillons toujours pour vous apporter les solutions logicielles les plus adaptées. Nous croyons toujours qu'un produit performant doit aider les clients à résoudre les problèmes actuels et, en outre, contribuer au développement de leurs activités. Des produits utiles, des clients satisfaits, des entreprises en croissance, sont notre feuille de route de service."
+               "1" : "Qui sommes nous?",
+               "2" : "Nous sommes Plogg Vietnam - une partie de Plogg Ca.Nous avons établi en 2022. Plogg Vietnam est un Société internationale de services technologiquesqui se trouve au Vietnam. Nous fournissons de nombreux services informatiques professionnels pour soutenir de la petite entreprise à la grande coopération. Plogg Vietnam est spécialisé dans le développement de sites Web, de logiciels et de conception 3D. Nous fournissons également de nombreux autres services liés à l'informatique pour aider nos clients à atteindre le sommet de la gloire.",
+               "3" : "Nous sommes l'équipe Plogg !",
+               "4" : "Nous travaillons toujours pour vous apporter les solutions logicielles les plus adaptées. Nous croyons toujours qu'un produit performant doit aider les clients à résoudre les problèmes actuels et, en outre, contribuer au développement de leurs activités. Des produits utiles, des clients satisfaits, des entreprises en croissance, sont notre feuille de route de service.",
+               "5" : "Notre mission",
+               "6" : "Nous apportons les services informatiques les plus professionnels pour aider les entreprises à réussir en créant la solution optionnelle et en fournissant une technologie de haute qualité pour dépasser les attentes des clients.",
+               "9" : "Nos réalisations",
+               "10" : "Nos membres"
                }
        }
 
