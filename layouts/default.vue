@@ -44,33 +44,32 @@
 				<kq-button-locale color="black" />
 			</v-col>
 		</v-app-bar>
+	
 		<v-navigation-drawer
 			v-model="drawer"
-			color="#cac5e5"
+			color="white"
+			class=""
 			absolute
 			temporary
 		>
+		<v-card height="80" flat color="transparent"></v-card>
 			<v-layout column>
 				<v-btn
 					v-for="(list, index) in lists"
 					:key="index"
-					class="
-						my-1
-						font-weight-bold
-						deep-purple--text
-						text--darken-4
-					"
+					class="my-1"
+					:href="list.link"
+					:to="localePath(list.link)"
 					text
-					height="10vh"
+					height="9vh"
 				>
-					<div class="h7">
+					<div class="4">
 						{{ list.title }}
 					</div>
 				</v-btn>
 				<kq-button-locale
-					x
 					height="10vh"
-					color="deep-purple darken-4"
+					color="deep-purple grey"
 				/>
 			</v-layout>
 		</v-navigation-drawer>

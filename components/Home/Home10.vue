@@ -1,14 +1,14 @@
 <template>
   <v-sheet color:="white">
 	<v-row>
-		<v-img v-if="$vuetify.breakpoint.smAndUp" contain aspect-ratio="1" :max-width="$vuetify.breakpoint.smAndDown ? '20%' : '31%'" src="get1.jpg"></v-img>
+		<v-img v-if="$vuetify.breakpoint.mdAndUp" contain aspect-ratio="1" :max-width="$vuetify.breakpoint.smAndDown ? '20%' : '31%'" src="get1.jpg"></v-img>
 		<v-col>
 			<v-layout color="transparent" class="d-flex flex-column flex-md-row align-center py-5">
 				<v-layout :style="$vuetify.breakpoint.smAndDown ? 'max-width: 100%' : 'max-width: 50%'" column :class=" $vuetify.breakpoint.smAndDown ? 'black--text' : 'black--text '">
 					<v-col cols="12" class="justify-center ">
 						<div :class="
 							$vuetify.breakpoint.smAndDown
-							? 'h6 font-weight-bold  pl-9'
+							? 'h6 font-weight-bold text-center'
 							: 'h4 font-weight-bold text-center'
 						">
 							{{ $t("title.1") }}
@@ -20,9 +20,9 @@
 							<v-btn :class="
 							$vuetify.breakpoint.smAndDown
 								? 'rounded-lg white--text'
-								: 'rounded-lg white--text'
-							" :color="hover ? 'grey darken-1' : 'cyan lighten-3'"
-							:height="$vuetify.breakpoint.smAndDown ? '40' : '55'" href="https://www.google.com/intl/vi/gmail/about/">
+								: 'rounded-lg white--text'"
+							:color="hover ? 'grey darken-1' : 'cyan lighten-3'"
+							:height="$vuetify.breakpoint.smAndDown ? '40' : '55'">
 							<div class="font-weight-black h7">{{ $t("button.2") }}</div>
 							</v-btn>
 						</v-hover>
@@ -42,7 +42,7 @@
 				<v-col>
 					<v-row justify="center">
 					<v-img contain aspect-ratio="1" :max-width="$vuetify.breakpoint.smAndDown ? '30%' : ''" src="get2.jpg" />
-					<v-img v-if="$vuetify.breakpoint.xs" contain aspect-ratio="1" :max-width="$vuetify.breakpoint.smAndDown ? '30%' : ''" src="get1.jpg"></v-img>
+					<v-img v-if="$vuetify.breakpoint.smAndDown" contain aspect-ratio="1" :max-width="$vuetify.breakpoint.smAndDown ? '30%' : ''" src="get1.jpg"></v-img>
 					</v-row>
 				</v-col>
 			</v-layout>

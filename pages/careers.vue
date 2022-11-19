@@ -1,78 +1,90 @@
 <template>
 	<v-sheet>
 		<template>
-			<v-img max-height="600" src="/imgtext.jpg">
-				<div class="py-16 ma-16">
+			<v-img max-height="800" src="/imgtext.jpg">
+				<div :class="$vuetify.breakpoint.smAndDown ? 'mx-5 py-5' : 'py-16 ma-14'">
 					<v-card-title :class="$vuetify.breakpoint.smAndDown ? 'justify-center' : 'justify-start'">
 						<div :class="$vuetify.breakpoint.smAndDown
 						? 'h6 font-weight-bold text-center '
-						: 'h4 font-weight-bold mx-13'">
+						: 'h4 font-weight-bold mx-10'">
 							{{ $t("title.1") }}
 						</div>
 					</v-card-title>
 
-					<v-card-title class=" grey--text">
+					<v-card-titse class=" grey--text">
 						<v-col :class="$vuetify.breakpoint.smAndDown
 						? 'subtitle-1 font-weight-bold text-center '
 						: 'h6 mx-11'">
 							{{ $t("title.2") }}
 						</v-col>
-					</v-card-title>
+					</v-card-titse>
 				</div>
 			</v-img>
 		</template>
+		<v-sheet class="px-16">
 
-		<template>
-			<div class="py-16 ma-16">
-				<v-card-title :class="$vuetify.breakpoint.smAndDown ? 'justify-center' : 'justify-start'">
-					<div :class="$vuetify.breakpoint.smAndDown ? 'h6 text-center font-weight-bold' : 'h4 mx-14 font-weight-bold '">
+			<template>
+				<div :class="$vuetify.breakpoint.smAndDown ? 'mx-5 py-5' : 'mx-10'">
+					<div :class="$vuetify.breakpoint.smAndDown 
+					? 'h6 text-center font-weight-bold' : 'h4  font-weight-bold pl-2 py-10'">
 						{{ $t("title.3") }}
 					</div>
-				</v-card-title>
+					<v-sheet class=" black--text">
+						<v-col :cols="$vuetify.breakpoint.smAndDown ? ' ' : '11'"
+							:class="$vuetify.breakpoint.smAndDown ? 'subtitle-1 text-center ' : 'h6 '">
+							{{ $t("title.4") }}
+						</v-col>
+					</v-sheet>
+				</div>
+			</template>
 
-				<v-card-title class=" black--text">
-					<v-col :cols="$vuetify.breakpoint.smAndDown ? ' ' : '11'"
-						:class="$vuetify.breakpoint.smAndDown ? 'subtitle-1 text-center ' : 'h6 mx-10 px-5'">
-						{{ $t("title.4") }}
-					</v-col>
-				</v-card-title>
-			</div>
-		</template>
-
-		<template>
-			<div class="py-16 ma-16  mx-16">
-				<v-card-title :class="$vuetify.breakpoint.smAndDown ? 'justify-center' : 'justify-start'">
-					<div :class="$vuetify.breakpoint.smAndDown ? 'h6 text-center  font-weight-bold' : 'h4 font-weight-bold  my-5 mx-16'">
+			<template>
+				<div :class="$vuetify.breakpoint.smAndDown ? ' py-5' : 'mx-10'">
+					<div
+						:class="$vuetify.breakpoint.smAndDown ? 'h6 text-center font-weight-bold' : 'h4 font-weight-bold py-10 '">
 						{{ $t("title.5") }}
 					</div>
-				</v-card-title> 
-				<v-card-title v-for="(header, index) in headers" :key="index"
-					:class="$vuetify.breakpoint.smAndDown ? 'justify-center' : 'justify-start'">
-					<div :class="$vuetify.breakpoint.smAndDown ? 'subtitle-1 text-center  ' : 'h6 mx-16 '">
-						{{ header.text1 }}
-					</div>
-				</v-card-title>
-			</div>
-		</template>
-		<template>
-			<div class="py-16 ma-16  mx-16 ">
-				<v-card-title>
+
+					<v-sheet v-for="(header, index) in headers" :key="index"
+						:class="$vuetify.breakpoint.smAndDown ? '' : 'justify-start'">
+						<div :class="$vuetify.breakpoint.smAndDown ? 'subtitle-1 text-center  ' : 'h6  '">
+							{{ header.text1 }}
+						</div>
+					</v-sheet>
+				</div>
+			</template>
+			<template>
+				<div :class="$vuetify.breakpoint.smAndDown ? 'mt-6 py-5' : 'mx-10'">
+
 					<div :class="$vuetify.breakpoint.smAndDown
 					? 'h6 font-weight-bold text-center '
-					: 'h4 font-weight-bold mx-16'">
+					: 'h4 font-weight-bold py-10'">
 						{{ $t("title.6") }}
 					</div>
-				</v-card-title>
-				<v-card-title v-for="(head, index) in heads" :key="index"
-					:class="$vuetify.breakpoint.smAndDown ? 'justify-center' : 'justify-start'">
-					<div :class="$vuetify.breakpoint.smAndDown
-					? 'subtitle-1 text-center '
-					: 'h6 mx-16'">
-						{{ head.text2 }}
+					<div v-for="(head, index) in heads" :key="index"
+						:class="$vuetify.breakpoint.smAndDown ? 'justify-center' : 'justify-start'">
+						<div :class="$vuetify.breakpoint.smAndDown
+						? 'subtitle-1 text-center '
+						: 'h6 mt-2 '">
+							{{ head.text2 }}
+						</div>
 					</div>
-				</v-card-title>
-			</div>
-		</template>
+				</div>
+			</template>
+		</v-sheet>
+
+		<div class="d-flex justify-center w-100 pt-5">
+			<v-hover v-slot="{ hover }">
+				<v-btn :class="
+					$vuetify.breakpoint.smAndDown
+						? 'rounded-lg white--text'
+						: 'rounded-lg white--text'
+				" :color="hover ? 'grey darken-1' : 'cyan lighten-3'" :height="$vuetify.breakpoint.smAndDown ? '45' : '55'"
+					:to="localePath(`/sales team`)">
+					<div class="font-weight-black h7">{{ $t("button") }}</div>
+				</v-btn>
+			</v-hover>
+		</div>
 
 
 
@@ -155,7 +167,9 @@ export default {
 		"3" : "Manual QA Tester ",
 		"4" : "Internship "
 		
-	}
+	},
+	"button":"Click here to join us"
+        
     },
     "fr":{
 	"title":{
@@ -179,7 +193,8 @@ export default {
 		"3" : "Testeur QA manuel ",
 		"4" : "Stage "
 		
-	}
+	},
+	"button":"Cliquez ici pour nous rejoindre"
     }
 }
 </i18n>

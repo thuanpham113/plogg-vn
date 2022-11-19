@@ -1,49 +1,28 @@
 <template>
 	<rely-layout-page>
+		<v-card height="80" flat color="transparent"></v-card>
 		<div
-			class="d-flex justify-center ma-16 pt-12 text-h3 text-center font-weight-bold"
-			:style="!$vuetify.breakpoint.smAndDown ? 'padding-left: 100px;  padding-right:100px': ''"
-		>
-				{{ $t("add") }}
+			:class="$vuetify.breakpoint.smAndDown ? ' h6 text-center font-weight-bold' : 'text-h4 text-center my-10 font-weight-bold'">
+			{{ $t("add") }}
 		</div>
 
-		<v-layout
-			class="justify-md-space-around mx-16"
-			:class="$vuetify.breakpoint.smAndDown ? 'flex-column align-center':'flex-wrap' "
-			:column="$vuetify.breakpoint.smAndDown"
-		>
-			<v-sheet
-				:max-width="$vuetify.breakpoint.smAndDown ? '90%' : '40%'"
-				v-for="(form, index) in forms"
-				:key="index"
-			>
-				<v-card
-					rounded="xl"
-					class="ma-5 "
-					:color="hover ? 'grey darken-1' : ''"
-					:class="{ 'on-hover': hover }"
-				>
-					<v-img
-						class="pl-5"
-						:width="
-							$vuetify.breakpoint.smAndDown
-								? '100%'
-								: '100%'
-						"
-						:src="form.imgs"
-					>
+		<v-layout class="justify-md-space-around mx-16"
+			:class="$vuetify.breakpoint.smAndDown ? 'flex-column align-center' : 'flex-wrap'"
+			:column="$vuetify.breakpoint.smAndDown">
+			<v-sheet :max-width="$vuetify.breakpoint.smAndDown ? '90%' : '40%'" v-for="(form, index) in forms"
+				:key="index">
+				<v-card rounded="xl" class="ma-5 " :color="hover ? 'grey darken-1' : ''" :class="{ 'on-hover': hover }">
+					<v-img class="pl-5" :width="
+						$vuetify.breakpoint.smAndDown
+							? '100%'
+							: '100%'
+					" :src="form.imgs">
 					</v-img>
 				</v-card>
 				<v-card elevation="0" rounded="xl" class="text-center">
-					<v-card-text
-						class="text-h6 black--text font-weight-bold"
-						v-if="form.texts"
-					>
+					<v-card-text class="text-h6 black--text font-weight-bold" v-if="form.texts">
 						{{ form.key }}
-						<div
-							class="subtitle-1 grey--text"
-							v-if="form.text1"
-						>
+						<div class="subtitle-1 grey--text" v-if="form.text1">
 							{{ form.text1 }}
 						</div>
 					</v-card-text>
@@ -53,28 +32,22 @@
 
 		<v-col cols="12" class="d-flex justify-center">
 			<v-hover v-slot="{ hover }">
-				<v-btn
-					:class="
-						$vuetify.breakpoint.smAndDown
-							? 'rounded-lg white--text'
-							: 'rounded-lg black--text'
-					"
-					:color="hover ? 'pink' : 'cyan lighten-3'"
-					:height="$vuetify.breakpoint.smAndDown ? '30' : '35'"
-					href="https://www.google.com/intl/vi/gmail/about/"
-				>
+				<v-btn :class="
+					$vuetify.breakpoint.smAndDown
+						? 'rounded-lg white--text'
+						: 'rounded-lg black--text'
+				" :color="hover ? 'pink' : 'cyan lighten-3'" :height="$vuetify.breakpoint.smAndDown ? '30' : '35'"
+					:to="localePath(`/Collaborate here`)">
 					<div>{{ $t("button") }}</div>
 				</v-btn>
 			</v-hover>
 		</v-col>
 		<v-col cols="12" class="grey--text d-flex justify-center">
-			<div
-				:class="
-					$vuetify.breakpoint.smAndDown
-						? ' text-center'
-						: 'subtitle-1'
-				"
-			>
+			<div :class="
+				$vuetify.breakpoint.smAndDown
+					? ' text-center'
+					: 'subtitle-1'
+			">
 				{{ $t("text") }}
 			</div>
 		</v-col>

@@ -1,11 +1,13 @@
 <template>
 	<v-layout column>
+		<v-card :height=" $vuetify.breakpoint.smAndDown ? '' : '80' " flat color="transparent"></v-card>
 		<template>
-			<v-sheet class="d-flex flex-column flex-md-row align-center py-16 mt-16">
+			
+			<v-sheet class="d-flex flex-column flex-md-row align-center  ">
 				<v-sheet
 					:class="['d-flex flex-row-reverse my-16', $vuetify.breakpoint.smAndDown ? 'mt-5' : 'd-column-reverse align-center justify-end']">
 					<div class=" px-16 d-flex flex-column">
-						<div class="d-flex flex-row">
+						<div  :class="$vuetify.breakpoint.smAndDown ? 'justify-center d-flex flex-row' : 'd-flex flex-row '">
 							<v-img :class="$vuetify.breakpoint.smAndDown ? 'mt-5' : ''" max-height="70" max-width="70"
 								contain src="/3ddd.jpg" />
 						
@@ -126,7 +128,7 @@ export default {
 			"7":"Synode vous aide à afficher des instructions 3D étape par étape à vos clients directement sur votre site Web et/ou notre application"
         },
 		"button":{
-        	"2":"Contactez-nous"
+        "2":"Contactez-nous"
         },
 		"icon":{
 			"1":"Conception graphique 3D"

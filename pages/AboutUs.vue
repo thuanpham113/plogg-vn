@@ -1,124 +1,142 @@
 <template>
     <v-sheet>
-        <v-layout class="py-16 ma-16">
+        <v-card :height="$vuetify.breakpoint.smAndDown ? '' : '80 '" flat color="transparent"></v-card>
+        <v-layout :class="$vuetify.breakpoint.smAndDown ? '' : 'py-5 mx-15'">
             <template>
-                <div class="black--text py-16 px-16  ">
-                    <v-col cols="9" class="ml-16 pt-16 pl-16  ">
-                        <img class="left-side " src="/logowe.jpg" />
+                <div :class="$vuetify.breakpoint.smAndDown ? 'mx-8 ' : 'black--text '">
+
+                    <v-col :cols="$vuetify.breakpoint.smAndDown ? ' ' : '9'">
+                        <v-layout v-if="$vuetify.breakpoint.smAndDown" justify-center>
+                            <img contain aspect-ratio="1" :width="$vuetify.breakpoint.smAndDown ? ' 200' : ''" :class="$vuetify.breakpoint.smAndDown ? 'top-side justify-center' : 'left-side'
+                            " src="/logowe.jpg" />
+                        </v-layout>
                     </v-col>
-                    <v-card-title class="content">
-                        <v-sheet class="h3 ml-7 text-wrap ">
-                            {{ $t("title.1") }}
-                        </v-sheet>
-                    </v-card-title>
+                    <v-col  v-if="$vuetify.breakpoint.smAndUp"
+                    :cols="$vuetify.breakpoint.smAndDown ? ' ' : '9'">
+                        <img contain aspect-ratio="1" :width="$vuetify.breakpoint.smAndDown ? ' 200' : ''" :class="$vuetify.breakpoint.smAndDown ? 'top-side justify-center' : 'left-side'
+                        " src="/logowe.jpg" />
+                    </v-col>
+
+
+                    <div :class="$vuetify.breakpoint.smAndDown
+                    ? 'h5 text-center font-weight-bold'
+                    : 'h3 pl-10 text-wrap '">
+                        {{ $t("title.1") }}
+                    </div>
+
                     <div class="content">
-                        <p class="h6 grey--text mt-10 ma-12 ">{{ $t("title.2") }}</p>
+                        <p
+                            :class="$vuetify.breakpoint.smAndDown ? 'text-center grey--text subtitle-1' : ' h6 grey--text mt-10 ma-12'">
+                            {{ $t("title.2") }}
+                        </p>
                     </div>
                 </div>
             </template>
         </v-layout>
 
-        <v-img contain :width="$vuetify.breakpoint.smAndDown ? '50%' : '100vw'" src="/we1.jpg" />
-        <template>
-            <v-col class="ma-16 px-16 py-16">
-                <v-card-title class="d-flex justify-start">
-                    <div :class="'h3 front-weight-black ml-2'">
+
+        <v-img contain :width="$vuetify.breakpoint.smAndDown ? '100%' : '100vw'" src="/we1.jpg" />
+        <v-sheet :class="$vuetify.breakpoint.smAndDown ? 'mx-5' : 'px-16'">
+
+            <template>
+                <div :class="$vuetify.breakpoint.smAndDown ? 'py-9' : 'py-16 mx-10'">
+                    <div
+                        :class="$vuetify.breakpoint.smAndDown ? 'h5 font-weight-bold text-center' : 'h3 front-weight-black '">
                         {{ $t("title.3") }}
                     </div>
-                </v-card-title>
-                <v-card-title class="d-flex justify-start mt-3">
-                    <v-col cols="11">
-                        <div :class="'h6 grey--text'">
-                            {{ $t("title.4") }}
-                        </div>
-                    </v-col>
-                </v-card-title>
-            </v-col>
 
-            <v-col cols="11" class="ma-16 px-16">
-                <v-card-title class="d-flex justify-start  ">
-                    <div :class="'h3 front-weight-black ml-2'">
+                    <div :class="$vuetify.breakpoint.smAndDown ? 'subtitle-1 grey--text text-center' : 'h6 grey--text'">
+                        {{ $t("title.4") }}
+                    </div>
+
+                </div>
+
+                <v-col :class="$vuetify.breakpoint.smAndDown ? 'text-center' : 'mx-5 '">
+                    <div :class="$vuetify.breakpoint.smAndDown ? 'h5 font-weight-bold' : 'h3 front-weight-black'">
                         {{ $t("title.5") }}
                     </div>
-                </v-card-title>
-                <v-card-title class="d-flex justify-start mt-3">
-                    <v-col cols="6">
-                        <div :class="'h6 grey--text'">
+                    <v-col :cols="$vuetify.breakpoint.smAndDown ? 12 : 6">
+                        <div :class="$vuetify.breakpoint.smAndDown ? 'subtitle-1 grey--text' : 'h6 grey--text'">
                             {{ $t("title.6") }}
                         </div>
                     </v-col>
-                </v-card-title>
-            </v-col>
-        </template>
+                </v-col>
+            </template>
 
-        <template>
-            <v-sheet class="d-flex flex-column flex-md-row align-center px-14 justify-center">
-                <v-img class="" aspect-ratio="1" max-width="30%" max-height="50%" src="/home2.jpg" />
-                <v-layout
-                    :style="$vuetify.breakpoint.smAndDown ? 'max-width: 80%' : 'max-width: 60%'" column
-                    :class="$vuetify.breakpoint.smAndDown ? 'black--text' : 'black--text pl-11'">
+            <template>
+                <v-sheet class="d-flex flex-column flex-md-row align-center justify-center my-5">
+                    <v-img class="" :max-width="$vuetify.breakpoint.smAndDown ? '60%' : '35%'" contain
+                        src="/about1.jpg" />
 
-                    <v-col class="justify-end">
-                        <v-card-title
-                        :class="$vuetify.breakpoint.smAndDown
-                         ? 'h6 font-weight-bold text-center '
-                         : 'h3 justify-end '
-                         ">
-                            {{ $t("title.1") }}
-                        </v-card-title>
-                    </v-col>
-
-                    <v-col  class="grey--text">
-                        <v-card-title outlined tile
-                        :class=" $vuetify.breakpoint.smAndDown
-                                ? 'mt-2  text-center'
-                                : 'pb-16 h6 justify-end align-center '
+                    <div :class="['d-flex flex-column',
+                        $vuetify.breakpoint.smAndDown
+                            ? 'black--text'
+                            : 'black--text align-end w-55 '
+                    ]">
+                        <div :class="
+                            $vuetify.breakpoint.smAndDown
+                                ? 'h5  text-center font-weight-bold'
+                                : 'h3  text-end py-4  '
                         ">
-                            {{ $t("title.2") }}
-                        </v-card-title>
-                    </v-col>
-                </v-layout>
-            </v-sheet>
-        </template>
+                            {{ $t("title.7") }}
+                        </div>
 
-        <template>
-            <v-sheet class="px-11 ma-12 py-5" max-width="100%">
-                <v-card-title :class="$vuetify.breakpoint.smAndDown ? 'mt-2  text-center' : 'h3 justify-start pl-16  '">
-                    {{ $t("title.9") }}
-                </v-card-title>
-                <v-slide-group v-model="current" class="pa-5 mt-12" center-active show-arrows>
-                    <v-slide-item disabled v-for="(header, index) in headers" :key="index"
-                        :class="$vuetify.breakpoint.smAndDown">
-                        <v-card elevation="0" class="" height="200" width="450">
-                            <a :href="header.link">
-                                <v-img width="100%" class="" :src="header.imgs" />
-                            </a>
-                        </v-card>
-                    </v-slide-item>
-                </v-slide-group>
-            </v-sheet>
-        </template>
+                        <div :class="
+                            $vuetify.breakpoint.smAndDown
+                                ? 'mt-2  text-center grey--text'
+                                : 'h6 text-end py-2 grey--text'
+                        ">
+                            {{ $t("title.8") }}
+                        </div>
+                    </div>
+                </v-sheet>
+            </template>
+
+            <template>
+                <v-sheet :class="$vuetify.breakpoint.smAndDown ? 'mx-2' : ' mx-8 pl-2 py-5'" max-width="100%">
+                    <div :class="
+                        $vuetify.breakpoint.smAndDown
+                            ? 'h5 mt-2 font-weight-bold text-center'
+                            : 'h3 justify-start  '
+                    ">
+                        {{ $t("title.9") }}
+                    </div>
+                    <v-slide-group v-model="current" :class="$vuetify.breakpoint.smAndDown ? '' : 'pa-5 mt-12'"
+                        center-active show-arrows>
+                        <v-slide-item disabled v-for="(header, index) in headers" :key="index">
+                            <v-card elevation="0" height="200" width="400">
+                                <v-img contain :src="header.imgs" />
+                            </v-card>
+                        </v-slide-item>
+                    </v-slide-group>
+                </v-sheet>
+            </template>
+       
+
+
 
         <template>
             <rely-layout-page>
-                <v-card-title
-                    :class="$vuetify.breakpoint.smAndDown ? 'mt-2  text-center' : 'h3 justify-end mr-16 px-16 pt-16'">
+                <div :class="
+                    $vuetify.breakpoint.smAndDown
+                        ? 'h5 font-weight-bold text-center'
+                        : 'h3 justify-end pl-11  '
+                ">
                     {{ $t("title.10") }}
-                </v-card-title>
-                <v-row class="mx-16 ma-16 ">
+                </div>
+                <v-row class="mx-16 ma-16">
                     <v-hover v-for="(form, index) in forms" :key="index">
-                        <template  v-slot:default="{ hover }">
-                            <v-card :class="$vuetify.breakpoint.smAndDown ? 'ma-8' : ' mx-auto ma-12 '"
+                        <template v-slot:default="{ hover }">
+                            <v-card :class="$vuetify.breakpoint.smAndDown ? '' : ' mx-auto ma-12 '"
                                 :max-width="$vuetify.breakpoint.smAndDown ? '' : '400'">
-                                <v-img  contains height="300px" width="400px" :src="form.imgs">
+                                <v-img contains height="300px" width="400px" :src="form.imgs">
                                 </v-img>
 
                                 <v-card-text class="text-center font-weight-bold">
-                                    <h2 class="text-h5 black--text ">
+                                    <h2 class="text-h5 black--text">
                                         {{ form.text1 }}
                                     </h2>
-                                    <h3> {{ form.text2 }} </h3>
-
+                                    <h3>{{ form.text2 }}</h3>
                                 </v-card-text>
                                 <v-fade-transition>
                                     <v-overlay v-if="hover" absolute color="#036358">
@@ -129,9 +147,9 @@
                         </template>
                     </v-hover>
                 </v-row>
-
             </rely-layout-page>
         </template>
+    </v-sheet>
     </v-sheet>
 </template>
 
@@ -143,50 +161,42 @@ export default {
                 imgs: "/avt1.jpg",
                 text1: "Mr. Le Duc Anh ",
                 text2: "CEO",
-                links: "https://www.facebook.com/yunbray",
             },
             {
                 imgs: "/avt2.jpg",
                 text1: "Mr. Thuan Pham",
                 text2: "Excutive Director",
-                links: "https://www.facebook.com/denvau",
             },
             {
                 imgs: "/avt3.jpg",
                 text1: "Mr. Duy Minh",
                 text2: "Software Development Directors",
-                links: "https://www.facebook.com/MTP.Fan",
             },
             {
                 imgs: "/avt4.jpg",
                 text1: "Mr. Kiet Ha ",
                 text2: "Software Development Directors",
-                links: "https://www.facebook.com/HVNS.Hoaminzy",
             },
             {
                 imgs: "/avt3.jpg",
                 text1: "Mr. Duy Minh",
                 text2: "Software Development Directors",
-                links: "https://www.facebook.com/MTP.Fan",
             },
             {
                 imgs: "/avt4.jpg",
                 text1: "Mr. Kiet Ha ",
                 text2: "Software Development Directors",
-                links: "https://www.facebook.com/HVNS.Hoaminzy",
             },
             {
                 imgs: "/avt3.jpg",
                 text1: "Mr. Duy Minh",
                 text2: "Software Development Directors",
-                links: "https://www.facebook.com/MTP.Fan",
             },
             {
                 imgs: "/avt4.jpg",
                 text1: "Mr. Kiet Ha ",
                 text2: "Software Development Directors",
-                links: "https://www.facebook.com/HVNS.Hoaminzy",
-            }
+            },
         ],
         headers: [
             { imgs: "/item1.jpeg", link: "https://www.facebook.com/" },
@@ -202,22 +212,24 @@ export default {
         current: 1,
         interval: undefined,
         direction: 1,
-        slideInterval: 2
+        slideInterval: 2,
     }),
     created() {
         this.interval = setInterval(() => {
-            if (this.current === 0 || this.current === this.headers.length - 1) {
-                this.direction *= -1
-                this.current += this.direction
+            if (
+                this.current === 0 ||
+                this.current === this.headers.length - 1
+            ) {
+                this.direction *= -1;
+                this.current += this.direction;
             } else {
-                this.current += this.direction
+                this.current += this.direction;
             }
-
-        }, this.slideInterval * 1000)
+        }, this.slideInterval * 1000);
     },
     beforeDestroy() {
-        clearInterval(this.interval)
-    }
+        clearInterval(this.interval);
+    },
 };
 </script>
 
@@ -226,7 +238,6 @@ export default {
     float: right;
     width: 50%;
     height: 50%;
-
 }
 
 .content img {
@@ -243,6 +254,8 @@ export default {
                "4" : "We are always working to bring you the most suitable software solutions.We always believe that a successful product must help customers solve current problems, and further, contribute to the development of their businesses. Useful products, satisfied customers, growing businesses, are our service roadmap.",
                "5" : "Our mission",
                "6" : "We bring the most professional IT services to support businesses meet their success by creating the optional solution and providing high-quality technology to exceed customers' expectation. ",
+               "7":"Our vision",
+                "8":"Plogg Vietnam aims to become one of the highest quality IT service providers in the world. In the next 5 years, we will extend our outsourcing to leading countries such as UK, USA, Australia, New Zealand, Singapore, etc. And Plogg Vietnam will become a leading prestigious and reliable partner in the IT service fields all over the world.",
                "9" : "Our achievements",
                "10" : "Our members"
                }
@@ -255,6 +268,8 @@ export default {
                "4" : "Nous travaillons toujours pour vous apporter les solutions logicielles les plus adaptées. Nous croyons toujours qu'un produit performant doit aider les clients à résoudre les problèmes actuels et, en outre, contribuer au développement de leurs activités. Des produits utiles, des clients satisfaits, des entreprises en croissance, sont notre feuille de route de service.",
                "5" : "Notre mission",
                "6" : "Nous apportons les services informatiques les plus professionnels pour aider les entreprises à réussir en créant la solution optionnelle et en fournissant une technologie de haute qualité pour dépasser les attentes des clients.",
+               "7":"Notre vision",
+               "8":"Plogg Vietnam vise à devenir l'un des fournisseurs de services informatiques de la plus haute qualité au monde. Au cours des 5 prochaines années, nous étendrons notre externalisation à des pays leaders tels que le Royaume-Uni, les États-Unis, l'Australie, la Nouvelle-Zélande, Singapour, etc. Et Plogg Vietnam deviendra un partenaire prestigieux et fiable dans les domaines des services informatiques dans le monde entier.",
                "9" : "Nos réalisations",
                "10" : "Nos membres"
                }

@@ -2,7 +2,12 @@
 	<v-layout column align-center class="my-16">
         <v-col cols="7" class="my-16">
             <v-layout justify-center>
-                <div class="font-weight-bold text-h2 mb-16">
+                <div   :class="
+						$vuetify.breakpoint.smAndDown
+							? 'h6 text-center font-weight-bold py-5'
+							: 'font-weight-bold text-center text-h2 mb-16'"
+                >
+              
                     {{ $t("title.1") }}
                 </div>
             </v-layout>
@@ -12,11 +17,11 @@
                     <v-text-field label="Last name"/>
                 </v-row>
                 <v-row class="mx-16">
-                    <v-text-field label="Email" class="mr-10"/>
-                    <v-text-field label="Phone"/>
+                    <v-text-field label="Business Email" class="mr-10"/>
+                    <v-text-field label="Company Name"/>
                 </v-row>
 
-                <v-text-field label="Job title" class="mx-16 mb-16"/>
+                <v-text-field label="How can we help you?" class="mx-16 mb-16"/>
             </v-sheet>
             <v-sheet>
                 <div class="text-center">
@@ -41,7 +46,7 @@ export default {
 "en":{
     "title":{
 
-        "1":"Join us here"
+        "1":"Contact our sales team"
     },
     "button":{
         "1":"Click here to submit"
@@ -49,7 +54,7 @@ export default {
 },
 "fr":{
     "title":{
-        "1":"Rejoignez-nous ici"
+        "1":"Contactez notre équipe commerciale"
     },
     "button":{
         "1":"Cliquez ici pour soumettre"

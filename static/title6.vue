@@ -12,11 +12,11 @@
                     <v-text-field label="Last name"/>
                 </v-row>
                 <v-row class="mx-16">
-                    <v-text-field label="Email" class="mr-10"/>
-                    <v-text-field label="Phone"/>
+                    <v-text-field label="Business Email" class="mr-10"/>
+                    <v-text-field label="Company Name"/>
                 </v-row>
 
-                <v-text-field label="Industries" class="mx-16 mb-16"/>
+                <v-text-field label="How can we help you?" class="mx-16 mb-16"/>
             </v-sheet>
             <v-sheet>
                 <div class="text-center">
@@ -31,12 +31,6 @@
 
 <script>
 export default {
-    props: {
-        col: {
-            type: Number,
-            default: 7
-        }
-    },
     layout: "hero",
 };
 </script>
@@ -47,7 +41,7 @@ export default {
 "en":{
     "title":{
 
-        "1":"Collaborrate here"
+        "1":"Contact our sales team"
     },
     "button":{
         "1":"Click here to submit"
@@ -55,7 +49,7 @@ export default {
 },
 "fr":{
     "title":{
-        "1":"Collaborez ici"
+        "1":"Contactez notre équipe commerciale"
     },
     "button":{
         "1":"Cliquez ici pour soumettre"

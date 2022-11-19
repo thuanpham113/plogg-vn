@@ -1,18 +1,15 @@
 <template>
 	<v-sheet
-	color:="white"
-	:class="$vuetify.breakpoint.smAndDown ? 'ml-16 py-5':'d-flex align-center vh100'">
+	:class="$vuetify.breakpoint.smAndDown ? 'd-flex  flex-column   align-center':'d-flex align-center vh100'">
 		<div
 			column
-			:class=" $vuetify.breakpoint.smAndDown ? ' w-80' : 'black--text pl-16 w-50'"
+			:class=" $vuetify.breakpoint.smAndDown ? ' ' : 'black--text pl-16 w-50'"
 		>
-			<div :class="
-				[
-					'd-flex'
-					,$vuetify.breakpoint.smAndDown
-					? 'h6 font-weight-bold text-center '
-					: 'h3 font-weight-bold mt-10 flex-column'
-				]
+			<div 
+			 :class="
+				$vuetify.breakpoint.smAndDown
+				? 'h5 font-weight-bold text-center mt-8'
+				: 'h3 font-weight-bold mt-10 flex-column'
 			">
 				<div>
 					{{ $t("title.1") }}

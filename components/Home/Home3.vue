@@ -14,9 +14,9 @@
 		/>
 
 		<div :class="$vuetify.breakpoint.smAndDown ? '' : 'px-16 w-60'">
-			<div class="d-flex flex-row">
+			<div :class="$vuetify.breakpoint.smAndDown ? 'justify-center d-flex flex-row' : 'd-flex flex-row '">
 				<v-img
-					:class="$vuetify.breakpoint.smAndDown ? 'mt-5 ' : ''"
+					:class="$vuetify.breakpoint.smAndDown ? 'mt-5 ml-1 ' : ''"
 					max-height="70"
 					max-width="70"
 					contain
