@@ -8,7 +8,7 @@
 			<div 
 			 :class="
 				$vuetify.breakpoint.smAndDown
-				? 'h5 font-weight-bold text-center mt-8'
+				? 'h5 font-weight-bold text-center mt-8 '
 				: 'h3 font-weight-bold mt-10 flex-column'
 			">
 				<div>
@@ -18,7 +18,7 @@
 			</div>
 			<div :class="
 				$vuetify.breakpoint.smAndDown
-				? 'py-6 text-center'
+				? 'py-6 text-center mx-2'
 				: 'h6 mb-11 my-5'
 			">
 				{{ $t("title.2") }}

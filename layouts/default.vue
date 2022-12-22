@@ -1,7 +1,7 @@
 <template>
-	<v-app id="app" class="overflow-hidden">
+	<v-app id="app" class="overflow-auto">
 		<v-app-bar
-			:elevation="scrolled ? '10' : ''"
+			:elevation="scrolled ? '60' : ''"
 			:color="scrolled ? 'white' : 'transparent'"
 			app
 			flat
@@ -48,9 +48,9 @@
 		<v-navigation-drawer
 			v-model="drawer"
 			color="white"
-			class=""
-			absolute
-			temporary
+			fixed
+			right	
+			overflow-hidden
 		>
 		<v-card height="80" flat color="transparent"></v-card>
 			<v-layout column>
@@ -61,18 +61,19 @@
 					:href="list.link"
 					:to="localePath(list.link)"
 					text
-					height="9vh"
-				>
-					<div class="4">
+					height="8vh"
+				>	
+					<div class=" font-weight-bold">
 						{{ list.title }}
 					</div>
 				</v-btn>
 				<kq-button-locale
 					height="10vh"
-					color="deep-purple grey"
+					color=" grey"
 				/>
 			</v-layout>
 		</v-navigation-drawer>
+		
 		<v-main v-if="$vuetify.breakpoint.smAndDown">
 			<v-container fluid class="pa-0" max-height="600">
 				<Nuxt />
@@ -98,7 +99,7 @@
 						"
 					>
 						<v-row v-for="(text, index) in texts" :key="index">
-							<div class="black--text font-weight-bold h7">
+							<div class="black--text font-weight-bold h6">
 								{{ text.title2 }}
 							</div>
 								<v-img
@@ -154,7 +155,7 @@ export default {
 			},
 			{
 				title: "Our services",
-				link: "/Our services",
+				link: "/OurServices",
 			},
 			{
 				title: "Careers",
@@ -223,6 +224,7 @@ export default {
 	z-index: 100	
 }
 </style>
+
 
 <i18n>
 {

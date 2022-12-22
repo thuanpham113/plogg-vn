@@ -52,7 +52,8 @@
 			>
 				{{ $t("title.2") }}
 			</div>
-			<div class="d-flex justify-center w-100 pt-5">
+			<div class="d-flex justify-center  pt-5"
+			:class="$vuetify.breakpoint.smAndDown ? '' : 'w-70'">
 				<v-hover class="" v-slot="{ hover }">
 					<v-btn
 						:class="
@@ -62,7 +63,7 @@
 						"
 						:color="hover ? 'grey darken-1' : 'cyan lighten-3'"
 						:height="$vuetify.breakpoint.smAndDown ? '45' : '55'"
-						:to="localePath(`/Build word`)"
+						:to="localePath(`/BuildWord`)"
 					>
 						<div class="font-weight-black h7">
 							{{ $t("button.1") }}

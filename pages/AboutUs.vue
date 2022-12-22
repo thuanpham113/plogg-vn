@@ -1,32 +1,39 @@
 <template>
     <v-sheet>
-        <v-card :height="$vuetify.breakpoint.smAndDown ? '' : '80 '" flat color="transparent"></v-card>
+        <v-card flat color="transparent" :height="$vuetify.breakpoint.smAndDown ? '' : '80 '" ></v-card>
         <v-layout :class="$vuetify.breakpoint.smAndDown ? '' : 'py-5 mx-15'">
             <template>
-                <div :class="$vuetify.breakpoint.smAndDown ? 'mx-8 ' : 'black--text '">
-
-                    <v-col :cols="$vuetify.breakpoint.smAndDown ? ' ' : '9'">
-                        <v-layout v-if="$vuetify.breakpoint.smAndDown" justify-center>
-                            <img contain aspect-ratio="1" :width="$vuetify.breakpoint.smAndDown ? ' 200' : ''" :class="$vuetify.breakpoint.smAndDown ? 'top-side justify-center' : 'left-side'
+                <div >
+                    <v-col >
+                        <v-layout justify-center v-if="$vuetify.breakpoint.smAndDown" >
+                            <img 
+                            contain 
+                            aspect-ratio="1" 
+                            :width="$vuetify.breakpoint.smAndDown ? ' 200' : ''" 
+                            :class="$vuetify.breakpoint.smAndDown ? 'top-side justify-center' : ''
                             " src="/logowe.jpg" />
                         </v-layout>
                     </v-col>
-                    <v-col  v-if="$vuetify.breakpoint.smAndUp"
-                    :cols="$vuetify.breakpoint.smAndDown ? ' ' : '9'">
-                        <img contain aspect-ratio="1" :width="$vuetify.breakpoint.smAndDown ? ' 200' : ''" :class="$vuetify.breakpoint.smAndDown ? 'top-side justify-center' : 'left-side'
-                        " src="/logowe.jpg" />
+
+                    <v-col v-if="$vuetify.breakpoint.mdAndUp"
+                          :cols="$vuetify.breakpoint.smAndDown ? ' ' : '9'">
+                        <img contain aspect-ratio="1" 
+                            :width="$vuetify.breakpoint.smAndDown ? ' 200' : ''" 
+                            :class="$vuetify.breakpoint.smAndDown ? '' : 'left-side'
+                            " src="/logowe.jpg" />
                     </v-col>
 
 
                     <div :class="$vuetify.breakpoint.smAndDown
-                    ? 'h5 text-center font-weight-bold'
-                    : 'h3 pl-10 text-wrap '">
+                            ? 'h5 text-center font-weight-bold '
+                            : 'h3 pl-10 text-wrap '">
                         {{ $t("title.1") }}
                     </div>
 
                     <div class="content">
-                        <p
-                            :class="$vuetify.breakpoint.smAndDown ? 'text-center grey--text subtitle-1' : ' h6 grey--text mt-10 ma-12'">
+                         <p
+                            :class="$vuetify.breakpoint.smAndDown ? 
+                            'text-center grey--text subtitle-1 mx-6' : ' h6 grey--text mt-10 ma-12'">
                             {{ $t("title.2") }}
                         </p>
                     </div>
@@ -37,36 +44,38 @@
 
         <v-img contain :width="$vuetify.breakpoint.smAndDown ? '100%' : '100vw'" src="/we1.jpg" />
         <v-sheet :class="$vuetify.breakpoint.smAndDown ? 'mx-5' : 'px-16'">
-
             <template>
                 <div :class="$vuetify.breakpoint.smAndDown ? 'py-9' : 'py-16 mx-10'">
                     <div
-                        :class="$vuetify.breakpoint.smAndDown ? 'h5 font-weight-bold text-center' : 'h3 front-weight-black '">
+                        :class="$vuetify.breakpoint.smAndDown ? 
+                        'h5 font-weight-bold text-center' : 'h3 front-weight-black '">
                         {{ $t("title.3") }}
                     </div>
 
-                    <div :class="$vuetify.breakpoint.smAndDown ? 'subtitle-1 grey--text text-center' : 'h6 grey--text'">
+                    <div :class="$vuetify.breakpoint.smAndDown ? 
+                        'subtitle-1 grey--text text-center' : 'h6 grey--text'">
                         {{ $t("title.4") }}
                     </div>
-
                 </div>
 
-                <v-col :class="$vuetify.breakpoint.smAndDown ? 'text-center' : 'mx-5 '">
-                    <div :class="$vuetify.breakpoint.smAndDown ? 'h5 font-weight-bold' : 'h3 front-weight-black'">
-                        {{ $t("title.5") }}
+                <v-col :class="$vuetify.breakpoint.smAndDown ? 'text-center' : 'mx-5 pb-9 '">
+                    <div :class="$vuetify.breakpoint.smAndDown ? 
+                        'h5 font-weight-bold' : 'h3 front-weight-black'">
+                            {{ $t("title.5") }}
                     </div>
                     <v-col :cols="$vuetify.breakpoint.smAndDown ? 12 : 6">
-                        <div :class="$vuetify.breakpoint.smAndDown ? 'subtitle-1 grey--text' : 'h6 grey--text'">
-                            {{ $t("title.6") }}
+                        <div :class="$vuetify.breakpoint.smAndDown ? 
+                        'subtitle-1 grey--text' : 'h6 grey--text'">
+                             {{ $t("title.6") }}
                         </div>
                     </v-col>
                 </v-col>
             </template>
 
             <template>
-                <v-sheet class="d-flex flex-column flex-md-row align-center justify-center my-5">
-                    <v-img class="" :max-width="$vuetify.breakpoint.smAndDown ? '60%' : '35%'" contain
-                        src="/about1.jpg" />
+                <v-sheet class="d-flex flex-column flex-md-row align-center justify-center my-9">
+                    <v-img  :max-width="$vuetify.breakpoint.smAndDown ? '60%' : '35%'" contain
+                        src="/service.jpg" />
 
                     <div :class="['d-flex flex-column',
                         $vuetify.breakpoint.smAndDown
@@ -76,7 +85,7 @@
                         <div :class="
                             $vuetify.breakpoint.smAndDown
                                 ? 'h5  text-center font-weight-bold'
-                                : 'h3  text-end py-4  '
+                                : 'h3  text-end   '
                         ">
                             {{ $t("title.7") }}
                         </div>
@@ -84,7 +93,7 @@
                         <div :class="
                             $vuetify.breakpoint.smAndDown
                                 ? 'mt-2  text-center grey--text'
-                                : 'h6 text-end py-2 grey--text'
+                                : 'h6 text-end pt-2 grey--text'
                         ">
                             {{ $t("title.8") }}
                         </div>
@@ -119,19 +128,18 @@
             <rely-layout-page>
                 <div :class="
                     $vuetify.breakpoint.smAndDown
-                        ? 'h5 font-weight-bold text-center'
-                        : 'h3 justify-end pl-11  '
+                        ? 'h5 font-weight-bold text-center py-9'
+                        : 'h3 justify-end pl-10  '
                 ">
                     {{ $t("title.10") }}
                 </div>
-                <v-row class="mx-16 ma-16">
+                <v-row class="justify-center">
                     <v-hover v-for="(form, index) in forms" :key="index">
                         <template v-slot:default="{ hover }">
-                            <v-card :class="$vuetify.breakpoint.smAndDown ? '' : ' mx-auto ma-12 '"
+                            <v-card 
+                                :class="$vuetify.breakpoint.smAndDown ? '' : ' mx-auto ma-12 '"
                                 :max-width="$vuetify.breakpoint.smAndDown ? '' : '400'">
-                                <v-img contains height="300px" width="400px" :src="form.imgs">
-                                </v-img>
-
+                                <v-img contains height="300px" width="400px" :src="form.imgs"/>
                                 <v-card-text class="text-center font-weight-bold">
                                     <h2 class="text-h5 black--text">
                                         {{ form.text1 }}
@@ -249,9 +257,9 @@ export default {
        "en": {
            "title":{
                "1" : "Who are we?",
-               "2" : "We are Plogg Vietnam - a part of Plogg Ca. We established in 2022. Plogg Vietnam is anInternational Technology Service Company which located in Vietnam. We provides many professional IT services to support from small business to large coroperation. Plogg Vietnam is specialised in developing website, software, and designing 3D. We also provide many more services related to IT to help our customers reach the pinnacle of glory.",
+               "2" : "We are Plogg Vietnam - a branch of Plogg Ca. , established in 2022. Plogg Vietnam is  an International Technology Service Company that provides many professional IT services to support both small business and large coorperations. Plogg Vietnam is specialised in developing websites, softwares, and 3D designs. We are also a one-stop shop that offer a variery of other IT-related services to meet our customers’ needs. ",
                "3" : "We are Plogg Team!",
-               "4" : "We are always working to bring you the most suitable software solutions.We always believe that a successful product must help customers solve current problems, and further, contribute to the development of their businesses. Useful products, satisfied customers, growing businesses, are our service roadmap.",
+               "4" : "We are relentlessly working to bring you the most suitable software solutions. We always believe that a successful product will not only solve the customers’ initial concerns but also contributes to the advancement of their businesses. Functional products, satisfied customers, and flourishing businesses are our company’s missions and ideals. ",
                "5" : "Our mission",
                "6" : "We bring the most professional IT services to support businesses meet their success by creating the optional solution and providing high-quality technology to exceed customers' expectation. ",
                "7":"Our vision",

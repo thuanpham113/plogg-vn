@@ -36,8 +36,8 @@
 					$vuetify.breakpoint.smAndDown
 						? 'rounded-lg white--text'
 						: 'rounded-lg black--text'
-				" :color="hover ? 'pink' : 'cyan lighten-3'" :height="$vuetify.breakpoint.smAndDown ? '30' : '35'"
-					:to="localePath(`/Collaborate here`)">
+				" :color="hover ? 'pink' : 'cyan lighten-3'" :height="$vuetify.breakpoint.smAndDown ? '30' : '50'"
+					:to="localePath(`/Collaborate`)">
 					<div>{{ $t("button") }}</div>
 				</v-btn>
 			</v-hover>

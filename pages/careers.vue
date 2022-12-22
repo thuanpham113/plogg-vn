@@ -2,7 +2,8 @@
 	<v-sheet>
 		<template>
 			<v-img max-height="800" src="/imgtext.jpg">
-				<div :class="$vuetify.breakpoint.smAndDown ? 'mx-5 py-5' : 'py-16 ma-14'">
+				<v-card :height=" $vuetify.breakpoint.smAndDown ? '' : '90' " flat color="transparent"></v-card>
+				<div :class="$vuetify.breakpoint.smAndDown ? 'mx-5 py-5' : 'pt-16  ma-14'">
 					<v-card-title :class="$vuetify.breakpoint.smAndDown ? 'justify-center' : 'justify-start'">
 						<div :class="$vuetify.breakpoint.smAndDown
 						? 'h6 font-weight-bold text-center '
@@ -21,12 +22,12 @@
 				</div>
 			</v-img>
 		</template>
-		<v-sheet class="px-16">
+		<v-sheet class="px-16 ">
 
 			<template>
 				<div :class="$vuetify.breakpoint.smAndDown ? 'mx-5 py-5' : 'mx-10'">
 					<div :class="$vuetify.breakpoint.smAndDown 
-					? 'h6 text-center font-weight-bold' : 'h4  font-weight-bold pl-2 py-10'">
+					? 'h6 text-center font-weight-bold' : 'h4  font-weight-bold pl-2 py-9'">
 						{{ $t("title.3") }}
 					</div>
 					<v-sheet class=" black--text">
@@ -80,7 +81,7 @@
 						? 'rounded-lg white--text'
 						: 'rounded-lg white--text'
 				" :color="hover ? 'grey darken-1' : 'cyan lighten-3'" :height="$vuetify.breakpoint.smAndDown ? '45' : '55'"
-					:to="localePath(`/sales team`)">
+					:to="localePath(`/SalesTeam`)">
 					<div class="font-weight-black h7">{{ $t("button") }}</div>
 				</v-btn>
 			</v-hover>

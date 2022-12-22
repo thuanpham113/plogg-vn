@@ -1,24 +1,24 @@
 <template>
 	<v-layout column>
-		<v-card :height=" $vuetify.breakpoint.smAndDown ? '' : '80' " flat color="transparent"></v-card>
+		<v-card :height="$vuetify.breakpoint.smAndDown ? '' : '80'" flat color="transparent"></v-card>
 		<template>
-			
+
 			<v-sheet class="d-flex flex-column flex-md-row align-center  ">
 				<v-sheet
 					:class="['d-flex flex-row-reverse my-16', $vuetify.breakpoint.smAndDown ? 'mt-5' : 'd-column-reverse align-center justify-end']">
 					<div class=" px-16 d-flex flex-column">
-						<div  :class="$vuetify.breakpoint.smAndDown ? 'justify-center d-flex flex-row' : 'd-flex flex-row '">
+						<div
+							:class="$vuetify.breakpoint.smAndDown ? 'justify-center d-flex flex-row' : 'd-flex flex-row '">
 							<v-img :class="$vuetify.breakpoint.smAndDown ? 'mt-5' : ''" max-height="70" max-width="70"
 								contain src="/3ddd.jpg" />
-						
-							<div class="grey--text "
-							:class="
-							$vuetify.breakpoint.smAndDown
-								? 'h6  font-weight-bold text-center mt-11 '
-								: 'h6 font-weight-bold py-4'
-						">
+
+							<div class="grey--text font-weight-bold " :class="
+								$vuetify.breakpoint.smAndDown
+									? 'h6 text-center mt-11 '
+									: 'h6  py-4'
+							">
 								3D graphic design
-						</div>
+							</div>
 						</div>
 
 						<div :class="
@@ -29,61 +29,66 @@
 							{{ $t("title.1") }}
 						</div>
 
-						<div :class=" $vuetify.breakpoint.smAndDown ? 'mt-2  text-center' : 'h6 py-2' ">
+						<div :class="$vuetify.breakpoint.smAndDown ? 'mt-2  text-center' : 'h6 py-2'">
 							{{ $t("title.2") }}
 						</div>
 						<div
 							:class="$vuetify.breakpoint.smAndDown ? 'd-flex justify-center py-6' : 'd-flex justify-start w-100 pt-5'">
-							<v-hover class="" v-slot="{ hover }">
-								<v-btn 
-								:class="$vuetify.breakpoint.smAndDown ? 'rounded-lg white--text' : 'rounded-lg white--text'"
-			 					:color="hover ? 'grey darken-1' : 'cyan lighten-3'" :height="$vuetify.breakpoint.smAndDown ? '45' : '55'">
-								<div class="font-weight-black h7">{{ $t("button.2") }}</div>
+							<v-hover v-slot="{ hover }">
+								<v-btn
+									:class="$vuetify.breakpoint.smAndDown ? 'rounded-lg white--text' : 'rounded-lg white--text'"
+									:color="hover ? 'grey darken-1' : 'cyan lighten-3'"
+									:height="$vuetify.breakpoint.smAndDown ? '45' : '55'">
+									<div class="font-weight-black h7">{{ $t("button") }}</div>
 								</v-btn>
 							</v-hover>
 						</div>
 					</div>
 				</v-sheet>
 
-				<v-col :cols="$vuetify.breakpoint.smAndDown ? '' : '6'">
+				<v-col md="6">
 					<v-img calss="" aspect-ratio="2" src="/Build1.jpg"> </v-img>
 				</v-col>
 			</v-sheet>
 		</template>
-<template>
-		<v-card-title class="justify-center">
-			<div :class=" $vuetify.breakpoint.smAndDown ? 'h6 font-weight-bold text-center mx-7 py-1' : 'h5   font-weight-bold font-weight-medium' ">
-				{{ $t("title.3") }}
-			</div>
-		</v-card-title>
-		<div class="justify-center">
-			<div 
-			:class=" $vuetify.breakpoint.smAndDown ? 'subtile-1 text-center  pa-5 py-1' : 'h6 text-center grey--text ma-16'">			
-				{{ $t("title.4") }}
-			</div>
-		</div>
-	</template>
-
-
-
-	<v-sheet>
-			<div :class=" $vuetify.breakpoint.smAndDown ? 'h6 text-center font-weight-bold py-12' : ' h5 font-weight-bold  text-center'" >{{ $t("title.5") }}</div>
-	
-		<v-layout :class=" $vuetify.breakpoint.smAndDown ? 'd-flex flex-column' : 'py-12 '" style="max-width: 90%" mx-16 >
-			<v-col :cols=" $vuetify.breakpoint.smAndDown ? '12' : ' 6'" >
-
-				<v-img aspect-ratio="1" src="/Build2.jpg" />
-			</v-col>
-			<v-col :class=" $vuetify.breakpoint.smAndDown ? '' : ' justify-center ma-16 py-14 '"  >
-				<div :class=" $vuetify.breakpoint.smAndDown ? 'h6 cyan--text  font-weight-bold text-center mt-16' : ' h5 cyan--text  font-weight-bold text-center mt-16 '">
-					{{ $t("title.6") }}
+		<template>
+			<v-card-title class="justify-center font-weight-bold">
+				<div :class="$vuetify.breakpoint.smAndDown ? 'h6 text-center mx-7 py-1' : 'h5'">
+					{{ $t("title.3") }}
 				</div>
-				<div :class=" $vuetify.breakpoint.smAndDown ? 'subtile-1 text-center grey--text py-5' : ' h6 text-center grey--text py-5 '">
-					{{ $t("title.7") }}
+			</v-card-title>
+			<div class=" justify-center text-center grey--text">
+				<div :class="$vuetify.breakpoint.smAndDown ? 'subtile-1 pa-5 py-1' : 'h6   ma-16'">
+					{{ $t("title.4") }}
 				</div>
-			</v-col>
-		</v-layout>
-	</v-sheet>
+			</div>
+		</template>
+
+
+
+		<v-sheet>
+			<div
+				:class="$vuetify.breakpoint.smAndDown ? 'h6 text-center font-weight-bold py-12' : ' h5 font-weight-bold  text-center'">
+				{{ $t("title.5") }}</div>
+
+			<v-layout :class="$vuetify.breakpoint.smAndDown ? 'd-flex flex-column' : 'py-12 '" style="max-width: 90%"
+				mx-16>
+				<v-col :cols="$vuetify.breakpoint.smAndDown ? '12' : ' 6'">
+
+					<v-img aspect-ratio="1" src="/Build2.jpg" />
+				</v-col>
+				<v-col :class="$vuetify.breakpoint.smAndDown ? '' : ' justify-center ma-16 py-14 '">
+					<div
+						:class="$vuetify.breakpoint.smAndDown ? 'h6 cyan--text  font-weight-bold text-center mt-16' : ' h5 cyan--text  font-weight-bold text-center mt-16 '">
+						{{ $t("title.6") }}
+					</div>
+					<div
+						:class="$vuetify.breakpoint.smAndDown ? 'subtile-1 text-center grey--text py-5' : ' h6 text-center grey--text py-5 '">
+						{{ $t("title.7") }}
+					</div>
+				</v-col>
+			</v-layout>
+		</v-sheet>
 	</v-layout>
 </template>
 
@@ -109,9 +114,7 @@ export default {
 			"6" : "Synode Interactive 3D Assembly Instructions",
 			"7" : "Synode helps you display step-by-step 3D instructions to your clients directly on your website and/or our app"
         },
-        "button":{
-        	"2" : "Contact us"
-        },
+        "button":"Contact us",
 		"icon":{
 			"1" : "3D graphic design"
 		}
