@@ -42,8 +42,7 @@
 			</div>
 		</div>
 		
-		<v-img contain class="mx-2" aspect-ratio="1" :width="$vuetify.breakpoint.smAndDown ? '70%' : '40%'"
-			src="logo 2.png"/>
+		<v-img contain class="mr-15 pa-0" aspect-ratio="1" :width="$vuetify.breakpoint.smAndDown ? '70%' : '40%'" src="logo 2.png"/>
 		
 	
 	</v-sheet>

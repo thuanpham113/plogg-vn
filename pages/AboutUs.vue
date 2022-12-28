@@ -9,14 +9,14 @@
                             <img 
                             contain 
                             aspect-ratio="1" 
-                            :width="$vuetify.breakpoint.smAndDown ? ' 200' : ''" 
+                            :width="$vuetify.breakpoint.smAndDown ? '200' : ''" 
                             :class="$vuetify.breakpoint.smAndDown ? 'top-side justify-center' : ''
                             " src="/logowe.jpg" />
                         </v-layout>
                     </v-col>
 
                     <v-col v-if="$vuetify.breakpoint.mdAndUp"
-                          :cols="$vuetify.breakpoint.smAndDown ? ' ' : '9'">
+                          md="9">
                         <img contain aspect-ratio="1" 
                             :width="$vuetify.breakpoint.smAndDown ? ' 200' : ''" 
                             :class="$vuetify.breakpoint.smAndDown ? '' : 'left-side'
@@ -133,7 +133,7 @@
                 ">
                     {{ $t("title.10") }}
                 </div>
-                <v-row class="justify-center">
+                <v-row classgit="justify-center">
                     <v-hover v-for="(form, index) in forms" :key="index">
                         <template v-slot:default="{ hover }">
                             <v-card 
@@ -171,9 +171,9 @@ export default {
                 text2: "CEO",
             },
             {
-                imgs: "/avt2.jpg",
+                imgs: "/AI/Phạm Nguyễn Thuận.png",
                 text1: "Mr. Thuan Pham",
-                text2: "Excutive Director",
+                text2: "Executive Director",
             },
             {
                 imgs: "/avt3.jpg",
@@ -181,7 +181,7 @@ export default {
                 text2: "Software Development Directors",
             },
             {
-                imgs: "/avt4.jpg",
+                imgs: "/AI/Hà Tuấn Kiệt.png",
                 text1: "Mr. Kiet Ha ",
                 text2: "Software Development Directors",
             },
@@ -191,7 +191,7 @@ export default {
                 text2: "Software Development Directors",
             },
             {
-                imgs: "/avt4.jpg",
+                imgs: "/AI/Hà Tuấn Kiệt.png",
                 text1: "Mr. Kiet Ha ",
                 text2: "Software Development Directors",
             },
@@ -201,7 +201,7 @@ export default {
                 text2: "Software Development Directors",
             },
             {
-                imgs: "/avt4.jpg",
+                imgs: "/AI/Hà Tuấn Kiệt.png",
                 text1: "Mr. Kiet Ha ",
                 text2: "Software Development Directors",
             },
@@ -266,7 +266,11 @@ export default {
                 "8":"Plogg Vietnam aims to become one of the highest quality IT service providers in the world. In the next 5 years, we will extend our outsourcing to leading countries such as UK, USA, Australia, New Zealand, Singapore, etc. And Plogg Vietnam will become a leading prestigious and reliable partner in the IT service fields all over the world.",
                "9" : "Our achievements",
                "10" : "Our members"
-               }
+               },
+            "position" : {
+                "1": "Executive Director"
+            }
+
        },
        "fr": {
            "title":{
@@ -280,7 +284,11 @@ export default {
                "8":"Plogg Vietnam vise à devenir l'un des fournisseurs de services informatiques de la plus haute qualité au monde. Au cours des 5 prochaines années, nous étendrons notre externalisation à des pays leaders tels que le Royaume-Uni, les États-Unis, l'Australie, la Nouvelle-Zélande, Singapour, etc. Et Plogg Vietnam deviendra un partenaire prestigieux et fiable dans les domaines des services informatiques dans le monde entier.",
                "9" : "Nos réalisations",
                "10" : "Nos membres"
-               }
+               },
+            "position" : {
+                "1": "Directeur exécutif"
+                
+            }
        }
 
     }
