@@ -9,14 +9,14 @@
                             <img 
                             contain 
                             aspect-ratio="1" 
-                            :width="$vuetify.breakpoint.smAndDown ? ' 200' : ''" 
+                            :width="$vuetify.breakpoint.smAndDown ? '200' : ''" 
                             :class="$vuetify.breakpoint.smAndDown ? 'top-side justify-center' : ''
                             " src="/logowe.jpg" />
                         </v-layout>
                     </v-col>
 
                     <v-col v-if="$vuetify.breakpoint.mdAndUp"
-                          :cols="$vuetify.breakpoint.smAndDown ? ' ' : '9'">
+                          md="9">
                         <img contain aspect-ratio="1" 
                             :width="$vuetify.breakpoint.smAndDown ? ' 200' : ''" 
                             :class="$vuetify.breakpoint.smAndDown ? '' : 'left-side'
@@ -30,10 +30,9 @@
                         {{ $t("title.1") }}
                     </div>
 
-                    <div class="content">
+                    <div class="content mx-lg-6">
                          <p
-                            :class="$vuetify.breakpoint.smAndDown ? 
-                            'text-center grey--text subtitle-1 mx-6' : ' h6 grey--text mt-10 ma-12'">
+                            >
                             {{ $t("title.2") }}
                         </p>
                     </div>
@@ -120,10 +119,6 @@
                     </v-slide-group>
                 </v-sheet>
             </template>
-       
-
-
-
         <template>
             <rely-layout-page>
                 <div :class="
@@ -133,12 +128,13 @@
                 ">
                     {{ $t("title.10") }}
                 </div>
-                <v-row class="justify-center">
+                <v-row classgit="justify-center">
                     <v-hover v-for="(form, index) in forms" :key="index">
-                        <template v-slot:default="{ hover }">
-                            <v-card 
+                        <template #default="{ hover }" >
+                            <v-card
                                 :class="$vuetify.breakpoint.smAndDown ? '' : ' mx-auto ma-12 '"
-                                :max-width="$vuetify.breakpoint.smAndDown ? '' : '400'">
+                                :max-width="$vuetify.breakpoint.smAndDown ? '' : '400'"
+                                class="rounded-xl">
                                 <v-img contains height="300px" width="400px" :src="form.imgs"/>
                                 <v-card-text class="text-center font-weight-bold">
                                     <h2 class="text-h5 black--text">
@@ -166,14 +162,14 @@ export default {
     data: () => ({
         forms: [
             {
-                imgs: "/avt1.jpg",
+                imgs: "/AI/Lê Đức Anh.png",
                 text1: "Mr. Le Duc Anh ",
                 text2: "CEO",
             },
             {
-                imgs: "/avt2.jpg",
+                imgs: "/AI/Phạm Nguyễn Thuận.png",
                 text1: "Mr. Thuan Pham",
-                text2: "Excutive Director",
+                text2: "Executive Director",
             },
             {
                 imgs: "/avt3.jpg",
@@ -181,28 +177,63 @@ export default {
                 text2: "Software Development Directors",
             },
             {
-                imgs: "/avt4.jpg",
+                imgs: "/AI/Hà Tuấn Kiệt.png",
                 text1: "Mr. Kiet Ha ",
                 text2: "Software Development Directors",
             },
             {
-                imgs: "/avt3.jpg",
-                text1: "Mr. Duy Minh",
+                imgs: "/AI/Duy Quang.png",
+                text1: "Mr. Quang Duy",
                 text2: "Software Development Directors",
             },
             {
-                imgs: "/avt4.jpg",
+                imgs: "/AI/Hà Tuấn Kiệt.png",
                 text1: "Mr. Kiet Ha ",
                 text2: "Software Development Directors",
             },
             {
-                imgs: "/avt3.jpg",
-                text1: "Mr. Duy Minh",
+                imgs: "/AI/Đỗ Duy Khang.png",
+                text1: "Mr. Khang Do",
                 text2: "Software Development Directors",
             },
             {
-                imgs: "/avt4.jpg",
+                imgs: "/AI/Hà Tuấn Kiệt.png",
                 text1: "Mr. Kiet Ha ",
+                text2: "Software Development Directors",
+            },
+            {
+                imgs: "/AI/Đỗ Đăng Trình.png",
+                text1: "Mr. Trinh Do",
+                text2: "Software Development Directors",
+            },
+            {
+                imgs: "/AI/Dương Bảo Nam.png",
+                text1: "Mr. Nam Duong",
+                text2: "Software Development Directors",
+            },
+            {
+                imgs: "/AI/Tấn Đạt Lê.png",
+                text1: "Mr. Dat Le",
+                text2: "Software Development Directors",
+            },
+            {
+                imgs: "/AI/Thanh Sơn.png",
+                text1: "Mr. Son Thanh",
+                text2: "Software Development Directors",
+            },
+            {
+                imgs: "/AI/Trần Nguyễn Nhật Quang.png",
+                text1: "Mr. Quang Tran",
+                text2: "Software Development Directors",
+            },
+            {
+                imgs: "/AI/Nguyễn Quốc Hoàng Anh.png",
+                text1: "Mr. Anh Nguyen ",
+                text2: "Software Development Directors",
+            },
+            {
+                imgs: "/AI/Phạm Thanh Thảo.png",
+                text1: "Mr. Thao Pham ",
                 text2: "Software Development Directors",
             },
         ],
@@ -248,9 +279,6 @@ export default {
     height: 50%;
 }
 
-.content img {
-    // max-width: 30%;
-}
 </style>
 <i18n>
    {
@@ -266,7 +294,11 @@ export default {
                 "8":"Plogg Vietnam aims to become one of the highest quality IT service providers in the world. In the next 5 years, we will extend our outsourcing to leading countries such as UK, USA, Australia, New Zealand, Singapore, etc. And Plogg Vietnam will become a leading prestigious and reliable partner in the IT service fields all over the world.",
                "9" : "Our achievements",
                "10" : "Our members"
-               }
+               },
+            "position" : {
+                "1": "Executive Director"
+            }
+
        },
        "fr": {
            "title":{
@@ -280,7 +312,11 @@ export default {
                "8":"Plogg Vietnam vise à devenir l'un des fournisseurs de services informatiques de la plus haute qualité au monde. Au cours des 5 prochaines années, nous étendrons notre externalisation à des pays leaders tels que le Royaume-Uni, les États-Unis, l'Australie, la Nouvelle-Zélande, Singapour, etc. Et Plogg Vietnam deviendra un partenaire prestigieux et fiable dans les domaines des services informatiques dans le monde entier.",
                "9" : "Nos réalisations",
                "10" : "Nos membres"
-               }
+               },
+            "position" : {
+                "1": "Directeur exécutif"
+                
+            }
        }
 
     }
