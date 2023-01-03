@@ -4,7 +4,7 @@
         <v-layout :class="$vuetify.breakpoint.smAndDown ? '' : 'py-5 mx-15'">
             <template>
                 <div >
-                    <v-col >
+                    <!-- <v-col >
                         <v-layout justify-center v-if="$vuetify.breakpoint.smAndDown" >
                             <img 
                             contain 
@@ -13,25 +13,26 @@
                             :class="$vuetify.breakpoint.smAndDown ? 'top-side justify-center' : ''
                             " src="/logowe.jpg" />
                         </v-layout>
-                    </v-col>
+                    </v-col> -->
 
-                    <v-col v-if="$vuetify.breakpoint.mdAndUp"
-                          md="9">
-                        <img contain aspect-ratio="1" 
-                            :width="$vuetify.breakpoint.smAndDown ? ' 200' : ''" 
-                            :class="$vuetify.breakpoint.smAndDown ? '' : 'left-side'
-                            " src="/logowe.jpg" />
-                    </v-col>
-
-
-                    <div :class="$vuetify.breakpoint.smAndDown
-                            ? 'h5 text-center font-weight-bold '
-                            : 'h3 pl-10 text-wrap '">
-                        {{ $t("title.1") }}
-                    </div>
-
+                    <v-layout>
+                        <v-col v-if="$vuetify.breakpoint.mdAndUp"
+                              md="9">
+                            <img contain aspect-ratio="1" 
+                                :width="$vuetify.breakpoint.smAndDown ? '200' : ''" 
+                                :class="$vuetify.breakpoint.smAndDown ? '' : 'left-side'"
+                                src="/logowe.jpg" />
+                        </v-col>
+    
+                        <div :class="$vuetify.breakpoint.smAndDown
+                                ? 'h5 text-center font-weight-bold '
+                                : 'h3 pl-10 text-wrap '">
+                            {{ $t("title.1") }}
+                        </div>
+                    </v-layout>
+                    
                     <div class="content mx-lg-6">
-                         <p
+                         <p class="text-h5"
                             >
                             {{ $t("title.2") }}
                         </p>
