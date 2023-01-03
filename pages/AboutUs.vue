@@ -15,25 +15,25 @@
                         </v-layout>
                     </v-col> -->
 
-                    <v-layout>
-                        <v-col v-if="$vuetify.breakpoint.mdAndUp"
-                              md="9">
-                            <img contain aspect-ratio="1" 
-                                :width="$vuetify.breakpoint.smAndDown ? '200' : ''" 
-                                :class="$vuetify.breakpoint.smAndDown ? '' : 'left-side'"
-                                src="/logowe.jpg" />
-                        </v-col>
-    
-                        <div :class="$vuetify.breakpoint.smAndDown
-                                ? 'h5 text-center font-weight-bold '
-                                : 'h3 pl-10 text-wrap '">
-                            {{ $t("title.1") }}
-                        </div>
-                    </v-layout>
-                    
-                    <div class="content mx-lg-6">
-                         <p class="text-h5"
-                            >
+                    <v-col v-if="$vuetify.breakpoint.mdAndUp"
+                          :cols="$vuetify.breakpoint.smAndDown ? ' ' : '9'">
+                        <img contain aspect-ratio="1" 
+                            :width="$vuetify.breakpoint.smAndDown ? ' 200' : ''" 
+                            :class="$vuetify.breakpoint.smAndDown ? '' : 'left-side'
+                            " src="/logowe.jpg" />
+                    </v-col>
+
+
+                    <div :class="$vuetify.breakpoint.smAndDown
+                            ? 'h5 text-center font-weight-bold '
+                            : 'h3 pl-10 text-wrap '">
+                        {{ $t("title.1") }}
+                    </div>
+
+                    <div class="content">
+                         <p
+                            :class="$vuetify.breakpoint.smAndDown ? 
+                            'text-center grey--text subtitle-1 mx-6' : ' h6 grey--text mt-10 ma-12'">
                             {{ $t("title.2") }}
                         </p>
                     </div>
@@ -280,6 +280,9 @@ export default {
     height: 50%;
 }
 
+.content img {
+    // max-width: 30%;
+}
 </style>
 <i18n>
    {

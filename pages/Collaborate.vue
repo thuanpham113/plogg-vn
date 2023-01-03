@@ -1,70 +1,4 @@
 <template>
-<<<<<<< Updated upstream
-	<v-layout column align-center class="py-16">
-		<v-col cols="7" class="my-16">
-			<v-layout justify-center>
-				<div class="font-weight-bold text-h2 mb-16">
-					{{ $t("title") }}
-				</div>
-			</v-layout>
-			<v-sheet>
-				<v-row class="mx-16">
-					<v-text-field
-					 class="mr-10"
-					 :label="$t('first')" 
-					 :rules="[rules.required]"
-					 />
-					<v-text-field 
-					:label="$t('last')"
-					:rules="[rules.required]"
-					/>
-				</v-row>
-				<v-row class="mx-16">
-					<v-text-field 
-					class="mr-10"
-					:label="$t('email')"
-					:rules="[rules.required, rules.email]"
-					
-					/>
-					<v-text-field 
-					class="mt-2"
-					:label="$t('phone')"
-					:rules="[rules.required]"
-					/>
-				</v-row>
-					<v-text-field 
-					class="mx-16 mt-2"
-					:label="$t('Company name')"
-					:rules="[rules.required]"
-					/>
-				<v-autocomplete
-					class="mx-16"
-					ref="selected"
-					v-model="selected"
-					:items="orderStatuses"
-					:rules="[() => !!selected || 'This field is required']"
-					label="Industry"
-					placeholder="Select..."
-					item-text="label"
-					item-value="value"
-				></v-autocomplete>
-				
-			</v-sheet>
-			 <v-sheet>
-                <div class="text-center">
-                    <v-btn 
-                        color="black" 
-                        class="white--text" 
-                        rounded-lg
-                        :loading="loading"
-                        @click="buttonClick()">
-                        {{ $t("button") }}
-                    </v-btn>
-                </div>
-            </v-sheet>
-		</v-col>
-	</v-layout>
-=======
   <v-layout column align-center class="py-16">
     <v-col cols="7" class="my-16">
       <v-layout justify-center>
@@ -72,7 +6,7 @@
           {{ $t("title") }}
         </div>
       </v-layout>
-      
+
       <v-sheet>
         <v-row class="mx-16">
           <v-text-field
@@ -118,7 +52,7 @@
             class="white--text"
             rounded-lg
             :loading="loading"
-            @click="buttonClick()"          
+            @click="buttonClick()"
           >
             {{ $t("button") }}
           </v-btn>
@@ -126,64 +60,10 @@
       </v-sheet>
     </v-col>
   </v-layout>
->>>>>>> Stashed changes
 </template>
 
 <script>
-
 export default {
-<<<<<<< Updated upstream
-	data () {
-		return {
-			loader: null,
-        	loading: false,
-			orderStatuses: [
-				{
-					label: this.$t("orderStatuses.healthcare"),
-					value: "healthcare"
-				},
-				{
-					label: this.$t("orderStatuses.retail"),
-					value: "retail"
-				},
-				{
-					label: this.$t("orderStatuses.hr"),
-					value: "hr"
-				},
-				{
-					label: this.$t("orderStatuses.marketing"),
-					value: "marketing"
-				},
-				{
-					label: this.$t("orderStatuses.customer"),
-					value: "customer"
-				},
-				{
-					label: this.$t("orderStatuses.secutity"),
-					value: "secutity"
-				}
-			],
-			rules: {
-				required: value => !!value || this.$t("required"),
-				email: value => {
-				const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-				return pattern.test(value) || 'Invalid e-mail.'
-         		 },
-			},	
-		}
-	},
-	methods: {
-				buttonClick() {
-				this.loading = true
-				const timeout = setTimeout(() => {
-				this.loading = false
-				clearTimeout(timeout)
-			}, 3000)
-		}
-    }    
-}
-
-=======
   data() {
     return {
       loader: null,
@@ -214,32 +94,64 @@ export default {
           value: "secutity",
         },
       ],
+
+      data() {
+        return {
+          loader: null,
+          loading: false,
+          orderStatuses: [
+            {
+              label: this.$t("orderStatuses.healthcare"),
+              value: "healthcare",
+            },
+            {
+              label: this.$t("orderStatuses.retail"),
+              value: "retail",
+            },
+            {
+              label: this.$t("orderStatuses.hr"),
+              value: "hr",
+            },
+            {
+              label: this.$t("orderStatuses.marketing"),
+              value: "marketing",
+            },
+            {
+              label: this.$t("orderStatuses.customer"),
+              value: "customer",
+            },
+            {
+              label: this.$t("orderStatuses.secutity"),
+              value: "secutity",
+            },
+          ],
+        };
+      },
+      methods: {
+        buttonClick() {
+          this.loading = true;
+          const timeout = setTimeout(() => {
+            this.loading = false;
+            clearTimeout(timeout);
+          }, 3000);
+        },
+        showButton() {
+          if (this.values.length != 0) {
+            return false;
+          }
+          return true;
+        },
+      },
     };
   },
-  methods: {
-    buttonClick() {
-      this.loading = true;
-      const timeout = setTimeout(() => {
-        this.loading = false;
-        clearTimeout(timeout);
-      }, 3000);
-    },
-    showButton(){
-      if(this.values.length != 0){
-        return false
-      }
-      return true
-    }
-  },
 };
->>>>>>> Stashed changes
 </script>
 
 <style>
-  .custom-loader {
-    animation: loader 1s infinite;
-    display: flex;
-  }
+.custom-loader {
+  animation: loader 1s infinite;
+  display: flex;
+}
 </style>
 
 <i18n>

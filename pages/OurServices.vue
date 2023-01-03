@@ -16,7 +16,7 @@
 					:class="$vuetify.breakpoint.smAndDown ? 'd-flex flex-column mx-16' : 'px-16 ml-16'">
 					<v-img contain aspect-ratio="1" :src="header.img1"
 						:width="$vuetify.breakpoint.smAndDown ? '100%' : '50%'" />
-					<v-col :cols="$vuetify.breakpoint.smAndDown ? '' : '8'" class="py-4 ">
+					<v-col md="8" class="py-4 ">
 						<div :class="$vuetify.breakpoint.smAndDown ? 'text-center subtitle-2' : 'h6 ma-16  py-16 '">
 							{{ header.text1s }}
 						</div>
