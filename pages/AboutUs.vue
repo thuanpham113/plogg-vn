@@ -30,10 +30,9 @@
                         {{ $t("title.1") }}
                     </div>
 
-                    <div class="content">
+                    <div class="content mx-lg-6">
                          <p
-                            :class="$vuetify.breakpoint.smAndDown ? 
-                            'text-center grey--text subtitle-1 mx-6' : ' h6 grey--text mt-10 ma-12'">
+                            >
                             {{ $t("title.2") }}
                         </p>
                     </div>
@@ -120,10 +119,6 @@
                     </v-slide-group>
                 </v-sheet>
             </template>
-       
-
-
-
         <template>
             <rely-layout-page>
                 <div :class="
@@ -135,10 +130,11 @@
                 </div>
                 <v-row classgit="justify-center">
                     <v-hover v-for="(form, index) in forms" :key="index">
-                        <template v-slot:default="{ hover }">
-                            <v-card 
+                        <template #default="{ hover }" >
+                            <v-card
                                 :class="$vuetify.breakpoint.smAndDown ? '' : ' mx-auto ma-12 '"
-                                :max-width="$vuetify.breakpoint.smAndDown ? '' : '400'">
+                                :max-width="$vuetify.breakpoint.smAndDown ? '' : '400'"
+                                class="rounded-xl">
                                 <v-img contains height="300px" width="400px" :src="form.imgs"/>
                                 <v-card-text class="text-center font-weight-bold">
                                     <h2 class="text-h5 black--text">
@@ -166,7 +162,7 @@ export default {
     data: () => ({
         forms: [
             {
-                imgs: "/avt1.jpg",
+                imgs: "/AI/Lê Đức Anh.png",
                 text1: "Mr. Le Duc Anh ",
                 text2: "CEO",
             },
@@ -186,8 +182,8 @@ export default {
                 text2: "Software Development Directors",
             },
             {
-                imgs: "/avt3.jpg",
-                text1: "Mr. Duy Minh",
+                imgs: "/AI/Duy Quang.png",
+                text1: "Mr. Quang Duy",
                 text2: "Software Development Directors",
             },
             {
@@ -196,13 +192,48 @@ export default {
                 text2: "Software Development Directors",
             },
             {
-                imgs: "/avt3.jpg",
-                text1: "Mr. Duy Minh",
+                imgs: "/AI/Đỗ Duy Khang.png",
+                text1: "Mr. Khang Do",
                 text2: "Software Development Directors",
             },
             {
                 imgs: "/AI/Hà Tuấn Kiệt.png",
                 text1: "Mr. Kiet Ha ",
+                text2: "Software Development Directors",
+            },
+            {
+                imgs: "/AI/Đỗ Đăng Trình.png",
+                text1: "Mr. Trinh Do",
+                text2: "Software Development Directors",
+            },
+            {
+                imgs: "/AI/Dương Bảo Nam.png",
+                text1: "Mr. Nam Duong",
+                text2: "Software Development Directors",
+            },
+            {
+                imgs: "/AI/Tấn Đạt Lê.png",
+                text1: "Mr. Dat Le",
+                text2: "Software Development Directors",
+            },
+            {
+                imgs: "/AI/Thanh Sơn.png",
+                text1: "Mr. Son Thanh",
+                text2: "Software Development Directors",
+            },
+            {
+                imgs: "/AI/Trần Nguyễn Nhật Quang.png",
+                text1: "Mr. Quang Tran",
+                text2: "Software Development Directors",
+            },
+            {
+                imgs: "/AI/Nguyễn Quốc Hoàng Anh.png",
+                text1: "Mr. Anh Nguyen ",
+                text2: "Software Development Directors",
+            },
+            {
+                imgs: "/AI/Phạm Thanh Thảo.png",
+                text1: "Mr. Thao Pham ",
                 text2: "Software Development Directors",
             },
         ],
