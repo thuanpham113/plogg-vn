@@ -10,6 +10,16 @@ import { TagCloud } from "../../utils/TagCloud"
 export default {
     data() {
         return {
+        headers: [
+            { imgs: "/slile1.jpg", link: "https://www.facebook.com/" },
+            { imgs: "/slile2.jpg", link: "https://www.facebook.com/" },
+            { imgs: "/slile3.jpg", link: "https://www.facebook.com/" },
+            { imgs: "/slile4.jpg", link: "https://www.facebook.com/" },
+            { imgs: "/slile5.jpg", link: "https://www.facebook.com/" },
+            { imgs: "/slile1.jpg", link: "https://www.facebook.com/" },
+            { imgs: "/slile2.jpg", link: "https://www.facebook.com/" },
+            { imgs: "/slile3.jpg", link: "https://www.stiq.com/" },
+        ],
         stacks: [
             "/slideplogg/slide.png",
             "/slideplogg/slide2.png",
@@ -53,7 +63,7 @@ export default {
     mounted(){
         const container = '.content';
         const options = {
-            radius: 500,
+            radius: 400,
             keep: false,
             maxSpeed: "fast"
         };
@@ -65,7 +75,7 @@ export default {
 
 <style scoped >
     .container {
-        display: flex;
+        display: flex;  
         justify-content: center;
     }
 </style>
