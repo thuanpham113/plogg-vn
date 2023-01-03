@@ -279,6 +279,7 @@ export default {
     height: 50%;
 }
 
+
 </style>
 <i18n>
    {
