@@ -279,9 +279,6 @@ export default {
     height: 50%;
 }
 
-.content img {
-    // max-width: 30%;
-}
 </style>
 <i18n>
    {
