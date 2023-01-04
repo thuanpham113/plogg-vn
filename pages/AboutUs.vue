@@ -1,23 +1,23 @@
 <template>
     <v-sheet>
         <v-card flat color="transparent" :height="$vuetify.breakpoint.smAndDown ? '' : '80 '" ></v-card>
-        <v-layout :class="$vuetify.breakpoint.smAndDown ? '' : 'py-5 mx-15'">
+        <v-layout class="py-md-5 mx-md-15">
             <template>
                 <div >
                     <v-col >
                         <v-layout justify-center v-if="$vuetify.breakpoint.smAndDown" >
-                            <img 
-                            contain 
-                            aspect-ratio="1" 
-                            :width="$vuetify.breakpoint.smAndDown ? '200' : ''" 
+                            <img
+                            contain
+                            aspect-ratio="1"
+                            :width="$vuetify.breakpoint.smAndDown ? '200' : ''"
                             :class="$vuetify.breakpoint.smAndDown ? 'top-side justify-center' : ''
                             " src="/logowe.jpg" />
                         </v-layout>
                     </v-col>
 
                     <v-col  md="9" v-if="$vuetify.breakpoint.mdAndUp">
-                        <img contain aspect-ratio="1" 
-                            :width="$vuetify.breakpoint.smAndDown ? ' 200' : ''" 
+                        <img contain aspect-ratio="1"
+                            :width="$vuetify.breakpoint.smAndDown ? ' 200' : ''"
                             :class="$vuetify.breakpoint.smAndDown ? '' : 'left-side'
                             " src="/logowe.jpg" />
                     </v-col>
@@ -31,7 +31,7 @@
 
                     <div class="content">
                          <p
-                            :class="$vuetify.breakpoint.smAndDown ? 
+                            :class="$vuetify.breakpoint.smAndDown ?
                             'text-center grey--text subtitle-1 mx-6' : ' h6 grey--text mt-10 ma-12'">
                             {{ $t("title.2") }}
                         </p>
@@ -42,28 +42,28 @@
 
 
         <v-img contain :width="$vuetify.breakpoint.smAndDown ? '100%' : '100vw'" src="/we1.jpg" />
-        <v-sheet :class="$vuetify.breakpoint.smAndDown ? 'mx-5' : 'px-16'">
+        <v-sheet class="mx-sm-5  px-md-16">
             <template>
-                <div :class="$vuetify.breakpoint.smAndDown ? 'py-9' : 'py-16 mx-10'">
+                <div class="py-sm-9 py-md-16 mx-md-10">
                     <div
-                        :class="$vuetify.breakpoint.smAndDown ? 
+                        :class="$vuetify.breakpoint.smAndDown ?
                         'h5 font-weight-bold text-center' : 'h3 front-weight-black '">
                         {{ $t("title.3") }}
                     </div>
 
-                    <div :class="$vuetify.breakpoint.smAndDown ? 
+                    <div :class="$vuetify.breakpoint.smAndDown ?
                         'subtitle-1 grey--text text-center' : 'h6 grey--text'">
                         {{ $t("title.4") }}
                     </div>
                 </div>
 
                 <v-col :class="$vuetify.breakpoint.smAndDown ? 'text-center' : 'mx-5 pb-9 '">
-                    <div :class="$vuetify.breakpoint.smAndDown ? 
+                    <div :class="$vuetify.breakpoint.smAndDown ?
                         'h5 font-weight-bold' : 'h3 front-weight-black'">
                             {{ $t("title.5") }}
                     </div>
                     <v-col :cols="$vuetify.breakpoint.smAndDown ? 12 : 6">
-                        <div :class="$vuetify.breakpoint.smAndDown ? 
+                        <div :class="$vuetify.breakpoint.smAndDown ?
                         'subtitle-1 grey--text' : 'h6 grey--text'">
                              {{ $t("title.6") }}
                         </div>
@@ -101,7 +101,7 @@
             </template>
 
             <template>
-                <v-sheet :class="$vuetify.breakpoint.smAndDown ? 'mx-2' : ' mx-8 pl-2 py-5'" max-width="100%">
+                <v-sheet class="mx-sm-2 mx-md-8 pl-md-2 py-md-5" max-width="100%">
                     <div :class="
                         $vuetify.breakpoint.smAndDown
                             ? 'h5 mt-2 font-weight-bold text-center'
@@ -109,7 +109,7 @@
                     ">
                         {{ $t("title.9") }}
                     </div>
-                    <v-slide-group v-model="current" :class="$vuetify.breakpoint.smAndDown ? '' : 'pa-5 mt-12'"
+                    <v-slide-group v-model="current" class="pa-md-5 mt-md-12"
                         center-active show-arrows>
                         <v-slide-item disabled v-for="(header, index) in headers" :key="index">
                             <v-card elevation="0" height="200" width="400">
@@ -132,9 +132,8 @@
                     <v-hover v-for="(form, index) in forms" :key="index">
                         <template #default="{ hover }" >
                             <v-card
-                                :class="$vuetify.breakpoint.smAndDown ? '' : ' mx-auto ma-12 '"
-                                :max-width="$vuetify.breakpoint.smAndDown ? '' : '400'"
-                                class="rounded-xl">
+                                class="mx-md-auto ma-md-12 rounded-xl"
+                                :max-width="$vuetify.breakpoint.smAndDown ? '' : '400'">
                                 <v-img contains height="300px" width="400px" :src="form.imgs"/>
                                 <v-card-text class="text-center font-weight-bold">
                                     <h2 class="text-h5 black--text">
@@ -318,7 +317,7 @@ export default {
                },
             "position" : {
                 "1": "Directeur exécutif"
-                
+
             }
        }
 
