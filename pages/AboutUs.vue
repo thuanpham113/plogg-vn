@@ -4,7 +4,7 @@
         <v-layout :class="$vuetify.breakpoint.smAndDown ? '' : 'py-5 mx-15'">
             <template>
                 <div >
-                    <!-- <v-col >
+                    <v-col >
                         <v-layout justify-center v-if="$vuetify.breakpoint.smAndDown" >
                             <img 
                             contain 
@@ -13,10 +13,9 @@
                             :class="$vuetify.breakpoint.smAndDown ? 'top-side justify-center' : ''
                             " src="/logowe.jpg" />
                         </v-layout>
-                    </v-col> -->
+                    </v-col>
 
-                    <v-col v-if="$vuetify.breakpoint.mdAndUp"
-                          :cols="$vuetify.breakpoint.smAndDown ? ' ' : '9'">
+                    <v-col  md="9" v-if="$vuetify.breakpoint.mdAndUp">
                         <img contain aspect-ratio="1" 
                             :width="$vuetify.breakpoint.smAndDown ? ' 200' : ''" 
                             :class="$vuetify.breakpoint.smAndDown ? '' : 'left-side'

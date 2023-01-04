@@ -1,23 +1,17 @@
 <template>
 	<rely-layout-page>
 		<v-card height="80" flat color="transparent"></v-card>
-		<div
-			:class="$vuetify.breakpoint.smAndDown ? ' h6 text-center font-weight-bold' : 'text-h4 text-center my-10 font-weight-bold'">
-			{{ $t("add") }}
+		<div class="text-center font-weight-bold text-sm-h6 text-md-h4 my-md-10">
+			{{ $t("title") }}
 		</div>
 
 		<v-layout class="justify-md-space-around mx-16"
 			:class="$vuetify.breakpoint.smAndDown ? 'flex-column align-center' : 'flex-wrap'"
 			:column="$vuetify.breakpoint.smAndDown">
-			<v-sheet :max-width="$vuetify.breakpoint.smAndDown ? '90%' : '40%'" v-for="(form, index) in forms"
+			<v-sheet v-for="(form, index) in forms" :max-width="$vuetify.breakpoint.smAndDown ? '90%' : '40%'"
 				:key="index">
-				<v-card rounded="xl" class="ma-5 " :color="hover ? 'grey darken-1' : ''" :class="{ 'on-hover': hover }">
-					<v-img class="pl-5" :width="
-						$vuetify.breakpoint.smAndDown
-							? '100%'
-							: '100%'
-					" :src="form.imgs">
-					</v-img>
+				<v-card rounded="xl" class="ma-5 ">
+					<v-img class="pl-5" :src="form.imgs" />
 				</v-card>
 				<v-card elevation="0" rounded="xl" class="text-center">
 					<v-card-text class="text-h6 black--text font-weight-bold" v-if="form.texts">
@@ -30,24 +24,18 @@
 			</v-sheet>
 		</v-layout>
 
-		<v-col cols="12" class="d-flex justify-center">
+		<v-col class="d-flex justify-center">
 			<v-hover v-slot="{ hover }">
-				<v-btn :class="
-					$vuetify.breakpoint.smAndDown
-						? 'rounded-lg white--text'
-						: 'rounded-lg black--text'
-				" :color="hover ? 'pink' : 'cyan lighten-3'" :height="$vuetify.breakpoint.smAndDown ? '30' : '50'"
-					:to="localePath(`/Collaborate`)">
-					<div>{{ $t("button") }}</div>
+				<v-btn 
+					class="rounded-lg white--text" 
+					:color="hover ? 'pink' : 'cyan lighten-3'"
+					:height="$vuetify.breakpoint.smAndDown ? '30' : '60'" :to="localePath(`/Collaborate`)">
+						<div>{{ $t("button") }}</div>
 				</v-btn>
 			</v-hover>
 		</v-col>
-		<v-col cols="12" class="grey--text d-flex justify-center">
-			<div :class="
-				$vuetify.breakpoint.smAndDown
-					? ' text-center'
-					: 'subtitle-1'
-			">
+		<v-col class="grey--text d-flex justify-center">
+			<div class="text-subtitle-1">
 				{{ $t("text") }}
 			</div>
 		</v-col>
@@ -62,37 +50,37 @@ export default {
 			forms: [
 				{
 					key: this.$t("form1.banking"),
-					imgs: "/bank1.jpg",
+					imgs: "/Industries/bank1.jpg",
 					texts: this.$t("form1.banking"),
 					text1: this.$t("form1.text1s"),
 				},
 				{
 					key: this.$t("form2.healthcare"),
-					imgs: "/bank4.jpg",
+					imgs: "/Industries/bank4.jpg",
 					texts: this.$t("form2.healthcare"),
 					text1: this.$t("form2.text1s"),
 				},
 				{
 					key: this.$t("form1.retail"),
-					imgs: "/bank2.jpg",
+					imgs: "/Industries/bank2.jpg",
 					texts: this.$t("form1.retail"),
 					text1: this.$t("form1.text2s"),
 				},
 				{
 					key: this.$t("form2.marketing"),
-					imgs: "/bank5.jpg",
+					imgs: "/Industries/bank5.jpg",
 					texts: this.$t("form2.marketing"),
 					text1: this.$t("form2.text2s"),
 				},
 				{
 					key: this.$t("form1.human"),
-					imgs: "/bank3.jpg",
+					imgs: "/Industries/bank3.jpg",
 					texts: this.$t("form1.human"),
 					text1: this.$t("form1.text3s"),
 				},
 				{
 					key: this.$t("form2.customer"),
-					imgs: "/bank6.jpg",
+					imgs: "/Industries/bank6.jpg",
 					texts: this.$t("form2.customer"),
 					text1: this.$t("form2.text3s"),
 				},
@@ -143,7 +131,7 @@ export default {
 			"text3s" : "For customer service, IT is one of the best solutions that support businesses to quickly reach customers, capture customer's value, and drive customer satisfaction. We provide essential services to assist businesses in this. Working with us, you will have the advantages of getting closer to your customers at a low cost, delivering better customer results and increasing customer retention."
 
 		},
-		"add": "We Are the Big Players in Technology Services for Your Field",
+		"title": "We Are the Big Players in Technology Services for Your Field",
 		"button":"Collaboration here",
 		"text":"Tell us all you needed!"
 	},
@@ -168,7 +156,7 @@ export default {
 			"customer":"Service client",
 			"text3s" : "Pour le service client, l'informatique est l'une des meilleures solutions qui aide les entreprises à atteindre rapidement les clients, à capturer la valeur du client et à stimuler la satisfaction client. Nous fournissons des services essentiels pour aider les entreprises dans ce domaine. En travaillant avec nous, vous aurez les avantages de vous rapprocher de vos clients à moindre coût, d'obtenir de meilleurs résultats clients et d'augmenter la fidélisation de la clientèle."
 		},
-		"add": "Nous sommes les grands acteurs des services technologiques pour votre domaine",
+		"title": "Nous sommes les grands acteurs des services technologiques pour votre domaine",
 		"button": "Collaboration ici",
 		"text": "Dites-nous tout ce dont vous aviez besoin !"
 	}
