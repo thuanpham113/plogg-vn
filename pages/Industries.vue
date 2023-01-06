@@ -26,9 +26,9 @@
 
 		<v-col class="d-flex justify-center">
 			<v-hover v-slot="{ hover }">
-				<v-btn 
-					class="rounded-lg white--text" 
-					:color="hover ? 'pink' : 'cyan lighten-3'"
+				<v-btn
+					class="rounded-lg white--text"
+					:color="hover ? 'grey' : 'cyan lighten-3'"
 					:height="$vuetify.breakpoint.smAndDown ? '30' : '60'" :to="localePath(`/Collaborate`)">
 						<div>{{ $t("button") }}</div>
 				</v-btn>
@@ -108,7 +108,7 @@ export default {
 {
 	"en": {
 		"form1":{
-			
+
 			"banking" :"Banking and Financial service",
 			"text1s": " We provide high-quality applications of technology such as cloud computing, mobile, big data,... that contribute to transforming the entire real world into digital composite. From there, creating economic efficiency, catching up with scientific and technological trends, improving quality to meet common standards in the banking sector.",
 
@@ -117,10 +117,10 @@ export default {
 
 			"human":"Human Resources",
 			"text3s":"Technology will help business organizations improve their HR department's time management methods and subsequently improve work efficiency. Website-based technology is also being widely used for most common operations in human resource management such as timekeeping, salary calculation, employee information management,..."
-		
+
 		},
 		"form2":{
-			
+
 			"healthcare": "Healthcare",
 			"text1s" : "With the development of IT, the medical profession can quickly absorb new knowledge of mankind without worrying about geographical distance. IT makes it convenient for users to monitor health, such as integrating analysis tools to reduce the error rate in drug use, guiding preventive monitoring or warning of unusual events about doubt of health.",
 
