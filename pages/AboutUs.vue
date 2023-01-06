@@ -114,7 +114,6 @@
                         <template #default="{ hover }" >
                             <v-card
                                 :class="$vuetify.breakpoint.smAndDown ? '' : ' mx-auto ma-12 '"
-                                :max-width="$vuetify.breakpoint.smAndDown ? '' : '400'"
                                 class="rounded-xl">
                                 <v-img contains height="300px" width="400px" :src="form.imgs"/>
                                 <v-card-text class="text-center font-weight-bold">
@@ -145,7 +144,7 @@ export default {
 
             forms: [
                 {
-                    imgs: "/AI/Lê Đức Anh.png",
+                imgs: "/AI/Lê Đức Anh.png",
                 text1: "Mr. Le Duc Anh ",
                 text2: "CEO",
             },
@@ -280,11 +279,9 @@ export default {
     width: 50%;
     height: 50%;
 }
-
-.content img {
-    // max-width: 30%;
-}
 </style>
+
+
 <i18n>
    {
        "en": {
