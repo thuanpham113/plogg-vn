@@ -146,19 +146,19 @@ export default {
 
 	"title":{
 		"1" : "Hi, we are looking for you!",
-		"2" : "Plogg team always wants to bring working opportunities for creative, energetic, and enthusiastic young people. We wish to nurture young talents like you to devote their talents and wisdom to the development of the company as well as yourself. At Plogg Vietnam, you will be able to work with dynamic, enthusiastic young people with a great, comfortable, and creative working environment.",
+		"2" : "Plogg team always wants to bring working and learning opportunities to creative, energetic, and enthusiastic young people. We wish to nurture young talents, provide you a chance for self-improvement, and look forward to seeing your contributions to the development of the company. At Plogg Vietnam, you will be able to work with a group of motivated young people in a collaborative and professional environment.",
 		"3" : "Why should you join us?",
-		"4" : "When joining Plogg team with us, you will be involved in a dynamic, joyful, enthusiastic, and creative working environment. The members of Plogg Vietnam are young people with a passion for information technology. At Plogg Vietnam, each individual contributes a part of their knowledge, creativity, and talent to the company to help the company grow. Joining us, you will experience a comfortable, fun, creative, and professional working environment. Not only work, but this is also a place where you can hone your knowledge and learn new things.",
-		"5" : "What you can get when you join us?",
+		"4" : "When joining Plogg team, you will be involved in a dynamic, enjoyable, and creative working environment. The members of Plogg Vietnam are young people with a passion for information technology. At Plogg Vietnam, each individual contributes a part of their knowledge, creativity, and talent to help the company grow as a whole. More than just a workplace, our company is also a welcoming home, where you can hone your knowledge and learn new things together. ",
+		"5" : "What can you get when you join us?",
 		"6" : "We are looking for..."
 	},
 	"form":{
-		"1" : "You will be working in a great environment",
-		"2" : "You will be free to exchange and share knowledge ",
-		"3" : "You will have the opportunity to contact foreign companies",
-		"4" : "You will have the opportunity to expand your networking ",
-		"5" : "You will be enhanced spiritual value",
-		"6" : "You will enjoy full benefits"
+		"1" : "You will be working in a unique environment",
+		"2" : "You will be free and encouraged to exchange and share knowledge.",
+		"3" : "You will have the opportunity to interact with foreign companies and colleagues.",
+		"4" : "You will have the opportunity to expand your networking.",
+		"5" : "You will physically and emotionally benefit from our healthy working environment.",
+		"6" : "You will enjoy a full range of benefits we have to offer."
 	},
 	"form1":{
 		"1" : "Software Developer (Fullstack)",
@@ -173,19 +173,19 @@ export default {
     "fr":{
 	"title":{
 		"1" : "Salut, nous te cherchons !",
-		"2" : "L'équipe de Plogg souhaite toujours offrir des opportunités de travail à des jeunes créatifs, énergiques et enthousiastes. Nous souhaitons encourager les jeunes talents comme vous à consacrer leurs talents et leur sagesse au développement de l'entreprise ainsi qu'à vous-même. Chez Plogg Vietnam, vous pourrez travailler avec des jeunes dynamiques et enthousiastes dans un environnement de travail agréable, confortable et créatif.",
+		"2" : "L'équipe Plogg souhaite toujours offrir des opportunités de travail et d'apprentissage à des jeunes créatifs, énergiques et enthousiastes. Nous souhaitons encourager les jeunes talents, vous offrir une chance de vous améliorer et nous nous réjouissons de voir vos contributions au développement de l'entreprise. Chez Plogg Vietnam, vous pourrez travailler avec un groupe de jeunes motivés dans un environnement collaboratif et professionnel.",
 		"3" : "Pourquoi devriez-vous nous rejoindre?",
-		"4" : "En rejoignant l'équipe Plogg avec nous, vous serez impliqué dans un environnement de travail dynamique, joyeux, enthousiaste et créatif. Les membres de Plogg Vietnam sont des jeunes passionnés par les technologies de l'information. Chez Plogg Vietnam, chaque individu apporte une partie de ses connaissances, de sa créativité et de son talent à l'entreprise pour aider l'entreprise à se développer. En nous rejoignant, vous ferez l'expérience d'un environnement de travail confortable, amusant, créatif et professionnel. Non seulement le travail, mais c'est aussi un endroit où vous pouvez affiner vos connaissances et apprendre de nouvelles choses.",
-		"5" : "Qu'est-ce que vous pouvez obtenir lorsque vous nous rejoignez?",
+		"4" : "En rejoignant l'équipe de Plogg, vous serez impliqué dans un environnement de travail dynamique, agréable et créatif. Les membres de Plogg Vietnam sont des jeunes passionnés par les technologies de l'information. Chez Plogg Vietnam, chaque individu apporte une partie de ses connaissances, de sa créativité et de son talent pour aider l'entreprise à se développer dans son ensemble. Plus qu'un simple lieu de travail, notre entreprise est aussi une maison accueillante, où vous pouvez approfondir vos connaissances et apprendre de nouvelles choses ensemble.",
+		"5" : "Que pouvez-vous obtenir lorsque vous nous rejoignez?",
 		"6" : "What you can get when you join us?"
 		},
 	"form":{
-		"1" : "Vous travaillerez dans un super environnement",
-		"2" : "Vous serez libre d'échanger et de partager vos connaissances ",
-		"3" : "Vous aurez la possibilité de contacter des entreprises étrangères",
-		"4" : "Vous aurez l'opportunité d'élargir votre réseau ",
-		"5" : "Vous serez augmenté de valeur spirituelle",
-		"6" : "Vous bénéficierez de tous les avantages"
+		"1" : "Vous travaillerez dans un environnement unique.",
+		"2" : "Vous serez libre et encouragé à échanger et partager vos connaissances.",
+		"3" : "Vous aurez l'opportunité d'interagir avec des entreprises étrangères et des collègues.",
+		"4" : "Vous aurez l'opportunité d'élargir votre réseau.",
+		"5" : "Vous bénéficierez physiquement et émotionnellement de notre environnement de travail sain.",
+		"6" : "Vous profiterez d'une gamme complète d'avantages que nous avons à offrir."
 	},"form1":{
 		"1" : "Développeur de logiciels (Fullstack)",
 		"2" : "Graphiste 3D ",

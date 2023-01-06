@@ -109,11 +109,11 @@ export default {
 	"en": {
 		"form1":{
 
-			"banking" :"Banking and Financial service",
-			"text1s": " We provide high-quality applications of technology such as cloud computing, mobile, big data,... that contribute to transforming the entire real world into digital composite. From there, creating economic efficiency, catching up with scientific and technological trends, improving quality to meet common standards in the banking sector.",
+			"banking" :"Banking and Financial Service",
+			"text1s": " We provide high-quality applications of technology such as cloud computing, mobile, and big data that contribute to transforming the real world into digital surfaces. By catching up with scientific and technological trends, we aim to improve quality to meet common standards in the banking sector.",
 
 			"retail":"Retail",
-			"text2s": "Currently, retail businesses are gradually shifting to the trend of online sales. Developing technology brings authentic experiences to people, creating convenience and satisfaction. And Ploggvn will give you all the tools to create that miracle.",
+			"text2s": "Currently, retail businesses have gradually shifted from traditional stores to online sales. Advanced techonology will bring interactive, convenient and satisfying shopping experiences that attract and keep your buyers for life. PloggVietnam offer you the tools to create that miracle.",
 
 			"human":"Human Resources",
 			"text3s":"Technology will help business organizations improve their HR department's time management methods and subsequently improve work efficiency. Website-based technology is also being widely used for most common operations in human resource management such as timekeeping, salary calculation, employee information management,..."
@@ -122,16 +122,16 @@ export default {
 		"form2":{
 
 			"healthcare": "Healthcare",
-			"text1s" : "With the development of IT, the medical profession can quickly absorb new knowledge of mankind without worrying about geographical distance. IT makes it convenient for users to monitor health, such as integrating analysis tools to reduce the error rate in drug use, guiding preventive monitoring or warning of unusual events about doubt of health.",
+			"text1s" : "With the development of IT, the medical professionals can adapt and utilize newest scientific findings without geograhical constraints. IT also makes it convenient for users to monitor health, such as employing analysis tools to reduce the errors in drug use, and to provide timely warnings of health issues.",
 
 			"marketing":"Marketing",
-			"text2s" : "Technology has begun to play a crucial role in the marketing function. We provide IT systems such as CRM, Data Warehouses and CMS. We also provide Big Data, Marketing Automation, and improving website design. They contribute to the benefit of future marketing strategies.",
+			"text2s" : "Technology has always played a crucial role in the marketing industry. Along with designing authentic websites, we provide various IT systems such as CRM, Data Warehouses CMS, Big Data, and Marketing Automation. These services will easily benefit any marketing strategies you have.",
 
 			"customer":"Customer Services",
 			"text3s" : "For customer service, IT is one of the best solutions that support businesses to quickly reach customers, capture customer's value, and drive customer satisfaction. We provide essential services to assist businesses in this. Working with us, you will have the advantages of getting closer to your customers at a low cost, delivering better customer results and increasing customer retention."
 
 		},
-		"title": "We Are the Big Players in Technology Services for Your Field",
+		"add": "We Are the Big Players in Technology Services for Your Field",
 		"button":"Collaboration here",
 		"text":"Tell us all you needed!"
 	},
@@ -156,7 +156,7 @@ export default {
 			"customer":"Service client",
 			"text3s" : "Pour le service client, l'informatique est l'une des meilleures solutions qui aide les entreprises à atteindre rapidement les clients, à capturer la valeur du client et à stimuler la satisfaction client. Nous fournissons des services essentiels pour aider les entreprises dans ce domaine. En travaillant avec nous, vous aurez les avantages de vous rapprocher de vos clients à moindre coût, d'obtenir de meilleurs résultats clients et d'augmenter la fidélisation de la clientèle."
 		},
-		"title": "Nous sommes les grands acteurs des services technologiques pour votre domaine",
+		"add": "Nous sommes les grands acteurs des services technologiques pour votre domaine",
 		"button": "Collaboration ici",
 		"text": "Dites-nous tout ce dont vous aviez besoin !"
 	}
