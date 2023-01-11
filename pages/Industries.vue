@@ -2,7 +2,7 @@
 	<rely-layout-page>
 		<v-card height="80" flat color="transparent"></v-card>
 		<div class="text-center font-weight-bold text-sm-h6 text-md-h4 my-md-10">
-			{{ $t("title") }}
+			{{ $t("add") }}
 		</div>
 
 		<v-layout class="justify-md-space-around mx-16"

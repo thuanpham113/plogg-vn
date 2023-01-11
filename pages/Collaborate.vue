@@ -36,9 +36,9 @@
         <v-autocomplete
           class="mx-16"
           ref="selected"
-          v-model="selected"
+          v-model="$refs.selected"
           :items="orderStatuses"
-          :rules="[() => !!selected || 'This field is required']"
+          :rules="[() => !!$refs.selected || 'This field is required']"
           label="Industry"
           placeholder="Select..."
           item-text="label"
@@ -94,40 +94,9 @@ export default {
           value: "secutity",
         },
       ],
-
-      data() {
-        return {
-          loader: null,
-          loading: false,
-          orderStatuses: [
-            {
-              label: this.$t("orderStatuses.healthcare"),
-              value: "healthcare",
-            },
-            {
-              label: this.$t("orderStatuses.retail"),
-              value: "retail",
-            },
-            {
-              label: this.$t("orderStatuses.hr"),
-              value: "hr",
-            },
-            {
-              label: this.$t("orderStatuses.marketing"),
-              value: "marketing",
-            },
-            {
-              label: this.$t("orderStatuses.customer"),
-              value: "customer",
-            },
-            {
-              label: this.$t("orderStatuses.secutity"),
-              value: "secutity",
-            },
-          ],
-        };
-      },
-      methods: {
+    };
+  },
+  methods: {
         buttonClick() {
           this.loading = true;
           const timeout = setTimeout(() => {
@@ -141,9 +110,7 @@ export default {
           }
           return true;
         },
-      },
-    };
-  },
+      }
 };
 </script>
 
