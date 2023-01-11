@@ -68,16 +68,16 @@ export default {
 		return {
 			headers: [
 				{
-					img1: "/service.jpg",
-					img2: "/service1.jpg",
+					img1: "/Service_img/service.jpg",
+					img2: "/Service_img/service1.jpg",
 					text1: this.$t("form1.1"),
 					text1s: this.$t("form1.2"),
 					text2: this.$t("form1.3"),
 					text2s: this.$t("form1.4"),
 				},
 				{
-					img1: "/service2.jpg",
-					img2: "/service6.jpg",
+					img1: "/Service_img/service2.jpg",
+					img2: "/Service_img/service6.jpg",
 					text1: this.$t("form2.1"),
 					text1s: this.$t("form2.2"),
 					text2: this.$t("form2.3"),
@@ -85,8 +85,8 @@ export default {
 
 				},
 				{
-					img1: "/service4.jpg",
-					img2: "/service5.jpg",
+					img1: "/Service_img/service4.jpg",
+					img2: "/Service_img/service5.jpg",
 					text1: this.$t("form3.1"),
 					text1s: this.$t("form3.2"),
 					text2: this.$t("form3.3"),

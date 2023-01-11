@@ -163,12 +163,12 @@ export default {
 			},
 		],
 		texts: [
-			{ title2: "Contrach us" },
-			{ img: "/us1.jpg", title: "Twitter" },
-			{ img: "/us2.jpg", title: "Linkedin" },
-			{ img: "/us3.jpg", title: "Instagram" },
-			{ img: "/us4.jpg", title: "Gmail" },
-			{ img: "/us5.jpg", title: "Phone" },
+			{ title2: "Contact us" },
+			{ img: "/contact/logo1.jpg", title: "Twitter" },
+			{ img: "/contact/logo2.jpg", title: "Linkedin" },
+			{ img: "/contact/logo3.jpg", title: "Instagram" },
+			{ img: "/contact/logo4.jpg", title: "Gmail" },
+			{ img: "/contact/logo5.jpg", title: "Phone" },
 		],
 		heads: [
 			{
