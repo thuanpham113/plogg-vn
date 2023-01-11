@@ -1,7 +1,7 @@
 <template>
   <v-sheet  class="py-5 my-16 justify-center">
     <template>
-      <v-img max-height="800" src="/pan1.jpg">
+      <v-img max-height="800" src="/Start_Dream/Dream.jpg">
        
           <v-card-title class="justify-start">
             <div class="h5 py-2 px-5 grey--text" :class="$vuetify.breakpoint.smAndDown
@@ -60,7 +60,7 @@
           :class=" $vuetify.breakpoint.smAndDown ? '' : 'rounded-lg black--text mx-16 mt-6'" 
           class="rounded-xl"
           aspect-ratio="4"
-          src="Group 14.png"
+          src="/Start_Dream/Sparkline.png"
         ></v-img>
     <template>
     </template>

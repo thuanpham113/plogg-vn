@@ -1,11 +1,11 @@
 <template>
 	<v-sheet>
 		<template>
-			<v-img max-height="800" src="/imgtext.jpg">
+			<v-img max-height="800" src="/Round.jpg">
 				<v-card :height=" $vuetify.breakpoint.smAndDown ? '' : '90' " flat color="transparent"></v-card>
 				<div :class="$vuetify.breakpoint.smAndDown ? 'mx-5 py-5' : 'pt-16  ma-14'">
 					<v-card-title :class="$vuetify.breakpoint.smAndDown ? 'justify-center' : 'justify-start'">
-						<div :class="$vuetify.breakpoint.smAndDown
+				<div :class="$vuetify.breakpoint.smAndDown
 						? 'h6 font-weight-bold text-center '
 						: 'h4 font-weight-bold mx-10'">
 							{{ $t("title.1") }}

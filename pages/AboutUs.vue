@@ -41,7 +41,7 @@
         </v-layout>
 
 
-        <v-img contain :width="$vuetify.breakpoint.smAndDown ? '100%' : '100vw'" src="/we1.jpg" />
+        <v-img contain :width="$vuetify.breakpoint.smAndDown ? '100%' : '100vw'" src="/AI/we1.jpg" />
         <v-sheet class="mx-sm-5  px-md-16">
             <template>
                 <div class="py-sm-9 py-md-16 mx-md-10">
@@ -74,7 +74,7 @@
             <template>
                 <v-sheet class="d-flex flex-column flex-md-row align-center justify-center my-9">
                     <v-img  :max-width="$vuetify.breakpoint.smAndDown ? '60%' : '35%'" contain
-                        src="/service.jpg" />
+                        src="/Service_img/service.jpg" />
 
                     <div :class="['d-flex flex-column',
                         $vuetify.breakpoint.smAndDown
@@ -237,14 +237,14 @@ export default {
             },
         ],
         headers: [
-            { imgs: "/item1.jpeg", link: "" },
-            { imgs: "/item2.jpeg", link: "" },
-            { imgs: "/item3.jpeg", link: "" },
-            { imgs: "/item4.jpeg", link: "" },
-            { imgs: "/item5.jpeg", link: "" },
-            { imgs: "/item6.jpeg", link: "" },
-            { imgs: "/item5.jpeg", link: "" },
-            { imgs: "/item8.jpeg", link: "" },
+            { imgs: "/Achievements/item1.jpeg", link: "" },
+            { imgs: "/Achievements/item2.jpeg", link: "" },
+            { imgs: "/Achievements/item3.jpeg", link: "" },
+            { imgs: "/Achievements/item4.jpeg", link: "" },
+            { imgs: "/Achievements/item5.jpeg", link: "" },
+            { imgs: "/Achievements/item6.jpeg", link: "" },
+            { imgs: "/Achievements/item5.jpeg", link: "" },
+            { imgs: "/Achievements/item8.jpeg", link: "" },
         ],
 
         current: 1,

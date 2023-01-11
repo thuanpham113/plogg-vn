@@ -4,7 +4,7 @@
 			<v-layout pl-16 max-width="50%" column>
 				<v-row>
 					<v-col cols="2">
-						<v-img src="/3ddd.jpg"/>
+						<v-img src="/Home_Page/Rocket.jpg"/>
 					</v-col>
 					<v-col>
 						<h2 class="grey--text mt-16">{{ $t("icon.1")}}</h2>
