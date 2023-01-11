@@ -20,7 +20,7 @@
 					max-height="70"
 					max-width="70"
 					contain
-					src="/3ddd.jpg"
+					src="/Rocket.jpg"
 				/>
 				<h2
 					:class="

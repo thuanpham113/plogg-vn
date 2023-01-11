@@ -2,7 +2,7 @@
 	<v-sheet width="100vw" height="100vh">
 		<v-img
 			
-			src="/login22.jpg"
+			src="/login.jpg"
 			height="100%"
 			max-width="100%"
 			class="align-center"

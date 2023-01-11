@@ -10,7 +10,7 @@
 						<div
 							:class="$vuetify.breakpoint.smAndDown ? 'justify-center d-flex flex-row' : 'd-flex flex-row '">
 							<v-img :class="$vuetify.breakpoint.smAndDown ? 'mt-5' : ''" max-height="70" max-width="70"
-								contain src="/3ddd.jpg" />
+								contain src="/Rocket.jpg" />
 
 							<div class="grey--text font-weight-bold " :class="
 								$vuetify.breakpoint.smAndDown

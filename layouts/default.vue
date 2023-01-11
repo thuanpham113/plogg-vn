@@ -164,11 +164,11 @@ export default {
 		],
 		texts: [
 			{ title2: "Contrach us" },
-			{ img: "/us1.jpg", title: "Twitter" },
-			{ img: "/us2.jpg", title: "Linkedin" },
-			{ img: "/us3.jpg", title: "Instagram" },
-			{ img: "/us4.jpg", title: "Gmail" },
-			{ img: "/us5.jpg", title: "Phone" },
+			{ img: "/Img_Contrach/us1.jpg", title: "Twitter" },
+			{ img: "/Img_Contrach/us2.jpg", title: "Linkedin" },
+			{ img: "/Img_Contrach/us3.jpg", title: "Instagram" },
+			{ img: "/Img_Contrach/us4.jpg", title: "Gmail" },
+			{ img: "/Img_Contrach/us5.jpg", title: "Phone" },
 		],
 		heads: [
 			{

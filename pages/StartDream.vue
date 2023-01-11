@@ -1,7 +1,7 @@
 <template>
 	<v-sheet class="py-5 my-16 justify-center">
 		<template>
-			<v-img max-height="800" src="/pan1.jpg">
+			<v-img max-height="800" src="/background.jpg">
 				<v-card-title class="justify-start">
 					<div
 						class="h5 py-2 px-5 grey--text"
@@ -75,20 +75,17 @@
 			</div>
 		</template>
 
-		<v-img class="mt-16 mx-16" aspect-ratio="4" src="Group 14.png"> </v-img>
+		<v-img class="mt-16 mx-16" aspect-ratio="4" src="Grap.png"> </v-img>
 		<template>
       <div  class="mt-16 text-center font-weight-bold text-sm-h5 text-md-h4">
           {{$t("title.4")}}
       </div>
-      <v-row>
-        <v-card-actions v-for="(logo, index) in logos" :key="index"
-          :class="$vuetify.breakpoint.smAndDown ? '' : ' mx-auto ma-12 '">
-        <v-img contain height="150px" width="150px" :src="logo.imgs"/>
-        </v-card-actions>
-      </v-row>
+     
     </template>
 	</v-sheet>
+	
 </template>
+
 
 <script>
 const gradients = [
@@ -132,35 +129,6 @@ export default {
 					class: "text-center text-md-h6",
 				},
 			],
-      logos:[
-        {
-          imgs: "/slideplogg/slide.png"
-        },
-        {
-          imgs:"/slideplogg/slide7.png"
-        },
-        {
-          imgs:"/slideplogg/slide3.png"
-        },
-        {
-          imgs:"/slideplogg/slide2.png"
-        },
-        {
-          imgs:"/slideplogg/slide6.png"
-        },
-        {
-          imgs:"/slideplogg/slide1.png"
-        },
-        {
-          imgs:"/slideplogg/slide8.png"
-        },
-        {
-          imgs:"/slideplogg/slide4.png"
-        },
-        {
-          imgs:"/slideplogg/slide5.png"
-        }
-      ]
 		};
 	},
 };
