@@ -1,10 +1,10 @@
 <template>
 	<div>
-		<home-body />
+		<home-1 />
 		<home-2 />
 		<home-3 />
-		<home-1 />
-		<home-10 />
+		<home-4 />
+		<home-5 />
 		<kq-scroll-up />
 	</div>
 </template>

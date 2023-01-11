@@ -1,81 +1,79 @@
 <template>
-    <div class="container">
-
-        <div class="content"></div>
-    </div>
+	<v-sheet
+	:class="$vuetify.breakpoint.smAndDown ? 'd-flex  flex-column   align-center':'d-flex align-center vh100'">
+		<div
+			column
+			:class=" $vuetify.breakpoint.smAndDown ? ' ' : 'black--text pl-16 w-50'"
+		>
+			<div 
+			 :class="
+				$vuetify.breakpoint.smAndDown
+				? 'h5 font-weight-bold text-center mt-8 '
+				: 'h3 font-weight-bold mt-10 flex-column'
+			">
+				<div>
+					{{ $t("title.1") }}
+				</div>
+			
+			</div>
+			<div :class="
+				$vuetify.breakpoint.smAndDown
+				? 'py-6 text-center mx-2'
+				: 'h6 mb-11 my-5'
+			">
+				{{ $t("title.2") }}
+			</div>
+			<div class="d-flex justify-center">
+				<v-hover class=" " v-slot="{ hover }">
+					<v-btn
+						:class="
+						$vuetify.breakpoint.smAndDown
+							? 'rounded-lg white--text'
+							: 'rounded-lg white--text'
+						"
+						:color="hover ? 'grey darken-1' : 'cyan lighten-3'"
+						:height="$vuetify.breakpoint.smAndDown ? '40' : '55'"
+						dense
+						href="/AboutUs"
+					>
+						<div class="font-weight-black h7">{{ $t("button.1") }}</div>
+					</v-btn>
+				</v-hover>
+			</div>
+		</div>
+		
+		<v-img contain class="mr-15 pa-0" aspect-ratio="1" :width="$vuetify.breakpoint.smAndDown ? '70%' : '40%'" src="plogg_img.png"/>
+		
+	
+	</v-sheet>
 </template>
 
 <script>
-import { TagCloud } from "../../utils/TagCloud"
-export default {
-    data() {
-        return {
-        headers: [
-            { imgs: "/slile1.jpg", link: "https://www.facebook.com/" },
-            { imgs: "/slile2.jpg", link: "https://www.facebook.com/" },
-            { imgs: "/slile3.jpg", link: "https://www.facebook.com/" },
-            { imgs: "/slile4.jpg", link: "https://www.facebook.com/" },
-            { imgs: "/slile5.jpg", link: "https://www.facebook.com/" },
-            { imgs: "/slile1.jpg", link: "https://www.facebook.com/" },
-            { imgs: "/slile2.jpg", link: "https://www.facebook.com/" },
-            { imgs: "/slile3.jpg", link: "https://www.stiq.com/" },
-        ],
-        stacks: [
-            "/slideplogg/slide.png",
-            "/slideplogg/slide2.png",
-            "/slideplogg/slide3.png",
-            "/slideplogg/slide4.png",
-            "/slideplogg/slide5.png",
-            "/slideplogg/slide6.png",
-            "/slideplogg/slide7.png",
-            "/slideplogg/slide8.png",
-            "/slideplogg/slide.png",
-            "/slideplogg/slide1.png",
-            "/slideplogg/slide2.png",
-            "/slideplogg/slide3.png",
-            "/slideplogg/slide4.png"
-
-        ],
-        current: 1,
-        interval: undefined,
-        direction: 1,
-        slideInterval: 2,
-        tagCloud: undefined,
-        }
-    },
-    created() {
-        this.interval = setInterval(() => {
-            if (
-                this.current === 0 ||
-                this.current === this.headers.length - 1
-            ) {
-                this.direction *= -1;
-                this.current += this.direction;
-            } else {
-                this.current += this.direction;
-            }
-        }, this.slideInterval * 1000);
-    },
-    beforeDestroy() {
-        this.tagCloud && this.tagCloud.destroy()
-        clearInterval(this.interval);
-    },
-    mounted(){
-        const container = '.content';
-        const options = {
-            radius: 400,
-            keep: false,
-            maxSpeed: "fast"
-        };
-
-        this.tagCloud = new TagCloud(document.querySelector(container), this.stacks, options);
-    }
-};
+export default {};
 </script>
 
-<style scoped >
-    .container {
-        display: flex;  
-        justify-content: center;
-    }
+<style>
 </style>
+
+<i18n>
+{
+	"en": {
+		"title":{
+		"1":"Welcome to Plogg VietNam,",
+		"2":"The best Information Technology Services company that you need to boost your success."
+		},
+		"button":{
+		"1":"Who are we ?"
+		}
+	},
+	"fr": {
+		"title": {
+		"1":"Bienvenue sur Plogg Vietnam,",
+		"2":"Abonnez-vous à notre newsletter et ne manquez jamais nos mises à jour."
+		},
+		"button":{
+		"1":"S'abonner"
+		}
+	}
+}
+</i18n>
