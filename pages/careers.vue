@@ -1,7 +1,7 @@
 <template>
 	<v-sheet>
 		<template>
-			<v-img max-height="450" src="/Round.jpg">
+			<v-img max-height="450" src="/imgtext.jpg">
 				<v-card :height=" $vuetify.breakpoint.smAndDown ? '' : '90' " flat color="transparent"></v-card>
 				<div class="pt-md-16 ma-md-14">
 					<v-card-title :class="$vuetify.breakpoint.smAndDown ? 'justify-center' : 'justify-start'">

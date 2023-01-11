@@ -10,7 +10,7 @@
 			class="px-16"
 			:max-width="$vuetify.breakpoint.smAndDown ? '80%' : '50%'"
 			contain
-			src="/Home_Page/Graphic-desig.png"
+			src="/Graphic-desig.png"
 		/>
 
 		<div :class="$vuetify.breakpoint.smAndDown ? '' : 'px-16 w-60'">
@@ -20,7 +20,7 @@
 					max-height="70"
 					max-width="70"
 					contain
-					src="/Home_Page/Rocket.jpg"
+					src="/3ddd.jpg"
 				/>
 				<h2
 					:class="

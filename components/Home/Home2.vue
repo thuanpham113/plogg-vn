@@ -2,7 +2,7 @@
 	<v-sheet
 		class="d-flex flex-column flex-md-row align-center justify-center my-16">
 		<v-img class="px-16" 
-		:max-width="$vuetify.breakpoint.smAndDown ? '80%' : '45%'" contain src="/Home_Page/Software-Development.png" />
+		:max-width="$vuetify.breakpoint.smAndDown ? '80%' : '45%'" contain src="/Software-Development.png" />
 
 		<div
 			:class="['d-flex flex-column',

@@ -10,7 +10,7 @@
 						<div
 							:class="$vuetify.breakpoint.smAndDown ? 'justify-center d-flex flex-row' : 'd-flex flex-row '">
 							<v-img :class="$vuetify.breakpoint.smAndDown ? 'mt-5' : ''" max-height="70" max-width="70"
-								contain src="/Home_Page/Rocket.jpg" />
+								contain src="/3ddd.jpg" />
 
 							<div class="grey--text font-weight-bold " :class="
 								$vuetify.breakpoint.smAndDown
@@ -47,7 +47,7 @@
 				</v-sheet>
 
 				<v-col md="6">
-					<v-img calss="" aspect-ratio="2" src="/BuildWord/Build1.jpg"> </v-img>
+					<v-img calss="" aspect-ratio="2" src="/Build1.jpg"> </v-img>
 				</v-col>
 			</v-sheet>
 		</template>
@@ -75,7 +75,7 @@
 				mx-16>
 				<v-col :cols="$vuetify.breakpoint.smAndDown ? '12' : ' 6'">
 
-					<v-img aspect-ratio="1" src="/BuildWord/Build2.jpg" />
+					<v-img aspect-ratio="1" src="/Build2.jpg" />
 				</v-col>
 				<v-col :class="$vuetify.breakpoint.smAndDown ? '' : ' justify-center ma-16 py-14 '">
 					<div
