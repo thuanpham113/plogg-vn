@@ -1,7 +1,7 @@
 <template>
     <v-sheet>
         <v-card flat color="transparent" :height="$vuetify.breakpoint.smAndDown ? '' : '80 '" ></v-card>
-        <v-layout class="py-md-5 mx-md-15">
+        <v-layout :class="$vuetify.breakpoint.smAndDown ? '' : 'py-5 mx-15'">
             <template>
                 <div >
                     <v-col >
@@ -25,7 +25,7 @@
 
                     <div :class="$vuetify.breakpoint.smAndDown
                             ? 'h5 text-center font-weight-bold '
-                            : 'h3 pl-10 text-wrap '">
+                            : 'h3 pl-10 text-wrap font-weight-bold'">
                         {{ $t("title.1") }}
                     </div>
 
@@ -42,37 +42,18 @@
 
 
         <v-img contain :width="$vuetify.breakpoint.smAndDown ? '100%' : '100vw'" src="/AI/we1.jpg" />
-        <v-sheet class="mx-sm-5  px-md-16">
+        <v-sheet :class="$vuetify.breakpoint.smAndDown ? 'mx-5' : 'px-16'">
             <template>
-                <div class="py-sm-9 py-md-16 mx-md-10">
-                    <div
-                        :class="$vuetify.breakpoint.smAndDown ?
-                        'h5 font-weight-bold text-center' : 'h3 front-weight-black '">
-                        {{ $t("title.3") }}
-                    </div>
-
-                    <div :class="$vuetify.breakpoint.smAndDown ?
-                        'subtitle-1 grey--text text-center' : 'h6 grey--text'">
-                        {{ $t("title.4") }}
-                    </div>
-                </div>
-
-                <v-col :class="$vuetify.breakpoint.smAndDown ? 'text-center' : 'mx-5 pb-9 '">
-                    <div :class="$vuetify.breakpoint.smAndDown ?
-                        'h5 font-weight-bold' : 'h3 front-weight-black'">
-                            {{ $t("title.5") }}
-                    </div>
-                    <v-col :cols="$vuetify.breakpoint.smAndDown ? 12 : 6">
-                        <div :class="$vuetify.breakpoint.smAndDown ?
-                        'subtitle-1 grey--text' : 'h6 grey--text'">
-                             {{ $t("title.6") }}
-                        </div>
-                    </v-col>
-                </v-col>
+                <div v-for="(head, index) in heads" :key="index"
+						:class="head.class">
+						<div>
+							{{ head.text }}
+						</div>
+					</div>
             </template>
 
             <template>
-                <v-sheet class="d-flex flex-column flex-md-row align-center justify-center my-9">
+                <v-sheet class="d-flex flex-column flex-md-row align-center justify-center my-9 mt-16">
                     <v-img  :max-width="$vuetify.breakpoint.smAndDown ? '60%' : '35%'" contain
                         src="/Service_img/service.jpg" />
 
@@ -84,7 +65,7 @@
                         <div :class="
                             $vuetify.breakpoint.smAndDown
                                 ? 'h5  text-center font-weight-bold'
-                                : 'h3  text-end   '
+                                : 'h3 font-weight-bold'
                         ">
                             {{ $t("title.7") }}
                         </div>
@@ -101,15 +82,15 @@
             </template>
 
             <template>
-                <v-sheet class="mx-sm-2 mx-md-8 pl-md-2 py-md-5" max-width="100%">
+                <v-sheet :class="$vuetify.breakpoint.smAndDown ? 'mx-2' : ' mx-8 pl-2 py-5'" max-width="100%">
                     <div :class="
                         $vuetify.breakpoint.smAndDown
                             ? 'h5 mt-2 font-weight-bold text-center'
-                            : 'h3 justify-start  '
+                            : 'h3 justify-start font-weight-bold '
                     ">
                         {{ $t("title.9") }}
                     </div>
-                    <v-slide-group v-model="current" class="pa-md-5 mt-md-12"
+                    <v-slide-group v-model="current" :class="$vuetify.breakpoint.smAndDown ? '' : 'pa-5 mt-12'"
                         center-active show-arrows>
                         <v-slide-item disabled v-for="(header, index) in headers" :key="index">
                             <v-card elevation="0" height="200" width="400">
@@ -124,16 +105,16 @@
                 <div :class="
                     $vuetify.breakpoint.smAndDown
                         ? 'h5 font-weight-bold text-center py-9'
-                        : 'h3 justify-end pl-10  '
+                        : 'h3 justify-end pl-10 font-weight-bold '
                 ">
                     {{ $t("title.10") }}
                 </div>
-                <v-row classgit="justify-center">
+                <v-row>
                     <v-hover v-for="(form, index) in forms" :key="index">
                         <template #default="{ hover }" >
                             <v-card
-                                class="mx-md-auto ma-md-12 rounded-xl"
-                                :max-width="$vuetify.breakpoint.smAndDown ? '' : '400'">
+                                :class="$vuetify.breakpoint.smAndDown ? '' : ' mx-auto ma-12 '"
+                                class="rounded-xl">
                                 <v-img contains height="300px" width="400px" :src="form.imgs"/>
                                 <v-card-text class="text-center font-weight-bold">
                                     <h2 class="text-h5 black--text">
@@ -158,9 +139,11 @@
 
 <script>
 export default {
-    data: () => ({
-        forms: [
-            {
+    data () {
+        return{
+
+            forms: [
+                {
                 imgs: "/AI/Lê Đức Anh.png",
                 text1: "Mr. Le Duc Anh ",
                 text2: "CEO",
@@ -246,12 +229,31 @@ export default {
             { imgs: "/Achievements/item5.jpeg", link: "" },
             { imgs: "/Achievements/item8.jpeg", link: "" },
         ],
+        heads: [
+            {
+                text: this.$t("form.1"),
+                class:"text-md-h2 pl-10 mt-10 text-wrap text-sm-h4 text-center font-weight-bold"
+            },
+            {
+                text: this.$t("form.2"),
+                class:"text-md-h5 mt-5 pl-10 grey--text text-center"
+            },
+            {
+                text: this.$t("form.3"),
+                class:"text-md-h2 pl-10 mt-10 text-wrap text-sm-h4 text-center font-weight-bold"
+            },
+            {
+                text: this.$t("form.4"),
+                class:"text-md-h5 mt-5 pl-10 grey--text text-center"
+            }
+        ],
 
         current: 1,
         interval: undefined,
         direction: 1,
         slideInterval: 2,
-    }),
+    };
+    },
     created() {
         this.interval = setInterval(() => {
             if (
@@ -277,21 +279,15 @@ export default {
     width: 50%;
     height: 50%;
 }
-
-.content img {
-    // max-width: 30%;
-}
 </style>
+
+
 <i18n>
    {
        "en": {
            "title":{
                "1" : "Who are we?",
                "2" : "We are Plogg Vietnam - a branch of Plogg Ca. , established in 2022. Plogg Vietnam is  an International Technology Service Company that provides many professional IT services to support both small business and large coorperations. Plogg Vietnam is specialised in developing websites, softwares, and 3D designs. We are also a one-stop shop that offer a variery of other IT-related services to meet our customers’ needs. ",
-               "3" : "We are Plogg Team!",
-               "4" : "We are relentlessly working to bring you the most suitable software solutions. We always believe that a successful product will not only solve the customers’ initial concerns but also contributes to the advancement of their businesses. Functional products, satisfied customers, and flourishing businesses are our company’s missions and ideals. ",
-               "5" : "Our mission",
-               "6" : "We bring the most professional IT services to support businesses meet their success by creating the optional solution and providing high-quality technology to exceed customers' expectation. ",
                "7":"Our vision",
                 "8":"Plogg Vietnam aims to become one of the highest quality IT service providers in the world. In the next 5 years, we will extend our outsourcing to leading countries such as UK, USA, Australia, New Zealand, Singapore, etc. And Plogg Vietnam will become a leading prestigious and reliable partner in the IT service fields all over the world.",
                "9" : "Our achievements",
@@ -299,17 +295,20 @@ export default {
                },
             "position" : {
                 "1": "Executive Director"
+            },
+            "form":{
+                "1":"We are Plogg Team!",
+                "2":"We are relentlessly working to bring you the most suitable software solutions. We always believe that a successful product will not only solve the customers’ initial concerns but also contributes to the advancement of their businesses. Functional products, satisfied customers, and flourishing businesses are our company’s missions and ideals.",
+                "3":"Our mission",
+                "4":"We bring the most professional IT services to support businesses meet their success by creating the optional solution and providing high-quality technology to exceed customers' expectation."
             }
+
 
        },
        "fr": {
            "title":{
                "1" : "Qui sommes nous?",
                "2" : "Nous sommes Plogg Vietnam - une partie de Plogg Ca.Nous avons établi en 2022. Plogg Vietnam est un Société internationale de services technologiquesqui se trouve au Vietnam. Nous fournissons de nombreux services informatiques professionnels pour soutenir de la petite entreprise à la grande coopération. Plogg Vietnam est spécialisé dans le développement de sites Web, de logiciels et de conception 3D. Nous fournissons également de nombreux autres services liés à l'informatique pour aider nos clients à atteindre le sommet de la gloire.",
-               "3" : "Nous sommes l'équipe Plogg !",
-               "4" : "Nous travaillons toujours pour vous apporter les solutions logicielles les plus adaptées. Nous croyons toujours qu'un produit performant doit aider les clients à résoudre les problèmes actuels et, en outre, contribuer au développement de leurs activités. Des produits utiles, des clients satisfaits, des entreprises en croissance, sont notre feuille de route de service.",
-               "5" : "Notre mission",
-               "6" : "Nous apportons les services informatiques les plus professionnels pour aider les entreprises à réussir en créant la solution optionnelle et en fournissant une technologie de haute qualité pour dépasser les attentes des clients.",
                "7":"Notre vision",
                "8":"Plogg Vietnam vise à devenir l'un des fournisseurs de services informatiques de la plus haute qualité au monde. Au cours des 5 prochaines années, nous étendrons notre externalisation à des pays leaders tels que le Royaume-Uni, les États-Unis, l'Australie, la Nouvelle-Zélande, Singapour, etc. Et Plogg Vietnam deviendra un partenaire prestigieux et fiable dans les domaines des services informatiques dans le monde entier.",
                "9" : "Nos réalisations",
@@ -317,7 +316,12 @@ export default {
                },
             "position" : {
                 "1": "Directeur exécutif"
-
+            },
+            "form":{
+                "1":"Nous sommes l'équipe Plogg !",
+                "2":"Nous travaillons toujours pour vous apporter les solutions logicielles les plus adaptées. Nous croyons toujours qu'un produit performant doit aider les clients à résoudre les problèmes actuels et, en outre, contribuer au développement de leurs activités. Des produits utiles, des clients satisfaits, des entreprises en croissance, sont notre feuille de route de service.",
+                "3":"Notre mission",
+                "4":"Nous apportons les services informatiques les plus professionnels pour aider les entreprises à réussir en créant la solution optionnelle et en fournissant une technologie de haute qualité pour dépasser les attentes des clients."
             }
        }
 
