@@ -31,7 +31,7 @@
             <v-text-field
               v-model="form.phone"
               :label="$t('phone')"
-              :rules="[rules.required]"
+              :rules="[$rules.required, $rules.phone]"
             />
           </v-row>
           <v-text-field
@@ -41,14 +41,14 @@
             :rules="[rules.required]"
           />
         </v-sheet>
-        <v-file-input
+        <!-- <v-file-input
           v-model="form.media"
           class="mx-16 mt-3"
           prepend-icon
           dense
           :label="$t('update')"
           :rules="[rules.required]"
-        />
+        /> -->
 
         <v-sheet>
           <div class="text-center">
@@ -59,11 +59,19 @@
               rounded-lg
               :loading="loading"
               :disabled="!valid || loading"
+              @click="snackbar = true"
             >
               {{ $t("button") }}
             </v-btn>
           </div>
         </v-sheet>
+        <v-snackbar
+          v-model="snackbar" 
+          :timeout="timeout"
+          color="green accent-4"
+          >
+          {{ $t("notification") }}
+        </v-snackbar>
       </v-form>
     </v-col>
   </v-layout>
@@ -77,6 +85,8 @@ export default {
     return {
       valid: true,
       loading: false,
+      snackbar: false,
+      timeout: 2000,
       rules: {
         required: (value) => !!value || this.$t("required"),
 
@@ -91,7 +101,6 @@ export default {
         lastname: "",
         phone: "",
         email: "",
-        media: undefined,
         title: "",
       },
     };
@@ -142,23 +151,26 @@ export default {
 <i18n>
 {
 "en":{
+    "notification":"Submitted successfully",
     "first":"First name",
 	"last":"Last name",
     "email":"Email",
 	"update":"Cv",
-    "company":"Company name",
 	"required":"Required",
     "title":"Join us here",
     "button":"Click here to submit",
     "phone":"Phone Number"
 },
 "fr":{
-    "title":{
-        "1":"Rejoignez-nous ici"
-    },
-    "button":{
-        "1":"Cliquez ici pour soumettre"
-    }
+    "notification":"Soumis avec succès",
+    "first":"Prénom",
+	"last":"Nom de famille",
+    "email":"Email",
+	"update":"Cv",
+	"required":"Required",
+    "title":"Rejoignez-nous ici",
+    "button":"Cliquez ici pour soumettre",
+    "phone":"Numéro de téléphone"
 
 }
 }
