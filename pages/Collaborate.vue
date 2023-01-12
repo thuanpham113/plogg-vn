@@ -144,7 +144,6 @@ export default {
             }`
           }
         });
-        console.log(result.data.data.collaborators);
       } catch {
       } finally {
         this.loading = false;

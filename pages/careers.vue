@@ -76,7 +76,7 @@
 			<v-hover v-slot="{ hover }">
 				<v-btn class="rounded-lg white--text"
 				 :color="hover ? 'grey darken-1' : 'cyan lighten-3'" :height="$vuetify.breakpoint.smAndDown ? '45' : '55'"
-					:to="localePath(`/SalesTeam`)">
+					:to="localePath(`/JoinUsHere`)">
 					<div class="font-weight-black h7">{{ $t("button") }}</div>
 				</v-btn>
 			</v-hover>
