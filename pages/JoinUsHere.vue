@@ -31,7 +31,7 @@
             <v-text-field
               v-model="form.phone"
               :label="$t('phone')"
-              :rules="[rules.required]"
+              :rules="[$rules.required, $rules.phone]"
             />
           </v-row>
           <v-text-field
