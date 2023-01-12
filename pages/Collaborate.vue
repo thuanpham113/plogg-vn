@@ -199,7 +199,7 @@ export default {
     "email":"E-mail",
 	  "phone":"Numéro de téléphone",
     "company":"Nom de l'entreprise",
-	  "required":"obligatoire",
+	  "required":"Obligatoire",
 	  "orderStatuses": {
             "healthcare" : "Soins de santé",
             "retail" : "Détail",
