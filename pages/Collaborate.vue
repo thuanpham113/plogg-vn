@@ -118,7 +118,7 @@ export default {
       try {
         const result = await axios({
           method: "post",
-          url: "http://localhost:1337/graphql",
+          url: "https://plogg-vn.uc.r.appspot.com/graphql",
           data: {
             query: `
             mutation {
