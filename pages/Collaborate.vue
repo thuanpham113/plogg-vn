@@ -7,7 +7,8 @@
         </div>
       </v-layout>
 
-      <v-sheet>
+      <v-form v-model="valid" @submit.prevent="buttonClick()">
+        <v-sheet>
         <v-row class="mx-16">
           <v-text-field
             class="mr-10"
@@ -56,16 +57,18 @@
       <v-sheet>
         <div class="text-center">
           <v-btn
+            type="submit"
             color="black"
             class="white--text"
             rounded-lg
             :loading="loading"
-            @click="buttonClick()"
+            :disabled="!valid"
           >
             {{ $t("button") }}
           </v-btn>
         </div>
       </v-sheet>
+      </v-form>
     </v-col>
   </v-layout>
 </template>
@@ -75,6 +78,7 @@ import axios from "axios";
 export default {
   data() {
     return {
+      valid: false,
       loader: null,
       loading: false,
       form: {
