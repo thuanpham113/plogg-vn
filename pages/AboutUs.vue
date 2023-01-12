@@ -118,9 +118,9 @@
                                 <v-img contains height="300px" width="400px" :src="form.imgs"/>
                                 <v-card-text class="text-center font-weight-bold">
                                     <h2 class="text-h5 black--text">
-                                        {{ form.text1 }}
+                                        {{ form.Name }}
                                     </h2>
-                                    <h3>{{ form.text2 }}</h3>
+                                    <h3>{{ form.Position }}</h3>
                                 </v-card-text>
                                 <v-fade-transition>
                                     <v-overlay v-if="hover" absolute color="#036358">
@@ -145,78 +145,70 @@ export default {
             forms: [
                 {
                 imgs: "/AI/Lê Đức Anh.png",
-                text1: "Mr. Le Duc Anh ",
-                text2: "CEO",
+                Name: "Mr. Le Duc Anh ",
+                Position: "CEO",
             },
             {
                 imgs: "/AI/Phạm Nguyễn Thuận.png",
-                text1: "Mr. Thuan Pham",
-                text2: "Executive Director",
+                Name: "Mr. Thuan Pham",
+                Position: "Executive Director",
             },
             {
                 imgs: "/avt3.jpg",
-                text1: "Mr. Duy Minh",
-                text2: "Software Development Directors",
+                Name: "Mr. Duy Minh",
+                Position: "Software Development Directors",
             },
-            {
-                imgs: "/AI/Hà Tuấn Kiệt.png",
-                text1: "Mr. Kiet Ha ",
-                text2: "Software Development Directors",
-            },
+            
             {
                 imgs: "/AI/Duy Quang.png",
-                text1: "Mr. Quang Duy",
-                text2: "Software Development Directors",
+                Name: "Mr. Quang Duy",
+                Position: "Software Development Directors",
             },
             {
                 imgs: "/AI/Hà Tuấn Kiệt.png",
-                text1: "Mr. Kiet Ha ",
-                text2: "Software Development Directors",
+                Name: "Mr. Kiet Ha ",
+                Position: "Software Development Directors",
             },
             {
                 imgs: "/AI/Đỗ Duy Khang.png",
-                text1: "Mr. Khang Do",
-                text2: "Software Development Directors",
+                Name: "Mr. Khang Do",
+                Position: "Software Development Directors",
             },
-            {
-                imgs: "/AI/Hà Tuấn Kiệt.png",
-                text1: "Mr. Kiet Ha ",
-                text2: "Software Development Directors",
-            },
+           
             {
                 imgs: "/AI/Đỗ Đăng Trình.png",
-                text1: "Mr. Trinh Do",
-                text2: "Software Development Directors",
+                Name: "Mr. Trinh Do",
+                Position: "Software Development Directors",
             },
             {
                 imgs: "/AI/Dương Bảo Nam.png",
-                text1: "Mr. Nam Duong",
-                text2: "Software Development Directors",
+                Name: "Mr. Nam Duong",
+                Position: "Software Development Directors",
             },
             {
                 imgs: "/AI/Tấn Đạt Lê.png",
-                text1: "Mr. Dat Le",
-                text2: "Software Development Directors",
+                Name: "Mr. Dat Le",
+                Position: "Software Development Directors",
             },
             {
                 imgs: "/AI/Thanh Sơn.png",
-                text1: "Mr. Son Thanh",
-                text2: "Software Development Directors",
+                Name: "Mr. Son Thanh",
+                Position: "Software Development Directors",
             },
             {
                 imgs: "/AI/Trần Nguyễn Nhật Quang.png",
-                text1: "Mr. Quang Tran",
-                text2: "Software Development Directors",
+                Name: "Mr. Quang Tran",
+                Position: "Software Development Directors",
             },
             {
                 imgs: "/AI/Nguyễn Quốc Hoàng Anh.png",
-                text1: "Mr. Anh Nguyen ",
-                text2: "Software Development Directors",
+                Name: "Mr. Anh Nguyen ",
+                Position: "Software Development Directors",
             },
             {
                 imgs: "/AI/Phạm Thanh Thảo.png",
-                text1: "Mr. Thao Pham ",
-                text2: "Software Development Directors",
+                Name: "Mr. Thao Pham ",
+                Position: "Software Development Directors",
             },
         ],
         headers: [
@@ -289,7 +281,7 @@ export default {
                "1" : "Who are we?",
                "2" : "We are Plogg Vietnam - a branch of Plogg Ca. , established in 2022. Plogg Vietnam is  an International Technology Service Company that provides many professional IT services to support both small business and large coorperations. Plogg Vietnam is specialised in developing websites, softwares, and 3D designs. We are also a one-stop shop that offer a variery of other IT-related services to meet our customers’ needs. ",
                "7":"Our vision",
-                "8":"Plogg Vietnam aims to become one of the highest quality IT service providers in the world. In the next 5 years, we will extend our outsourcing to leading countries such as UK, USA, Australia, New Zealand, Singapore, etc. And Plogg Vietnam will become a leading prestigious and reliable partner in the IT service fields all over the world.",
+               "8":"Plogg Vietnam aims to become one of the highest quality IT service providers in the world. In the next 5 years, we will extend our outsourcing to leading countries such as UK, USA, Australia, New Zealand, Singapore, etc. And Plogg Vietnam will become a leading prestigious and reliable partner in the IT service fields all over the world.",
                "9" : "Our achievements",
                "10" : "Our members"
                },

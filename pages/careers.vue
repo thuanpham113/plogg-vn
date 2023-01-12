@@ -47,7 +47,7 @@
 					<v-sheet v-for="(header, index) in headers" :key="index"
 						:class="$vuetify.breakpoint.smAndDown ? '' : 'justify-start'">
 						<div :class="$vuetify.breakpoint.smAndDown ? 'subtitle-1 text-center  ' : 'h6  '">
-							{{ header.text1 }}
+							{{ header.Title }}
 						</div>
 					</v-sheet>
 				</div>
@@ -65,7 +65,7 @@
 						<div :class="$vuetify.breakpoint.smAndDown
 						? 'subtitle-1 text-center '
 						: 'h6 mt-2 '">
-							{{ head.text2 }}
+							{{ head.Content }}
 						</div>
 					</div>
 				</div>
@@ -94,39 +94,39 @@ export default {
 			headers: [
 				{
 
-					text1: this.$t("form.1"),
+					Title: this.$t("form.1"),
 
 				},
 				{
-					text1: this.$t("form.2"),
+					Title: this.$t("form.2"),
 				},
 				{
-					text1: this.$t("form.3"),
+					Title: this.$t("form.3"),
 				},
 				{
-					text1: this.$t("form.4"),
+					Title: this.$t("form.4"),
 				},
 				{
-					text1: this.$t("form.5"),
+					Title: this.$t("form.5"),
 				},
 				{
-					text1: this.$t("form.6"),
+					Title: this.$t("form.6"),
 				}
 			],
 			heads: [
 				{
 
-					text2: this.$t("form1.1"),
+					Content: this.$t("form1.1"),
 
 				},
 				{
-					text2: this.$t("form1.2"),
+					Content: this.$t("form1.2"),
 				},
 				{
-					text2: this.$t("form1.3"),
+					Content: this.$t("form1.3"),
 				},
 				{
-					text2: this.$t("form1.4"),
+					Content: this.$t("form1.4"),
 				}
 			],
 		}

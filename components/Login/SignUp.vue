@@ -25,7 +25,7 @@
 				color="white"
 				outlined
 			>
-				<div>{{ button.text }}</div>
+				<div>{{ button.Title }}</div>
 			</v-btn>
 		</v-sheet>
 	</v-sheet>
@@ -55,10 +55,10 @@ export default {
 			],
 			buttons: [
 				{
-					text: "Change method",
+					Title: "Change method",
 				},
 				{
-					text: "Create account",
+					Title: "Create account",
 				},
 			],
 		}
