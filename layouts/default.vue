@@ -169,7 +169,7 @@ export default {
 			{ img: "/Img_Contrach/us2.jpg", title: "Linkedin" },
 			{ img: "/Img_Contrach/us3.jpg", title: "Instagram" },
 			{ img: "/Img_Contrach/us4.jpg", title: "Gmail" },
-			{ img: "/Img_Contrach/us5.jpg", title: "Phone" },
+			{ img: "/Img_Contrach/us5.jpg", title: this.$t("phone") },
 		],
 		heads: [
 			{
@@ -256,7 +256,8 @@ export default {
 		"feedback":"Feedback",
 		"help":"Help center",
 		"sub1":"Our communtiny",
-		"title2":"Contrach us"
+		"title2":"Contrach us",
+		"phone":"Phone"
 	},
 	"fr": {
 		"text":{
@@ -284,7 +285,8 @@ export default {
 		"feedback":"Retour",
 		"help":"Centre d'aide",
 		"sub1":"Notre communauté",
-		"title2":"Contraignez-nous"
+		"title2":"Contraignez-nous",
+		"phone":"Téléphone fixe"
 	}
 }
 </i18n>
