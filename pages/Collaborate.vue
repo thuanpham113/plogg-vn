@@ -13,25 +13,33 @@
             class="mr-10"
             :label="$t('first')"
             :rules="[$rules.required]"
+            v-model="form.firstname"
           />
-          <v-text-field :label="$t('last')" :rules="[$rules.required]" />
+          <v-text-field
+            :label="$t('last')"
+            :rules="[$rules.required]"
+            v-model="form.lastname"
+          />
         </v-row>
         <v-row class="mx-16">
           <v-text-field
             class="mr-10"
             :label="$t('email')"
             :rules="[$rules.required, $rules.email]"
+            v-model="form.email"
           />
           <v-text-field
             class="mt-2"
             :label="$t('phone')"
             :rules="[$rules.required, $rules.phone]"
+            v-model="form.phone"
           />
         </v-row>
         <v-text-field
           class="mx-16 mt-2"
-          :label="$t('Company name')"
+          :label="$t('company')"
           :rules="[$rules.required]"
+          v-model="form.company"
         />
         <v-autocomplete
           class="mx-16"
@@ -63,11 +71,19 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
       loader: null,
       loading: false,
+      form: {
+        firstname: "",
+        lastname: "",
+        phone: "",
+        email: "",
+        company: "",
+      },
       orderStatuses: [
         {
           label: this.$t("orderStatuses.healthcare"),
@@ -97,20 +113,46 @@ export default {
     };
   },
   methods: {
-        buttonClick() {
-          this.loading = true;
-          const timeout = setTimeout(() => {
-            this.loading = false;
-            clearTimeout(timeout);
-          }, 3000);
-        },
-        showButton() {
-          if (this.values.length != 0) {
-            return false;
+    async buttonClick() {
+      this.loading = true;
+      try {
+        const result = await axios({
+          method: "post",
+          url: "http://localhost:1337/graphql",
+          data: {
+            query: `
+            mutation {
+                createCollaborator(
+                data: {
+                  first_name:"${this.form.firstname}",
+                  last_name:"${this.form.lastname}",
+                  phone_number: ${this.form.phone},
+                  email:"${this.form.email}",
+                  industry:"${this.$refs.selected}",
+                  company_name:"${this.form.company}"
+                }
+              )
+              {
+                data {
+                  id
+                }
+              }
+            }`
           }
-          return true;
-        },
+        });
+        console.log(result.data.data.collaborators);
+      } catch {
+      } finally {
+        this.loading = false;
       }
+    },
+    showButton() {
+      if (this.values.length != 0) {
+        return false;
+      }
+      return true;
+    },
+  },
 };
 </script>
 

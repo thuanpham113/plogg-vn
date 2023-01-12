@@ -94,5 +94,3 @@ export default {
 }
 }
 </i18n>
-<!-- Business Email
-Company Name -->
