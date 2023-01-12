@@ -83,7 +83,6 @@ export default {
       loader: null,
       loading: false,
       snackbar: false,
-
       timeout: 2000,
       form: {
         firstname: "",

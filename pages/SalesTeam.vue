@@ -58,11 +58,20 @@
               class="white--text"
               :disabled="!valid"
               rounded-lg
+              :loading="loading"
+              @click="snackbar = true"
             >
               {{ $t("button") }}
             </v-btn>
           </div>
         </v-sheet>
+        <v-snackbar
+          v-model="snackbar" 
+          :timeout="timeout"
+          color="green accent-4"
+          >
+          {{ $t("notification") }}
+        </v-snackbar>
       </v-form>
     </v-col>
   </v-layout>
@@ -74,6 +83,9 @@ export default {
   layout: "hero",
   data() {
     return {
+      snackbar: false,
+      timeout: 2000,
+      loading: false,
       valid: false,
       form: {
         firstname: "",
@@ -132,16 +144,18 @@ export default {
 <i18n>
 {
 "en":{
+    "notification":"Submitted successfully",
     "title":"Contact our sales team",
     "button":"Click here to submit",
-	"first":"First name",
-	"last":"Last name",
+	  "first":"First name",
+	  "last":"Last name",
     "business":"Business Email",
     "company":"Company name",
-	"required":"Required",
+	  "required":"Required",
     "how":"How can we help you?"
     	},
 "fr":{
+    "notification":"Soumis avec succès",
     "title":{
         "1":"Contactez notre équipe commerciale"
     },
