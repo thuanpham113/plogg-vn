@@ -16,7 +16,8 @@
 						? 'grey--text text-center py-6'
 						: 'grey--text '
 				" >
-				Software development <v-icon size="50">mdi-xml</v-icon>
+				{{ $t("software") }}
+				<v-icon size="50">mdi-xml</v-icon>
 			</h2>
 
 			<div
@@ -99,7 +100,8 @@ export default {
         },
         "button":{
         	"2":"Start your dream"
-        }
+        },
+		"software":"Software development"
 
 	},
 	"fr": {
@@ -108,8 +110,9 @@ export default {
 			"2":"Abonnez-vous à notre newsletter et ne manquez jamais nos mises à jour."
 		},
 		"button":{
-			"2":"Start your dream"
-		}
+			"2":"Commencez votre rêve"
+		},
+		"software":"Développement de logiciels"
 	}
 }
 </i18n>

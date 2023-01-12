@@ -29,7 +29,7 @@
 							: 'grey--text mt-5'
 					"
 				>
-					3D graphic design
+					{{ $t("graphic") }}
 				</h2>
 			</div>
 
@@ -90,7 +90,8 @@ export default {};
 		},
 		"button":{
 		"1":"Built your world"
-		}
+		},
+		"graphic":"3D graphic design"
 
 	},
 	"fr": {
@@ -99,8 +100,9 @@ export default {};
 		"2":"Abonnez-vous à notre newsletter et ne manquez jamais nos mises à jour."
 		},
 	"button":{
-		"1":"Built your world"
-		}
+		"1":"Construis ton monde"
+		},
+	"graphic":"Conception graphique 3D"
 	}
 }
 </i18n>

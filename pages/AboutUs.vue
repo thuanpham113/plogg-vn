@@ -45,10 +45,13 @@
         <v-sheet :class="$vuetify.breakpoint.smAndDown ? 'mx-5' : 'px-16'">
             <template>
                 <div v-for="(head, index) in heads" :key="index"
-						:class="head.class">
+						:class="head.class"
+                        >
+                        <v-col :cols="head.col">
 						<div>
 							{{ head.text }}
 						</div>
+                        </v-col>
 					</div>
             </template>
 
@@ -224,22 +227,22 @@ export default {
         heads: [
             {
                 text: this.$t("form.1"),
-                class:"text-md-h2 pl-10 mt-10 text-wrap text-sm-h4 text-center font-weight-bold"
+                class:this.$vuetify.breakpoint.smAndDown ? 'h5 font-weight-bold text-center mt-16' : 'h3 front-weight-black mt-16'
             },
             {
                 text: this.$t("form.2"),
-                class:"text-md-h5 mt-5 pl-10 grey--text text-center"
+                class:this.$vuetify.breakpoint.smAndDown ? 'subtitle-1 grey--text text-center' : 'h6 grey--text'
             },
             {
                 text: this.$t("form.3"),
-                class:"text-md-h2 pl-10 mt-10 text-wrap text-sm-h4 text-center font-weight-bold"
+                class:this.$vuetify.breakpoint.smAndDown ? 'h5 font-weight-bold text-center mt-16' : 'h3 front-weight-black mt-16'
             },
             {
                 text: this.$t("form.4"),
-                class:"text-md-h5 mt-5 pl-10 grey--text text-center"
-            }
+                class:this.$vuetify.breakpoint.smAndDown ? 'subtitle-1 grey--text text-center' : 'h6 grey--text',
+                col: this.$vuetify.breakpoint.smAndDown ? 12 : 8
+            },
         ],
-
         current: 1,
         interval: undefined,
         direction: 1,
@@ -281,7 +284,7 @@ export default {
                "1" : "Who are we?",
                "2" : "We are Plogg Vietnam - a branch of Plogg Ca. , established in 2022. Plogg Vietnam is  an International Technology Service Company that provides many professional IT services to support both small business and large coorperations. Plogg Vietnam is specialised in developing websites, softwares, and 3D designs. We are also a one-stop shop that offer a variery of other IT-related services to meet our customers’ needs. ",
                "7":"Our vision",
-               "8":"Plogg Vietnam aims to become one of the highest quality IT service providers in the world. In the next 5 years, we will extend our outsourcing to leading countries such as UK, USA, Australia, New Zealand, Singapore, etc. And Plogg Vietnam will become a leading prestigious and reliable partner in the IT service fields all over the world.",
+                "8":"Plogg Vietnam aims to become one of the highest quality IT service providers in the world. In the next 5 years, we will extend our outsourcing to leading countries such as UK, USA, Australia, New Zealand, Singapore, etc. And Plogg Vietnam will become a leading prestigious and reliable partner in the IT service fields all over the world.",
                "9" : "Our achievements",
                "10" : "Our members"
                },

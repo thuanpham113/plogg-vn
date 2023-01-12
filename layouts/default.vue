@@ -141,29 +141,30 @@
 
 <script>
 export default {
-	data: () => ({
+	data () {
+        return{
 		drawer: false,
 		scrolled: false,
 		lists: [
 			{
-				title: "About us",
+				title: this.$t("list.1"),
 				link: "/AboutUs",
 			},
 			{
-				title: "Industries",
+				title: this.$t("list.2"),
 				link: "/industries",
 			},
 			{
-				title: "Our services",
+				title:this.$t("list.3"),
 				link: "/OurServices",
 			},
 			{
-				title: "Careers",
+				title: this.$t("list.4"),
 				link: "/careers",
 			},
 		],
 		texts: [
-			{ title2: "Contrach us" },
+			{ title2: this.$t("title2") },
 			{ img: "/Img_Contrach/us1.jpg", title: "Twitter" },
 			{ img: "/Img_Contrach/us2.jpg", title: "Linkedin" },
 			{ img: "/Img_Contrach/us3.jpg", title: "Instagram" },
@@ -172,24 +173,25 @@ export default {
 		],
 		heads: [
 			{
-				title: "Company",
-				subtitle: "About us",
-				text: "Careers",
-				sub: "Collaborate",
+				title: this.$t("title"),
+				subtitle: this.$t("subtitle"),
+				text: this.$t("careers"),
+				sub:this.$t("sub"),
 			},
 			{
-				title: "Legal",
-				subtitle: "Terms of service",
-				text: "Privacy policy",
+				title: this.$t("title1"),
+				subtitle: this.$t("subtitle1"),
+				text: this.$t("policy"),
 			},
 			{
-				title: "Support",
-				subtitle: "Feedback",
-				text: "Help center",
-				sub: "Our communtiny",
+				title: this.$t("support"),
+				subtitle: this.$t("feedback"),
+				text: this.$t("help"),
+				sub:this.$t("sub1"),
 			},
 		],
-	}),
+	};
+},
 	beforeMount() {
 		window.addEventListener("scroll", this.handleScroll);
 	},
@@ -236,7 +238,25 @@ export default {
 		"4":"Personal",
     	"5":"2018 Plogg Viet Nam. All rightddds reserved.",
     	"6":"Do you have any question?"
-		}
+		},
+		"list":{
+			"1":"About us",
+			"2":"Industries",
+			"3":"Our services",
+			"4":"Careers"
+		},
+		"title":"Company",
+		"subtitle":"About us",
+		"careers":"Careers",
+		"sub":"Collaborate",
+		"title1":"Legal",
+		"subtitle1":"Terms of service",
+		"policy":"Privacy policy",
+		"support":"Support",
+		"feedback":"Feedback",
+		"help":"Help center",
+		"sub1":"Our communtiny",
+		"title2":"Contrach us"
 	},
 	"fr": {
 		"text":{
@@ -246,7 +266,25 @@ export default {
 		"4":"Personnel",
     	"5":"2018 Plogg Viet Nam. Tous les droits sont réservés.",
     	"6":"Avez-vous des questions?"
-		}
+		},
+		"list":{
+			"1":"À propos de nous",
+			"2":"les industries",
+			"3":"Nos services",
+			"4":"Carrières"
+		},
+		"title":"Société",
+		"subtitle":"À propos de nous",
+		"careers":"Carrières",
+		"sub":"Collaborer",
+		"title1":"Juridique",
+		"subtitle1":"Conditions d'utilisation",
+		"policy":"Politique de confidentialité",
+		"support":"Soutien",
+		"feedback":"Retour",
+		"help":"Centre d'aide",
+		"sub1":"Notre communauté",
+		"title2":"Contraignez-nous"
 	}
 }
 </i18n>
