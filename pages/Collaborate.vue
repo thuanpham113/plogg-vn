@@ -9,7 +9,7 @@
 
       <v-form v-model="valid" @submit.prevent="buttonClick()">
         <v-sheet>
-        <v-row class="mx-16">
+          <v-row class="mx-16">
           <v-text-field
             class="mr-10"
             :label="$t('first')"
@@ -21,8 +21,8 @@
             :rules="[$rules.required]"
             v-model="form.lastname"
           />
-        </v-row>
-        <v-row class="mx-16">
+          </v-row>
+          <v-row class="mx-16">
           <v-text-field
             class="mr-10"
             :label="$t('email')"
@@ -35,7 +35,7 @@
             :rules="[$rules.required, $rules.phone]"
             v-model="form.phone"
           />
-        </v-row>
+          </v-row>
         <v-text-field
           class="mx-16 mt-2"
           :label="$t('company')"
@@ -53,21 +53,22 @@
           item-text="label"
           item-value="value"
         ></v-autocomplete>
-      </v-sheet>
-      <v-sheet>
-        <div class="text-center">
-          <v-btn
-            type="submit"
-            color="black"
-            class="white--text"
-            rounded-lg
-            :loading="loading"
-            :disabled="!valid"
+        </v-sheet>
+        <v-sheet>
+          <div class="text-center">
+            <v-btn type="submit" color="black" class="white--text" rounded-lg :loading="loading" :disabled="!valid"
+              @click="snackbar = true">
+              {{ $t("button") }}
+            </v-btn>
+          </div>
+        </v-sheet>
+        <v-snackbar
+          v-model="snackbar" 
+          :timeout="timeout"
+          color="green accent-4"
           >
-            {{ $t("button") }}
-          </v-btn>
-        </div>
-      </v-sheet>
+          {{ $t("notification") }}
+        </v-snackbar>
       </v-form>
     </v-col>
   </v-layout>
@@ -81,6 +82,9 @@ export default {
       valid: false,
       loader: null,
       loading: false,
+      snackbar: false,
+
+      timeout: 2000,
       form: {
         firstname: "",
         lastname: "",
@@ -170,15 +174,16 @@ export default {
 <i18n>
 {
 "en":{
-    "title":"Collaborate here",
-    "button":"Click here to submit",
-	"first":"First name",
-	"last":"Last name",
-    "email":"Email",
-	"phone":"Phone number",
-    "company":"Company name",
-	"required":"Required",
-	"orderStatuses": {
+     "notification":"Submitted successfully",
+      "title":"Collaborate here",
+      "button":"Click here to submit",
+      "first":"First name",
+      "last":"Last name",
+      "email":"Email",
+      "phone":"Phone number",
+      "company":"Company name",
+      "required":"Required",
+	    "orderStatuses": {
             "healthcare" : "Healthcare",
             "retail" : "Retail",
             "hr" : "HR",
@@ -188,15 +193,16 @@ export default {
         }
 	},
 "fr":{
-	"title":"Collaborez ici",
+    "notification":"Soumis avec succès",
+	  "title":"Collaborez ici",
     "button":"Cliquez ici pour soumettre",
-	"first":"Prénom",
-	"last":"Nom de famille",
+	  "first":"Prénom",
+	  "last":"Nom de famille",
     "email":"E-mail",
-	"phone":"Numéro de téléphone",
+	  "phone":"Numéro de téléphone",
     "company":"Nom de l'entreprise",
-	"required":"obligatoire",
-	"orderStatuses": {
+	  "required":"obligatoire",
+	  "orderStatuses": {
             "healthcare" : "Soins de santé",
             "retail" : "Détail",
             "hr" : "HEURE",
