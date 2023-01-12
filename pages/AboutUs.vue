@@ -127,7 +127,7 @@
                                 </v-card-text>
                                 <v-fade-transition>
                                     <v-overlay v-if="hover" absolute color="#036358">
-                                        <v-btn :href="form.links">See more info</v-btn>
+                                        <v-btn :href="form.links">{{ $t("see")}}</v-btn>
                                     </v-overlay>
                                 </v-fade-transition>
                             </v-card>
@@ -149,69 +149,69 @@ export default {
                 {
                 imgs: "/AI/Lê Đức Anh.png",
                 Name: "Mr. Le Duc Anh ",
-                Position: "CEO",
+                Position: "CEO"
             },
             {
                 imgs: "/AI/Phạm Nguyễn Thuận.png",
                 Name: "Mr. Thuan Pham",
-                Position: "Executive Director",
+                Position: this.$t("director")
             },
             {
                 imgs: "/avt3.jpg",
                 Name: "Mr. Duy Minh",
-                Position: "Software Development Directors",
+                Position: this.$t("develop")
             },
             
             {
                 imgs: "/AI/Duy Quang.png",
                 Name: "Mr. Quang Duy",
-                Position: "Software Development Directors",
+                Position: this.$t("develop")
             },
             {
                 imgs: "/AI/Hà Tuấn Kiệt.png",
                 Name: "Mr. Kiet Ha ",
-                Position: "Software Development Directors",
+                Position: this.$t("develop")            
             },
             {
                 imgs: "/AI/Đỗ Duy Khang.png",
                 Name: "Mr. Khang Do",
-                Position: "Software Development Directors",
+                Position: this.$t("develop")          
             },
            
             {
                 imgs: "/AI/Đỗ Đăng Trình.png",
                 Name: "Mr. Trinh Do",
-                Position: "Software Development Directors",
-            },
+                Position: this.$t("develop")          
+             },
             {
                 imgs: "/AI/Dương Bảo Nam.png",
                 Name: "Mr. Nam Duong",
-                Position: "Software Development Directors",
+                Position: this.$t("develop")           
             },
             {
                 imgs: "/AI/Tấn Đạt Lê.png",
                 Name: "Mr. Dat Le",
-                Position: "Software Development Directors",
+                Position: this.$t("develop")            
             },
             {
                 imgs: "/AI/Thanh Sơn.png",
                 Name: "Mr. Son Thanh",
-                Position: "Software Development Directors",
+                Position: this.$t("develop")            
             },
             {
                 imgs: "/AI/Trần Nguyễn Nhật Quang.png",
                 Name: "Mr. Quang Tran",
-                Position: "Software Development Directors",
+                Position: this.$t("develop")            
             },
             {
                 imgs: "/AI/Nguyễn Quốc Hoàng Anh.png",
                 Name: "Mr. Anh Nguyen ",
-                Position: "Software Development Directors",
+                Position: this.$t("develop")            
             },
             {
                 imgs: "/AI/Phạm Thanh Thảo.png",
                 Name: "Mr. Thao Pham ",
-                Position: "Software Development Directors",
+                Position: this.$t("develop")           
             },
         ],
         headers: [
@@ -222,7 +222,7 @@ export default {
             { imgs: "/About_Us/item5.jpeg", link: "" },
             { imgs: "/About_Us/item6.jpeg", link: "" },
             { imgs: "/About_Us/item5.jpeg", link: "" },
-            { imgs: "/About_Us/item8.jpeg", link: "" },
+            { imgs: "/About_Us/item8.jpeg", link: "" }
         ],
         heads: [
             {
@@ -246,7 +246,7 @@ export default {
         current: 1,
         interval: undefined,
         direction: 1,
-        slideInterval: 2,
+        slideInterval: 2
     };
     },
     created() {
@@ -296,7 +296,10 @@ export default {
                 "2":"We are relentlessly working to bring you the most suitable software solutions. We always believe that a successful product will not only solve the customers’ initial concerns but also contributes to the advancement of their businesses. Functional products, satisfied customers, and flourishing businesses are our company’s missions and ideals.",
                 "3":"Our mission",
                 "4":"We bring the most professional IT services to support businesses meet their success by creating the optional solution and providing high-quality technology to exceed customers' expectation."
-            }
+            },
+            "see":"See more info",
+            "director":"Executive Director",
+            "develop":"Software Development Directors"
 
 
        },
@@ -317,7 +320,10 @@ export default {
                 "2":"Nous travaillons toujours pour vous apporter les solutions logicielles les plus adaptées. Nous croyons toujours qu'un produit performant doit aider les clients à résoudre les problèmes actuels et, en outre, contribuer au développement de leurs activités. Des produits utiles, des clients satisfaits, des entreprises en croissance, sont notre feuille de route de service.",
                 "3":"Notre mission",
                 "4":"Nous apportons les services informatiques les plus professionnels pour aider les entreprises à réussir en créant la solution optionnelle et en fournissant une technologie de haute qualité pour dépasser les attentes des clients."
-            }
+            },
+            "see":"Voir plus d'informations",
+            "director":"Directeur exécutif",
+            "develop":"Directeurs du développement logiciel"
        }
 
     }
