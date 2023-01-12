@@ -41,14 +41,14 @@
             :rules="[rules.required]"
           />
         </v-sheet>
-        <!-- <v-file-input
+        <v-file-input
           v-model="form.media"
           class="mx-16 mt-3"
           prepend-icon
           dense
           :label="$t('update')"
           :rules="[rules.required]"
-        /> -->
+        />
 
         <v-sheet>
           <div class="text-center">
@@ -102,6 +102,7 @@ export default {
         phone: "",
         email: "",
         title: "",
+        cv: "" 
       },
     };
   },
@@ -119,9 +120,10 @@ export default {
                 data: {
                   first_name:"${this.form.firstname}",
                   last_name:"${this.form.lastname}",
-                  phone_number: "${this.form.phone}",
                   email:"${this.form.email}",
-                  job_title:"${this.form.title}"
+                  phone: "${this.form.phone}",
+                  job_title:"${this.form.title}",
+                  cv:"${this.form.cv}"
                 }
               )
               {
