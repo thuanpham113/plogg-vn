@@ -130,7 +130,7 @@ export default {
                 data: {
                   first_name:"${this.form.firstname}",
                   last_name:"${this.form.lastname}",
-                  phone_number: ${this.form.phone},
+                  phone_number: "${this.form.phone}",
                   email:"${this.form.email}",
                   industry:"${this.$refs.selected}",
                   company_name:"${this.form.company}"
