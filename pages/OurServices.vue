@@ -52,7 +52,7 @@
 							? 'rounded-lg white--text'
 							: 'rounded-lg white--text'
 					" :color="hover ? 'grey darken-1' : 'cyan lighten-3'"
-						:height="$vuetify.breakpoint.smAndDown ? '40' : '55'" :to="localePath(`/Collaborate`)">
+						:height="$vuetify.breakpoint.smAndDown ? '40' : '55'" :to="localePath(`/SalesTeam`)">
 						<div class="text-md-h6 text-sm-h8">{{ $t("button.2") }}</div>
 					</v-btn>
 				</v-hover>
