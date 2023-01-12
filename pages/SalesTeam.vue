@@ -137,7 +137,6 @@ export default {
 	"first":"First name",
 	"last":"Last name",
     "business":"Business Email",
-	"company":"Phone number",
     "company":"Company name",
 	"required":"Required",
     "how":"How can we help you?"

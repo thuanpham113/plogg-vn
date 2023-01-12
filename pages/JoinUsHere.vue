@@ -111,7 +111,8 @@ export default {
     "company":"Company name",
 	"required":"Required",
     "title":"Join us here",
-    "button":"Click here to submit"
+    "button":"Click here to submit",
+    "phone":"Phone Number"
 },
 "fr":{
     "title":{
