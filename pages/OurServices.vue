@@ -9,9 +9,11 @@
 
 		<template>
 			<v-sheet v-for="(header, index) in headers" :key="index" >
+				<div data-aos="fade-up" data-aos-duration="900">
 				<div class="font-weight-bold text-center text-sm-h6 text-md-h4" >
 					{{ header.text1 }}
 				</div>
+			
 				<v-layout  style="max-width: 80%"
 					:class="$vuetify.breakpoint.smAndDown ? 'd-flex flex-column mx-16' : 'px-16 ml-16'">
 					<v-img contain aspect-ratio="1" :src="header.img1"
@@ -22,30 +24,33 @@
 						</div>
 					</v-col>
 				</v-layout>
-
-				<v-sheet>
-						<div class="font-weight-bold text-center mt-7 text-sm-h6 text-md-h4 my-md-6">
-							{{ header.text2 }}
-						</div>
-					<v-layout :class="$vuetify.breakpoint.smAndDown ? 'd-flex flex-column mx-16' : 'px-16 ml-16'"
-						style="max-width: 80%">
-
-						<v-col md=8>
-							<div :class="$vuetify.breakpoint.smAndDown ? 'text-center subtitle-2' : 'h6 ma-16  py-16 '">
-								{{ header.text2s }}
+				</div>
+				<div data-aos="fade-down"
+    				 data-aos-easing="linear"
+    				 data-aos-duration="900">
+					<v-sheet >
+							<div class="font-weight-bold text-center mt-7 text-sm-h6 text-md-h4 my-md-6">
+								{{ header.text2 }}
 							</div>
-						</v-col>
-						<v-img contain aspect-ratio="1" :width="$vuetify.breakpoint.smAndDown ? '100%' : '50%'"
-							:src="header.img2" />
-					</v-layout>
-				</v-sheet>
+							<v-layout :class="$vuetify.breakpoint.smAndDown ? 'd-flex flex-column mx-16' : 'px-16 ml-16'"
+								style="max-width: 80%">
+								<v-col md=8>
+									<div :class="$vuetify.breakpoint.smAndDown ? 'text-center subtitle-2' : 'h6 ma-16  py-16 '">
+										{{ header.text2s }}
+									</div>
+								</v-col>
+								<v-img contain aspect-ratio="1" :width="$vuetify.breakpoint.smAndDown ? '100%' : '50%'"
+									:src="header.img2" />
+							</v-layout>
+					</v-sheet>
+				</div>
 
 
 			</v-sheet>
 
 		</template>
 		<template>
-			<v-col :cols="$vuetify.breakpoint.smAndDown ? '12' : '12'" class="d-flex justify-center ">
+			<v-col data-aos="fade-up" :cols="$vuetify.breakpoint.smAndDown ? '12' : '12'" class="d-flex justify-center ">
 				<v-hover class=" " v-slot="{ hover }">
 					<v-btn :class="
 						$vuetify.breakpoint.smAndDown
@@ -63,6 +68,9 @@
 </template>
 
 <script>
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 export default {
 	data() {
 		return {
@@ -96,7 +104,10 @@ export default {
 			],
 		}
 	},
-
+	mounted() {
+		AOS.init();
+		
+	}
 };
 </script>
 

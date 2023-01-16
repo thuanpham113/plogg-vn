@@ -79,6 +79,7 @@
 
 <script>
 import axios from 'axios'
+import { toRefs } from 'vue';
 export default {
   layout: "hero",
   data() {
@@ -102,7 +103,7 @@ export default {
         phone: "",
         email: "",
         title: "",
-        cv: "" 
+        media: true
       },
     };
   },
@@ -123,7 +124,7 @@ export default {
                   email:"${this.form.email}",
                   phone: "${this.form.phone}",
                   job_title:"${this.form.title}",
-                  cv:"${this.form.cv}"
+                  cv:"${this.form.media}"
                 }
               )
               {
