@@ -3,7 +3,7 @@
 		<v-card height="80" flat color="transparent"></v-card>
 		<div class="py-6 pa-9">
 			<div data-aos="zoom-in" data-aos-duration="900">
-			<div class="font-weight-bold text-center text-sm-h4  text-md-h3" >
+			<div class="font-weight-bold text-center mt-6 text-sm-h4  text-md-h2" >
 				{{ $t("title") }}
 			</div>
 			</div>
@@ -11,12 +11,12 @@
 
 		<template>
 			<v-sheet v-for="(header, index) in headers" :key="index" >
-				<div data-aos="fade-down" data-aos-offset="120"  data-aos-duration="1000"  data-aos-easing="ease-in-sine">
+				<div data-aos="fade-down" data-aos-offset="120" data-aos-once="true"  data-aos-duration="900"  data-aos-easing="ease-in-sine">
 				<div class="font-weight-bold text-center text-sm-h6 text-md-h4 align-start mt-10" >
 					{{ header.text1 }}
 				</div>
 			
-				<v-layout  style="max-width: 80%"
+				<v-layout  style="max-width:85%"
 					:class="$vuetify.breakpoint.smAndDown ? 'd-flex flex-column mx-16' : 'px-16 ml-16'">
 					<v-img contain aspect-ratio="1" :src="header.img1"
 						:width="$vuetify.breakpoint.smAndDown ? '100%' : '50%'" />
@@ -72,6 +72,7 @@
 <script>
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+
 
 export default {
 	data() {
