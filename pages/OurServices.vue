@@ -1,14 +1,14 @@
 <template>
-	<v-sheet >
-		<v-card height="80" flat color="transparent"></v-card>
+	<v-sheet  v-scroll="onScroll" >
+		<v-card height="80" flat color="transparent"/>
 		<div class="py-6 pa-9">
 			<div class="font-weight-bold text-center text-sm-h6  text-md-h4" >
 				{{ $t("title") }}
 			</div>
 		</div>
 
-		<template>
-			<v-sheet v-for="(header, index) in headers" :key="index" >
+		<template >
+			<v-sheet id="scroll-target" v-for="(header, index) in headers" :key="index" >
 				<div data-aos="fade-up" data-aos-duration="900">
 				<div class="font-weight-bold text-center text-sm-h6 text-md-h4" >
 					{{ header.text1 }}
@@ -102,11 +102,23 @@ export default {
 
 				}
 			],
+			scrollProcess:0,
+			timeout:undefined
 		}
 	},
 	mounted() {
 		AOS.init();
-		
+	},
+	methods:{
+		onScroll(e){
+			console.log(e.target.scrollingElement.scrollTop);
+			clearTimeout(this.timeout)
+			this.timeout = setTimeout(()=>{
+				if (e.target.scrollingElement.scrollTop>120) {
+					e.target.scrollingElement.scrollTo({top:722,behavior:'smooth'})
+			}
+			},1000)
+		}
 	}
 };
 </script>
