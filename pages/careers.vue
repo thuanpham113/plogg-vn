@@ -3,18 +3,23 @@
 		<template>
 			<v-img max-height="450" src="/Background_careers.jpg">
 				<v-card :height=" $vuetify.breakpoint.smAndDown ? '' : '90' " flat color="transparent"></v-card>
+				
 				<div class="pt-md-16 ma-md-14">
+					<div data-aos="zoom-out-down" data-aos-duration="900">
 					<v-card-title :class="$vuetify.breakpoint.smAndDown ? 'justify-center' : 'justify-start'">
 						<div class="text-sm-h5 text-md-h3 ml-10 font-weight-bold">
 							{{ $t("title.1") }}
 						</div>
 					</v-card-title>
-
+					</div>
+					
 					<v-card-titse class=" grey--text">
 						<v-col :class="$vuetify.breakpoint.smAndDown
 						? 'font-weight-bold text-center '
 						: 'h6 mx-11 '">
+						<div data-aos="zoom-out-down" data-aos-duration="900">
 							{{ $t("title.2") }}
+							</div>
 						</v-col>
 					</v-card-titse>
 				</div>
@@ -88,6 +93,9 @@
 </template>
 
 <script>
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 export default {
 	data() {
 		return {
@@ -133,6 +141,7 @@ export default {
 	},
 	mounted () {
 		console.log(this)
+		AOS.init();
 	}
 
 };

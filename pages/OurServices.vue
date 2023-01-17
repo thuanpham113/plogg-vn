@@ -2,15 +2,17 @@
 	<v-sheet >
 		<v-card height="80" flat color="transparent"></v-card>
 		<div class="py-6 pa-9">
-			<div class="font-weight-bold text-center text-sm-h6  text-md-h4" >
+			<div data-aos="zoom-in" data-aos-duration="900">
+			<div class="font-weight-bold text-center text-sm-h4  text-md-h3" >
 				{{ $t("title") }}
+			</div>
 			</div>
 		</div>
 
 		<template>
 			<v-sheet v-for="(header, index) in headers" :key="index" >
-				<div data-aos="fade-up" data-aos-duration="900">
-				<div class="font-weight-bold text-center text-sm-h6 text-md-h4" >
+				<div data-aos="fade-down" data-aos-offset="120"  data-aos-duration="1000"  data-aos-easing="ease-in-sine">
+				<div class="font-weight-bold text-center text-sm-h6 text-md-h4 align-start mt-10" >
 					{{ header.text1 }}
 				</div>
 			
