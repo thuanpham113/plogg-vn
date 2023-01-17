@@ -1,55 +1,63 @@
 <template>
 	<v-sheet
-	:class="$vuetify.breakpoint.smAndDown ? 'd-flex  flex-column   align-center':'d-flex align-center vh100'">
-		<div
+		:class="$vuetify.breakpoint.smAndDown ? 'd-flex  flex-column   align-center':'d-flex align-center vh100'">
+		<div 
 			column
 			:class=" $vuetify.breakpoint.smAndDown ? ' ' : 'black--text pl-16 w-50'"
 		>
-			<div 
-			 :class="
-				$vuetify.breakpoint.smAndDown
-				? 'h5 font-weight-bold text-center mt-8 '
-				: 'h3 font-weight-bold mt-10 flex-column'
-			">
+				<div  
+				data-aos="fade-right"
+				data-aos-duration="900"
+				:class="
+					$vuetify.breakpoint.smAndDown
+					? 'h5 font-weight-bold text-center mt-8 '
+					: 'h3 font-weight-bold mt-10 flex-column'
+				">
 				<div>
-					{{ $t("title.1") }}
-				</div>
-			
+						{{ $t("title.1") }}
+					</div>
+				
 			</div>
-			<div :class="
+			<div  data-aos="fade-right"
+				  data-aos-duration="900"
+			 :class="
 				$vuetify.breakpoint.smAndDown
 				? 'py-6 text-center mx-2'
 				: 'h6 mb-11 my-5'
 			">
 				{{ $t("title.2") }}
 			</div>
-			<div class="d-flex justify-center">
-				<v-hover class=" " v-slot="{ hover }">
-					<v-btn
-						:class="
-						$vuetify.breakpoint.smAndDown
-							? 'rounded-lg white--text'
-							: 'rounded-lg white--text'
-						"
-						:color="hover ? 'grey darken-1' : 'cyan lighten-3'"
-						:height="$vuetify.breakpoint.smAndDown ? '40' : '55'"
-						dense
-						href="/AboutUs"
-					>
-						<div class="font-weight-black h7">{{ $t("button.1") }}</div>
-					</v-btn>
-				</v-hover>
+			<div 
+				data-aos="fade-right" 
+				data-aos-duration="900" 
+				class="d-flex justify-center">
+					<v-hover class=" " v-slot="{ hover }">
+						<v-btn
+							class="rounded-lg white--text"
+							:color="hover ? 'grey darken-1' : 'cyan lighten-3'"
+							:height="$vuetify.breakpoint.smAndDown ? '40' : '55'"
+							dense
+							href="/AboutUs"
+						>
+							<div class="font-weight-black h7">{{ $t("button.1") }}</div>
+						</v-btn>
+					</v-hover>
 			</div>
 		</div>
 		
-		<v-img contain class="mr-15 pa-0" aspect-ratio="1" :width="$vuetify.breakpoint.smAndDown ? '70%' : '40%'" src="plogg_img.png"/>
-		
-	
+		<v-img data-aos="fade-left" data-aos-duration="900" contain class="mr-15 pa-0" aspect-ratio="1" :width="$vuetify.breakpoint.smAndDown ? '70%' : '40%'" src="plogg_img.png"/>
 	</v-sheet>
 </template>
 
 <script>
-export default {};
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+export default {
+	mounted() {
+		AOS.init();
+		
+	}
+};
 </script>
 
 <style>

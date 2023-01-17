@@ -4,19 +4,21 @@
 			<v-img max-height="450" src="/Background_careers.jpg">
 				<v-card :height=" $vuetify.breakpoint.smAndDown ? '' : '90' " flat color="transparent"></v-card>
 				<div class="pt-md-16 ma-md-14">
-					<v-card-title :class="$vuetify.breakpoint.smAndDown ? 'justify-center' : 'justify-start'">
-						<div class="text-sm-h5 text-md-h3 ml-10 font-weight-bold">
-							{{ $t("title.1") }}
-						</div>
-					</v-card-title>
+					<div data-aos="fade-up">
+						<v-card-title :class="$vuetify.breakpoint.smAndDown ? 'justify-center' : 'justify-start'">
+							<div class="text-sm-h5 text-md-h3 ml-10 font-weight-bold">
+								{{ $t("title.1") }}
+							</div>
+						</v-card-title>
 
-					<v-card-titse class=" grey--text">
-						<v-col :class="$vuetify.breakpoint.smAndDown
-						? 'font-weight-bold text-center '
-						: 'h6 mx-11 '">
-							{{ $t("title.2") }}
-						</v-col>
-					</v-card-titse>
+						<v-card-titse class=" grey--text">
+							<v-col :class="$vuetify.breakpoint.smAndDown
+							? 'font-weight-bold text-center '
+							: 'h6 mx-11 '">
+								{{ $t("title.2") }}
+							</v-col>
+						</v-card-titse>
+					</div>
 				</div>
 			</v-img>
 		</template>
@@ -38,18 +40,20 @@
 			</template>
 
 			<template>
-				<div class="mx-10">
-					<div
-						:class="$vuetify.breakpoint.smAndDown ? 'h6 text-center font-weight-bold' : 'h4 font-weight-bold py-10 '">
-						{{ $t("title.5") }}
-					</div>
-
-					<v-sheet v-for="(header, index) in headers" :key="index"
-						:class="$vuetify.breakpoint.smAndDown ? '' : 'justify-start'">
-						<div :class="$vuetify.breakpoint.smAndDown ? 'subtitle-1 text-center  ' : 'h6  '">
-							{{ header.Title }}
+				<div  data-aos="fade-up" :data-aos-delay="10000">
+					<div class="mx-10">
+						<div
+							:class="$vuetify.breakpoint.smAndDown ? 'h6 text-center font-weight-bold' : 'h4 font-weight-bold py-10 '">
+							{{ $t("title.5") }}
 						</div>
-					</v-sheet>
+
+						<v-sheet v-for="(header, index) in headers" :key="index"
+							:class="$vuetify.breakpoint.smAndDown ? '' : 'justify-start'">
+								<div :class="$vuetify.breakpoint.smAndDown ? 'subtitle-1 text-center  ' : 'h6  '">
+									{{ header.Title }}
+								</div>
+						</v-sheet>
+						</div>
 				</div>
 			</template>
 			<template>
@@ -88,6 +92,8 @@
 </template>
 
 <script>
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 export default {
 	data() {
 		return {
@@ -131,8 +137,8 @@ export default {
 			],
 		}
 	},
-	mounted () {
-		console.log(this)
+	mounted() {
+		AOS.init();
 	}
 
 };
