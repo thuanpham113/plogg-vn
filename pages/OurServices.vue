@@ -1,6 +1,6 @@
 <template>
-	<v-sheet >
-		<v-card height="80" flat color="transparent"></v-card>
+	<v-sheet  v-scroll="onScroll" >
+		<v-card height="80" flat color="transparent"/>
 		<div class="py-6 pa-9">
 			<div data-aos="zoom-in" data-aos-duration="900">
 			<div class="font-weight-bold text-center mt-6 text-sm-h4  text-md-h2" >
@@ -27,14 +27,18 @@
 					</v-col>
 				</v-layout>
 				</div>
-				<div data-aos="fade-down"
+				<div
+					 data-aos="fade-down"
     				 data-aos-easing="linear"
     				 data-aos-duration="900">
 					<v-sheet >
 							<div class="font-weight-bold text-center mt-7 text-sm-h6 text-md-h4 my-md-6">
 								{{ header.text2 }}
 							</div>
-							<v-layout :class="$vuetify.breakpoint.smAndDown ? 'd-flex flex-column mx-16' : 'px-16 ml-16'"
+							<v-layout 
+								:class="$vuetify.breakpoint.smAndDown ?
+							 	'd-flex flex-column mx-16' :
+							 	'px-16 ml-16'"
 								style="max-width: 80%">
 								<v-col md=8>
 									<div :class="$vuetify.breakpoint.smAndDown ? 'text-center subtitle-2' : 'h6 ma-16  py-16 '">
@@ -46,10 +50,7 @@
 							</v-layout>
 					</v-sheet>
 				</div>
-
-
 			</v-sheet>
-
 		</template>
 		<template>
 			<v-col data-aos="fade-up" :cols="$vuetify.breakpoint.smAndDown ? '12' : '12'" class="d-flex justify-center ">
@@ -65,7 +66,6 @@
 				</v-hover>
 			</v-col>
 		</template>
-
 	</v-sheet>
 </template>
 
@@ -105,11 +105,23 @@ export default {
 
 				}
 			],
+			scrollProcess:0,
+			timeout:undefined
 		}
 	},
 	mounted() {
 		AOS.init();
-		
+	},
+	methods:{
+		onScroll(e){
+			console.log(e.target.scrollingElement.scrollTop);
+			clearTimeout(this.timeout)
+			this.timeout = setTimeout(()=>{
+				if (e.target.scrollingElement.scrollTop>120) {
+					e.target.scrollingElement.scrollTo({top:722,behavior:'smooth'})
+			}
+			},1000)
+		}
 	}
 };
 </script>

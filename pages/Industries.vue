@@ -5,17 +5,26 @@
 			{{ $t("add") }}
 		</div>
 
-		<v-layout class="justify-md-space-around mx-16"
+		<v-layout 
+			class="justify-md-space-around mx-16"
 			:class="$vuetify.breakpoint.smAndDown ? 'flex-column align-center' : 'flex-wrap'"
-			:column="$vuetify.breakpoint.smAndDown">
-			<v-sheet v-for="(form, index) in forms" :max-width="$vuetify.breakpoint.smAndDown ? '90%' : '40%'"
-				:key="index">
+			:column="$vuetify.breakpoint.smAndDown"
+			>
+			<v-sheet 
+				 v-for="(form, index) in forms"
+				 :max-width="$vuetify.breakpoint.smAndDown ? '90%' : '40%'"
+				 :key="index"
+				 >
 				<v-card rounded="xl" class="ma-5 ">
 					<v-img class="pl-5" :src="form.imgs" />
 				</v-card>
-				<v-card elevation="0" rounded="xl" class="text-center">
+				<v-card 
+					elevation="0"
+					rounded="xl" 
+					class="text-center"
+					>
 					<v-card-text class="text-h6 black--text font-weight-bold" v-if="form.texts">
-						{{ form.key }}
+							{{ form.key }}
 						<div class="subtitle-1 grey--text" v-if="form.text1">
 							{{ form.text1 }}
 						</div>

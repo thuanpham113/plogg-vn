@@ -6,9 +6,11 @@
 					<v-col cols="2">
 						<v-img src="/Rocket.jpg"/>
 					</v-col>
+
 					<v-col>
 						<h2 class="grey--text mt-16">{{ $t("icon.1")}}</h2>
 					</v-col>
+
 				</v-row>
 
 				<v-col class="ml-8">
@@ -20,6 +22,7 @@
 						{{ $t("title.2") }}
 					</div>
 				</v-col>
+
 				<v-col :cols="$vuetify.breakpoint.smAndDown ? '12' : '9'">
 					<v-hover class=" " v-slot="{ hover }">
 						<v-btn
@@ -38,33 +41,37 @@
 			<v-col cols="6">
 				<v-img aspect-ratio="2" src="/phuc1.jpg"/> 
 			</v-col>
+
 		</v-sheet>
-		<v-layout justify-center>
-			<div class="h4 font-weight-medium">
-				{{ $t("title.3") }}
-			</div>
-		</v-layout>
-		<v-layout justify-center>
-			<div class="text-center grey--text ma-16">
-				{{ $t("title.4") }}
-			</div>
-		</v-layout>
-		<v-layout justify-center>
-			<div class="h4 font-weight-medium">{{ $t("title.5") }}</div>
-		</v-layout>
-		<v-layout style="max-width: 80%" ml-16 pl-16>
-			<v-col cols="4" class="ml-16">
-			<v-img aspect-ratio="1" src="/imgp.jpg" />
-			</v-col>
-			<v-col cols="8">
-				<div class="h5 cyan--text text-center mt-16">
-					{{ $t("title.6") }}
+			<v-layout justify-center>
+				<div class="h4 font-weight-medium">
+					{{ $t("title.3") }}
 				</div>
-				<div class="text-center grey--text mt-6">
-					{{ $t("title.7") }}
+			</v-layout>
+
+			<v-layout justify-center>
+				<div class="text-center grey--text ma-16">
+					{{ $t("title.4") }}
 				</div>
-			</v-col>
-		</v-layout>
+			</v-layout>
+				
+			<v-layout justify-center>
+				<div class="h4 font-weight-medium">{{ $t("title.5") }}</div>
+			</v-layout>
+
+			<v-layout style="max-width: 80%" ml-16 pl-16>
+				<v-col cols="4" class="ml-16">
+					<v-img aspect-ratio="1" src="/imgp.jpg" />
+				</v-col>
+					<v-col cols="8">
+						<div class="h5 cyan--text text-center mt-16">
+							{{ $t("title.6") }}
+						</div>
+						<div class="text-center grey--text mt-6">
+							{{ $t("title.7") }}
+						</div>
+					</v-col>
+			</v-layout>
 	</v-layout>
 </template>
 

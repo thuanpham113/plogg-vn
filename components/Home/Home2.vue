@@ -1,36 +1,43 @@
 <template>
 	<v-sheet
 		class="d-flex flex-column flex-md-row align-center justify-center my-16">
-		<v-img class="px-16" 
-		:max-width="$vuetify.breakpoint.smAndDown ? '80%' : '45%'" contain src="/Software.png" />
+		<v-img 
+			data-aos="fade-right"
+			data-aos-duration="900"
+			class="px-16" 
+			:max-width="$vuetify.breakpoint.smAndDown ? '80%' : '45%'" 
+			contain src="/Software.png" />
 
-		<div
-			:class="['d-flex flex-column',
-				$vuetify.breakpoint.smAndDown
-					? 'black--text'
-					: 'black--text align-end w-55 px-16'
+		<div 
+			data-aos="fade-right" 
+			data-aos-duration="900" 
+			:class="['d-flex flex-column',$vuetify.breakpoint.smAndDown ? 'black--text' : 'black--text align-end w-55 px-16'
 			]"
 		>
-			<h2 :class="
-					$vuetify.breakpoint.smAndDown
+			<h2  
+				 data-aos="fade-right"
+			     data-aos-duration="900"  
+			 	 :class=" $vuetify.breakpoint.smAndDown
 						? 'grey--text text-center py-6'
-						: 'grey--text '
-				" >
+						: 'grey--text ' " >
 				{{ $t("software") }}
 				<v-icon size="50">mdi-xml</v-icon>
 			</h2>
 
-			<div
-				:class="
+				<div 
+					data-aos="fade-right"
+				 	data-aos-duration="900" 
+					:class=" 
 					$vuetify.breakpoint.smAndDown
-						? 'h6 font-weight-bold text-center '
-						: 'h4 font-weight-bold text-end py-4'
-				"
-			>
-				{{ $t("title.1") }}
-			</div>
+							? 'h6 font-weight-bold text-center '
+							: 'h4 font-weight-bold text-end py-4'"
+				>
+					{{ $t("title.1") }}
+				</div>
 
-			<div
+			<div 
+				data-aos="fade-right" 
+				data-aos-duration="900" 
 				:class="
 					$vuetify.breakpoint.smAndDown
 						? 'mt-2  text-center'
@@ -40,15 +47,14 @@
 				{{ $t("title.2") }}
 			</div>
 
-			<div class="d-flex justify-center  pt-5"
-			:class="$vuetify.breakpoint.smAndDown ? '' : 'w-90'">
+			<div
+			 data-aos="fade-right" 
+			 data-aos-duration="900"  
+			 class="d-flex justify-center  pt-5"
+			 :class="$vuetify.breakpoint.smAndDown ? '' : 'w-90'">
 				<v-hover v-slot="{ hover }">
 					<v-btn
-						:class="
-							$vuetify.breakpoint.smAndDown
-								? 'rounded-lg white--text'
-								: 'rounded-lg white--text'
-						"
+					    class="rounded-lg white--text"
 						:color="hover ? 'grey darken-1' : 'cyan lighten-3'"
 						:height="$vuetify.breakpoint.smAndDown ? '45' : '55'"
 						:to="localePath(`/StartDream`)"
@@ -63,6 +69,8 @@
 </template>
 
 <script>
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 export default {
 	data: () => ({
 		selected: 1,
@@ -86,6 +94,10 @@ export default {
 			this.selected = index;
 		},
 	},
+	mounted() {
+		AOS.init();
+		
+	}
 };
 </script>
 
