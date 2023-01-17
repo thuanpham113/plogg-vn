@@ -9,68 +9,70 @@
       <v-form v-model="valid" @submit.prevent="buttonClick()">
         <v-sheet>
           <v-row class="mx-16">
-            <v-text-field
-              v-model="form.firstname"
-              class="mr-10"
-              :label="$t('first')"
-              :rules="[rules.required]"
-            />
-            <v-text-field
-              v-model="form.lastname"
-              :label="$t('last')"
-              :rules="[rules.required]"
-            />
+              <v-text-field
+                v-model="form.firstname"
+                class="mr-10"
+                :label="$t('first')"
+                :rules="[rules.required]"
+              />
+              <v-text-field
+                v-model="form.lastname"
+                :label="$t('last')"
+                :rules="[rules.required]"
+              />
           </v-row>
+
           <v-row class="mx-16">
             <v-text-field
-              v-model="form.email"
-              class="mr-10"
-              :label="$t('email')"
-              :rules="[rules.required, rules.email]"
-            />
+                v-model="form.email"
+                class="mr-10"
+                :label="$t('email')"
+                :rules="[rules.required, rules.email]"
+              />
+              <v-text-field
+                v-model="form.phone"
+                :label="$t('phone')"
+                :rules="[$rules.required, $rules.phone]"
+              />
+            </v-row>
+
             <v-text-field
-              v-model="form.phone"
-              :label="$t('phone')"
-              :rules="[$rules.required, $rules.phone]"
+              v-model="form.title"
+              label="Job title"
+              class="mx-16"
+              :rules="[rules.required]"
             />
-          </v-row>
-          <v-text-field
-            v-model="form.title"
-            label="Job title"
-            class="mx-16"
+        </v-sheet>
+          <v-file-input
+            v-model="form.media"
+            class="mx-16 mt-3"
+            prepend-icon
+            dense
+            :label="$t('update')"
             :rules="[rules.required]"
           />
-        </v-sheet>
-        <v-file-input
-          v-model="form.media"
-          class="mx-16 mt-3"
-          prepend-icon
-          dense
-          :label="$t('update')"
-          :rules="[rules.required]"
-        />
 
         <v-sheet>
-          <div class="text-center">
-            <v-btn
-              type="submit"
-              color="black"
-              class="white--text"
-              rounded-lg
-              :loading="loading"
-              :disabled="!valid || loading"
-              @click="snackbar = true"
-            >
-              {{ $t("button") }}
-            </v-btn>
-          </div>
+           <div class="text-center">
+              <v-btn
+                type="submit"
+                color="black"
+                class="white--text"
+                rounded-lg
+                :loading="loading"
+                :disabled="!valid || loading"
+                @click="snackbar = true"
+              >
+                {{ $t("button") }}
+              </v-btn>
+           </div>
         </v-sheet>
         <v-snackbar
-          v-model="snackbar" 
-          :timeout="timeout"
-          color="green accent-4"
-          >
-          {{ $t("notification") }}
+            v-model="snackbar" 
+            :timeout="timeout"
+            color="green accent-4"
+            >
+            {{ $t("notification") }}
         </v-snackbar>
       </v-form>
     </v-col>

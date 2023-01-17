@@ -1,17 +1,19 @@
 <template>
     <v-sheet>
         <v-card flat color="transparent" :height="$vuetify.breakpoint.smAndDown ? '' : '80 '" ></v-card>
-        <v-layout :class="$vuetify.breakpoint.smAndDown ? '' : 'py-5 mx-15'">
+        <v-layout :class="$vuetify.breakpoint.smAndDown ? '' : 'py-5 px-16 mx-15'">
             <template>
-                <div >
+                <div  >
                     <v-col >
-                        <v-layout justify-center v-if="$vuetify.breakpoint.smAndDown" >
-                            <img
-                            contain
-                            aspect-ratio="1"
-                            :width="$vuetify.breakpoint.smAndDown ? '200' : ''"
-                            :class="$vuetify.breakpoint.smAndDown ? 'top-side justify-center' : ''
-                            " src="/logowe.jpg" />
+                        <v-layout 
+                            justify-center data-aos="fade-down" 
+                            v-if="$vuetify.breakpoint.smAndDown" >
+                                <img
+                                contain
+                                aspect-ratio="1"
+                                :width="$vuetify.breakpoint.smAndDown ? '200' : ''"
+                                :class="$vuetify.breakpoint.smAndDown ? 'top-side justify-center' : ''
+                                " src="/logowe.jpg" />
                         </v-layout>
                     </v-col>
 
@@ -23,13 +25,20 @@
                     </v-col>
 
 
-                    <div :class="$vuetify.breakpoint.smAndDown
-                            ? 'h5 text-center font-weight-bold '
-                            : 'h3 pl-10 text-wrap font-weight-bold'">
+                    <div 
+                        data-aos="fade-down"  
+                        data-aos-duration="900" 
+                        :class="$vuetify.breakpoint.smAndDown
+                            ? 'h6 text-center font-weight-bold '
+                            : 'h4 pl-10 text-wrap font-weight-bold'"
+                            >
                         {{ $t("title.1") }}
                     </div>
 
-                    <div class="content">
+                    <div 
+                        data-aos="fade-down-right" 
+                        data-aos-duration="900" 
+                        class="content">
                          <p
                             :class="$vuetify.breakpoint.smAndDown ?
                             'text-center grey--text subtitle-1 mx-6' : ' h6 grey--text mt-10 ma-12'">
@@ -93,13 +102,20 @@
                     ">
                         {{ $t("title.9") }}
                     </div>
-                    <v-slide-group v-model="current" :class="$vuetify.breakpoint.smAndDown ? '' : 'pa-5 mt-12'"
-                        center-active show-arrows>
-                        <v-slide-item disabled v-for="(header, index) in headers" :key="index">
-                            <v-card elevation="0" height="200" width="400">
-                                <v-img contain :src="header.imgs" />
-                            </v-card>
-                        </v-slide-item>
+                    <v-slide-group
+                         center-active 
+                         show-arrows
+                         v-model="current" 
+                         :class="$vuetify.breakpoint.smAndDown ? '' : 'pa-5 mt-12'"
+                        >
+                            <v-slide-item disabled v-for="(header, index) in headers" :key="index">
+                                <v-card 
+                                    elevation="0" 
+                                    height="200" 
+                                    width="400">
+                                        <v-img contain :src="header.imgs" />
+                                </v-card>
+                            </v-slide-item>
                     </v-slide-group>
                 </v-sheet>
             </template>
@@ -117,19 +133,25 @@
                         <template #default="{ hover }" >
                             <v-card
                                 :class="$vuetify.breakpoint.smAndDown ? '' : ' mx-auto ma-12 '"
-                                class="rounded-xl">
-                                <v-img contains height="300px" width="400px" :src="form.imgs"/>
-                                <v-card-text class="text-center font-weight-bold">
-                                    <h2 class="text-h5 black--text">
-                                        {{ form.Name }}
-                                    </h2>
-                                    <h3>{{ form.Position }}</h3>
-                                </v-card-text>
-                                <v-fade-transition>
-                                    <v-overlay v-if="hover" absolute color="#036358">
-                                        <v-btn :href="form.links">{{ $t("see")}}</v-btn>
-                                    </v-overlay>
-                                </v-fade-transition>
+                                 class="rounded-xl">
+                                <v-img 
+                                    contains 
+                                    height="300px" 
+                                    width="400px" 
+                                    :src="form.imgs"
+                                    />
+                                        <v-card-text class="text-center font-weight-bold">
+                                            <h2 class="text-h5 black--text">
+                                                {{ form.Name }}
+                                            </h2>
+                                            <h3>{{ form.Position }}</h3>
+                                        </v-card-text>
+                                        
+                                    <v-fade-transition>
+                                        <v-overlay v-if="hover" absolute color="#036358">
+                                            <v-btn :href="form.links">{{ $t("see")}}</v-btn>
+                                        </v-overlay>
+                                    </v-fade-transition>
                             </v-card>
                         </template>
                     </v-hover>
@@ -141,6 +163,8 @@
 </template>
 
 <script>
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 export default {
     data () {
         return{
@@ -265,6 +289,10 @@ export default {
     beforeDestroy() {
         clearInterval(this.interval);
     },
+    mounted() {
+		AOS.init();
+		
+	}
 };
 </script>
 

@@ -2,18 +2,27 @@
 	<v-layout column>
 		<v-card :height="$vuetify.breakpoint.smAndDown ? '' : '80'" flat color="transparent"></v-card>
 		<template>
-
 			<v-sheet class="d-flex flex-column flex-md-row align-center  ">
 				<v-sheet
-					:class="['d-flex flex-row-reverse my-16', $vuetify.breakpoint.smAndDown ? 'mt-5' : 'd-column-reverse align-center justify-end']">
+					:class="['d-flex flex-row-reverse my-16',
+						$vuetify.breakpoint.smAndDown ?
+						'mt-5' : 
+						'd-column-reverse align-center justify-end']
+					 ">
 					<div class=" px-16 d-flex flex-column">
 						<div
-							:class="$vuetify.breakpoint.smAndDown ? 'justify-center d-flex flex-row' : 'd-flex flex-row '">
-							<v-img :class="$vuetify.breakpoint.smAndDown ? 'mt-5' : ''" max-height="70" max-width="70"
+							:class="$vuetify.breakpoint.smAndDown ? 
+							'justify-center d-flex flex-row' : 
+							'd-flex flex-row '
+							">
+							<v-img 
+								:class="$vuetify.breakpoint.smAndDown ? 'mt-5' : '' "
+								 max-height="70" 
+								 max-width="70"
 								contain src="/Rocket.jpg" />
 
-							<div class="grey--text font-weight-bold " :class="
-								$vuetify.breakpoint.smAndDown
+							<div class="grey--text font-weight-bold " 
+								:class=" $vuetify.breakpoint.smAndDown
 									? 'h6 text-center mt-11 '
 									: 'h6  py-4'
 							">
@@ -22,7 +31,7 @@
 						</div>
 
 						<div :class="
-							$vuetify.breakpoint.smAndDown
+								$vuetify.breakpoint.smAndDown
 								? 'h6 font-weight-bold text-center py-2'
 								: 'h4 font-weight-bold py-4'
 						">
@@ -63,9 +72,6 @@
 				</div>
 			</div>
 		</template>
-
-
-
 		<v-sheet>
 			<div
 				:class="$vuetify.breakpoint.smAndDown ? 'h6 text-center font-weight-bold py-12' : ' h5 font-weight-bold  text-center'">

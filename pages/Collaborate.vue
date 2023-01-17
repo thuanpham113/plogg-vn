@@ -10,55 +10,61 @@
       <v-form v-model="valid" @submit.prevent="buttonClick()">
         <v-sheet>
           <v-row class="mx-16">
-          <v-text-field
-            class="mr-10"
-            :label="$t('first')"
-            :rules="[$rules.required]"
-            v-model="form.firstname"
-          />
-          <v-text-field
-            :label="$t('last')"
-            :rules="[$rules.required]"
-            v-model="form.lastname"
-          />
+            <v-text-field
+              class="mr-10"
+              :label="$t('first')"
+              :rules="[$rules.required]"
+              v-model="form.firstname"
+            />
+            <v-text-field
+              :label="$t('last')"
+              :rules="[$rules.required]"
+              v-model="form.lastname"
+            />
           </v-row>
           <v-row class="mx-16">
-          <v-text-field
-            class="mr-10"
-            :label="$t('email')"
-            :rules="[$rules.required, $rules.email]"
-            v-model="form.email"
-          />
-          <v-text-field
-            class="mt-2"
-            :label="$t('phone')"
-            :rules="[$rules.required, $rules.phone]"
-            v-model="form.phone"
-          />
+            <v-text-field
+              class="mr-10"
+              :label="$t('email')"
+              :rules="[$rules.required, $rules.email]"
+              v-model="form.email"
+            />
+            <v-text-field
+              class="mt-2"
+              :label="$t('phone')"
+              :rules="[$rules.required, $rules.phone]"
+              v-model="form.phone"
+            />
           </v-row>
-        <v-text-field
-          class="mx-16 mt-2"
-          :label="$t('company')"
-          :rules="[$rules.required]"
-          v-model="form.company"
-        />
-        <v-autocomplete
-          class="mx-16"
-          ref="selected"
-          v-model="$refs.selected"
-          :items="orderStatuses"
-          :rules="[() => !!$refs.selected || 'This field is required']"
-          label="Industry"
-          placeholder="Select..."
-          item-text="label"
-          item-value="value"
-        ></v-autocomplete>
+          <v-text-field
+            class="mx-16 mt-2"
+            :label="$t('company')"
+            :rules="[$rules.required]"
+            v-model="form.company"
+          />
+            <v-autocomplete
+              class="mx-16"
+              ref="selected"
+              v-model="$refs.selected"
+              :items="orderStatuses"
+              :rules="[() => !!$refs.selected || 'This field is required']"
+              label="Industry"
+              placeholder="Select..."
+              item-text="label"
+              item-value="value"
+            />
         </v-sheet>
         <v-sheet>
           <div class="text-center">
-            <v-btn type="submit" color="black" class="white--text" rounded-lg :loading="loading" :disabled="!valid"
+            <v-btn
+               type="submit" 
+               color="black" 
+               class="white--text"
+               rounded-lg
+               :loading="loading" 
+               :disabled="!valid"
               @click="snackbar = true">
-              {{ $t("button") }}
+                 {{ $t("button") }}
             </v-btn>
           </div>
         </v-sheet>
@@ -85,11 +91,11 @@ export default {
       snackbar: false,
       timeout: 2000,
       form: {
-        firstname: "",
-        lastname: "",
-        phone: "",
-        email: "",
-        company: "",
+          firstname: "",
+          lastname: "",
+          phone: "",
+          email: "",
+          company: "",
       },
       orderStatuses: [
         {

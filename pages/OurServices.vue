@@ -7,32 +7,44 @@
 			</div>
 		</div>
 
-		<template >
-			<v-sheet id="scroll-target" v-for="(header, index) in headers" :key="index" >
-				<div data-aos="fade-up" data-aos-duration="900">
+		<template>
+			<v-sheet v-for="(header, index) in headers" :key="index" >
+				<div 
+					data-aos="fade-up" 
+					data-aos-duration="900">
 				<div class="font-weight-bold text-center text-sm-h6 text-md-h4" >
 					{{ header.text1 }}
 				</div>
 			
-				<v-layout  style="max-width: 80%"
-					:class="$vuetify.breakpoint.smAndDown ? 'd-flex flex-column mx-16' : 'px-16 ml-16'">
-					<v-img contain aspect-ratio="1" :src="header.img1"
-						:width="$vuetify.breakpoint.smAndDown ? '100%' : '50%'" />
-					<v-col md="8" class="py-4 ">
+				<v-layout 
+					 style="max-width: 80%"
+					:class="$vuetify.breakpoint.smAndDown ? 
+						'd-flex flex-column mx-16' :
+						'px-16 ml-16'"
+						 >
+						<v-img 
+							contain aspect-ratio="1" 
+							:src="header.img1"
+							:width="$vuetify.breakpoint.smAndDown ? '100%' : '50%'" />
+						<v-col md="8" class="py-4 ">
 						<div :class="$vuetify.breakpoint.smAndDown ? 'text-center subtitle-2' : 'h6 ma-16  py-16 '">
 							{{ header.text1s }}
 						</div>
 					</v-col>
 				</v-layout>
 				</div>
-				<div data-aos="fade-down"
+				<div
+					 data-aos="fade-down"
     				 data-aos-easing="linear"
     				 data-aos-duration="900">
 					<v-sheet >
 							<div class="font-weight-bold text-center mt-7 text-sm-h6 text-md-h4 my-md-6">
 								{{ header.text2 }}
 							</div>
-							<v-layout :class="$vuetify.breakpoint.smAndDown ? 'd-flex flex-column mx-16' : 'px-16 ml-16'"
+							<v-layout 
+								:class="$vuetify.breakpoint.smAndDown ?
+							 	'd-flex flex-column mx-16' :
+							 	'px-16 ml-16'"
 								style="max-width: 80%">
 								<v-col md=8>
 									<div :class="$vuetify.breakpoint.smAndDown ? 'text-center subtitle-2' : 'h6 ma-16  py-16 '">
@@ -44,10 +56,7 @@
 							</v-layout>
 					</v-sheet>
 				</div>
-
-
 			</v-sheet>
-
 		</template>
 		<template>
 			<v-col data-aos="fade-up" :cols="$vuetify.breakpoint.smAndDown ? '12' : '12'" class="d-flex justify-center ">
@@ -63,7 +72,6 @@
 				</v-hover>
 			</v-col>
 		</template>
-
 	</v-sheet>
 </template>
 
