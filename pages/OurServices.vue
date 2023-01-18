@@ -1,140 +1,135 @@
 <template>
-  <v-sheet>
-    <div class="py-6 pa-9">
-      <div class="font-weight-bold text-center" :class="$vuetify.breakpoint.smAndDown ? 'h6':'h4'">
-        {{ $t("title") }}
-      </div>
-    </div>
-    <service-item-card
-      v-for="(header, index) in headers"
-      :key="index"
-      :title="header.text1"
-      :aos="header.aos"
-      :easing="header.easing"
-    >
-      <template v-if="header.float === 'right'">
-        <v-img
-          contain
-          aspect-ratio="1"
-          :width="$vuetify.breakpoint.smAndDown ? '100%' : '50%'"
-          :src="header.img"
-        />
-        <v-col md="8">
-          <div
-            :class="
-              $vuetify.breakpoint.smAndDown
-                ? 'text-center subtitle-2'
-                : 'h6 ma-16  py-16 '
-            "
-          >
-            {{ header.text2 }}
-          </div>
-        </v-col>
-      </template>
-      <template v-else>
-        <v-col md="8">
-          <div
-            :class="
-              $vuetify.breakpoint.smAndDown
-                ? 'text-center subtitle-2'
-                : 'h6 ma-16  py-16 '
-            "
-          >
-            {{ header.text2 }}
-          </div>
-        </v-col>
-        <v-img
-          contain
-          aspect-ratio="1"
-          :width="$vuetify.breakpoint.smAndDown ? '100%' : '50%'"
-          :src="header.img"
-        />
-      </template>
-    </service-item-card>
-    <template>
-      <v-col
-        data-aos="fade-up"
-        :cols="$vuetify.breakpoint.smAndDown ? '12' : '12'"
-        class="d-flex justify-center"
-      >
-        <v-hover class=" " v-slot="{ hover }">
-          <v-btn
-            :class="
-              $vuetify.breakpoint.smAndDown
-                ? 'rounded-lg white--text'
-                : 'rounded-lg white--text'
-            "
-            :color="hover ? 'grey darken-1' : 'cyan lighten-3'"
-            :height="$vuetify.breakpoint.smAndDown ? '40' : '55'"
-            :to="localePath(`/SalesTeam`)"
-          >
-            <div class="text-md-h6 text-sm-h8">{{ $t("button.2") }}</div>
-          </v-btn>
-        </v-hover>
-      </v-col>
-    </template>
-  </v-sheet>
+	<v-sheet v-scroll="onScroll">
+		<v-card height="80" flat color="transparent" />
+		<div class="py-6 pa-9">
+			<div data-aos="zoom-in" data-aos-duration="900">
+				<div class="font-weight-bold text-center mt-6 text-sm-h4  text-md-h2">
+				{{ $t("title") }}
+			</div>
+			</div>
+		</div>
+
+		<template>
+			<v-sheet v-for="(header, index) in headers" :key="index">
+				<div data-aos="fade-down" data-aos-offset="120" data-aos-once="true" data-aos-delay="500"
+					data-aos-duration="700" data-aos-easing="ease-in-sine">
+					<div class="font-weight-bold text-center text-sm-h6 text-md-h4 align-start mt-10">
+					{{ header.text1 }}
+				</div>
+
+					<v-layout style="max-width:85%"
+					:class="$vuetify.breakpoint.smAndDown ? 'd-flex flex-column mx-16' : 'px-16 ml-16'">
+					<v-img contain aspect-ratio="1" :src="header.img1"
+						:width="$vuetify.breakpoint.smAndDown ? '100%' : '50%'" />
+					<v-col md="8" class="py-4 ">
+							<div :class="$vuetify.breakpoint.smAndDown ? 'text-center subtitle-2' : 'h6 ma-16  py-16 '">
+							{{ header.text1s }}
+						</div>
+					</v-col>
+				</v-layout>
+				</div>
+				<div
+					 data-aos="fade-down"
+    				 data-aos-easing="linear"
+    				 data-aos-duration="900">
+					<v-sheet >
+							<div class="font-weight-bold text-center mt-7 text-sm-h6 text-md-h4 my-md-6">
+								{{ header.text2 }}
+							</div>
+							<v-layout 
+								:class="$vuetify.breakpoint.smAndDown ?
+							 	'd-flex flex-column mx-16' :
+							 	'px-16 ml-16'"
+								style="max-width: 80%">
+								<v-col md=8>
+									<div :class="$vuetify.breakpoint.smAndDown ? 'text-center subtitle-2' : 'h6 ma-16  py-16 '">
+										{{ header.text2s }}
+									</div>
+								</v-col>
+								<v-img contain aspect-ratio="1" :width="$vuetify.breakpoint.smAndDown ? '100%' : '50%'"
+									:src="header.img2" />
+							</v-layout>
+					</v-sheet>
+				</div>
+			</v-sheet>
+		</template>
+		<template>
+			<v-col data-aos="fade-up" :cols="$vuetify.breakpoint.smAndDown ? '12' : '12'" class="d-flex justify-center ">
+				<v-hover class=" " v-slot="{ hover }">
+					<v-btn :class="
+						$vuetify.breakpoint.smAndDown
+							? 'rounded-lg white--text'
+							: 'rounded-lg white--text'
+					" :color="hover ? 'grey darken-1' : 'cyan lighten-3'"
+						:height="$vuetify.breakpoint.smAndDown ? '40' : '55'" :to="localePath(`/SalesTeam`)">
+						<div class="text-md-h6 text-sm-h8">{{ $t("button.2") }}</div>
+					</v-btn>
+				</v-hover>
+			</v-col>
+		</template>
+	</v-sheet>
 </template>
 
 <script>
-import AOS from "aos";
-import "aos/dist/aos.css";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 
 export default {
-  data() {
-    return {
-      headers: [
-        {
-          img: "/OurServices/service.jpg",
-          text1: this.$t("form1.1"),
-          text2: this.$t("form1.2"),
-          aos: "fade-up",
-        },
-        {
-          img: "/OurServices/service1.jpg",
-          text1: this.$t("form1.3"),
-          text2: this.$t("form1.4"),
-          float: "right",
-          aos: "fade-down",
-          easing: "linear",
-        },
-        {
-          img: "/OurServices/service2.jpg",
-          text1: this.$t("form2.1"),
-          text2: this.$t("form2.2"),
-          aos: "fade-up",
-        },
-        {
-          img: "/OurServices/service6.jpg",
-          text1: this.$t("form2.3"),
-          text2: this.$t("form2.4"),
-          float: "right",
-          aos: "fade-down",
-          easing: "linear",
-        },
-        {
-          img: "/OurServices/service4.jpg",
-          text1: this.$t("form3.1"),
-          text2: this.$t("form3.2"),
-          aos: "fade-up",
-        },
-        {
-          img: "/OurServices/service5.jpg",
-          text1: this.$t("form3.3"),
-          text2: this.$t("form3.4"),
-          float: "right",
-          aos: "fade-down",
-          easing: "linear",
-        },
-      ],
-    };
-  },
-  mounted() {
-    AOS.init();
-  },
+	data() {
+		return {
+			headers: [
+				{
+					img1: "/service.jpg",
+					img2: "/service1.jpg",
+					text1: this.$t("form1.1"),
+					text1s: this.$t("form1.2"),
+					text2: this.$t("form1.3"),
+					text2s: this.$t("form1.4"),
+				},
+				{
+					img1: "/OurServices/service2.jpg",
+					img2: "/OurServices/service6.jpg",
+					text1: this.$t("form2.1"),
+					text1s: this.$t("form2.2"),
+					text2: this.$t("form2.3"),
+					text2s: this.$t("form2.4"),
+
+				},
+				{
+					img1: "/OurServices/service4.jpg",
+					img2: "/OurServices/service5.jpg",
+					text1: this.$t("form3.1"),
+					text1s: this.$t("form3.2"),
+					text2: this.$t("form3.3"),
+					text2s: this.$t("form3.4"),
+
+				}
+			],
+			scrollProcess:0,
+			timeout:undefined
+		}
+	},
+	mounted() {
+		AOS.init();
+	},
+	methods:{
+		onScroll(e){
+			console.log(e.target.scrollingElement.scrollTop);
+			clearTimeout(this.timeout)
+			this.timeout = setTimeout(()=>{
+				if (e.target.scrollingElement.scrollTop>120) {
+					e.target.scrollingElement.scrollTo({top:722,behavior:'smooth'})
+			}
+			},1000)
+		}
+	}
 };
 </script>
+
+<style>
+
+</style>
 <i18n>
 {
     "en":{
