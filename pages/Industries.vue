@@ -35,14 +35,12 @@
 			<v-spacer />
 
 			<v-col 
-				data-aos="fade-right"
-     			data-aos-offset="300"
+				data-aos="fade-left"
+        		data-aos-offset="300"
      			data-aos-easing="ease-in-sine"  md="6">
 
 				<v-layout column>
-					<div 
-						data-aos="fade-right"
-						data-aos-duration="900">
+					<div >
 						<v-card
 							
 							rounded="xl"
@@ -75,20 +73,16 @@
 		<v-row 	class="justify-md-space-around mx-16" :column="$vuetify.breakpoint.smAndDown">
 			<v-col 
 				data-aos="fade-right"
-     			data-aos-offset="300"
+        		data-aos-offset="300"
      			data-aos-easing="ease-in-sine"  cols="12" md="6">
 				<v-sheet>
 					<v-card
-						data-aos="fade-right"
-						data-aos-duration="900" 
 						rounded="xl"
 						class="ma-16"
 						>
 						<v-img :class="$vuetify.breakpoint.smAndDown ? '': 'px-16'" src="/Industries/bank2.jpg"/>
 					</v-card>
 					<v-card
-						data-aos="fade-left"
-						data-aos-duration="900" 
 						elevation="0"
 						class="text-center"
 						>
@@ -103,9 +97,9 @@
 			</v-col>
 			<v-spacer />
 			<v-col 
-				data-aos="fade-right"
-     			data-aos-offset="300"
-     			data-aos-easing="ease-in-sine"  md="6">
+				data-aos="fade-left"
+				data-aos-offset="300"
+       		 	data-aos-easing="ease-in-sine" md="6">
 				<v-sheet>
 					<v-card
 						rounded="xl"
@@ -157,7 +151,7 @@
 			<v-spacer />
 
 			<v-col 
-				data-aos="fade-right"
+				data-aos="fade-left"
      			data-aos-offset="300"
      			data-aos-easing="ease-in-sine"  cols="12" md="6">
 				<v-sheet>
