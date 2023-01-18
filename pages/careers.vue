@@ -151,7 +151,6 @@ export default {
 		}
 	},
 	mounted() {
-		console.log(this)
 		AOS.init
 	}
 

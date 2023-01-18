@@ -1,7 +1,5 @@
 <template>
 	<v-sheet class="py-5  justify-center">
-		<v-card :height="$vuetify.breakpoint.smAndDown ? '' : '80'" flat color="transparent"></v-card>
-
 		<template>
 			<v-img max-height="800" src="/background.jpg">
 				<v-card-title class="justify-start">

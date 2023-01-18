@@ -74,14 +74,9 @@
 			</v-layout>
 		</v-navigation-drawer>
 		
-		<v-main v-if="$vuetify.breakpoint.smAndDown">
-			<v-container fluid class="pa-0" max-height="600">
-				<Nuxt />
-			</v-container>
-		</v-main>
-		<v-container v-else fluid class="pa-0" max-height="600">
+		<v-main class="mt-16 pa-0">
 			<Nuxt />
-		</v-container>
+		</v-main>
 		<v-footer
 			color="white"
 			class="white--text font-weight-light"
