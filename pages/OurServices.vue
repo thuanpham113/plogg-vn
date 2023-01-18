@@ -1,7 +1,7 @@
 <template>
   <v-sheet>
     <div class="py-6 pa-9">
-      <div class="font-weight-bold text-center text-sm-h6 text-md-h4" :class="$vuetify.breakpoint.smAndDown ? 'h6':'h4'">
+      <div class="font-weight-bold text-center" data-aos="flip-left" :class="$vuetify.breakpoint.smAndDown ? 'h6':'h4'">
         {{ $t("title") }}
       </div>
     </div>
