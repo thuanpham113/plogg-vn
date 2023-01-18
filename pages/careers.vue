@@ -1,6 +1,7 @@
 <template>
 	<v-sheet>
 		<template>
+<<<<<<< Updated upstream
 			<v-img max-height="450" src="/Background_careers.jpg">
 				<v-card :height="$vuetify.breakpoint.smAndDown ? '' : '40'" flat color="transparent"></v-card>
 				<div class="pt-md-16 ma-md-14">
@@ -11,6 +12,17 @@
 							</div>
 						</v-card-title>
 					</div>
+=======
+			<v-img max-height="800" src="/imgtext.jpg">
+				<v-card :height=" $vuetify.breakpoint.smAndDown ? '' : '90' " flat color="transparent"></v-card>
+				<div :class="$vuetify.breakpoint.smAndDown ? 'mx-5 py-5' : 'pt-16  ma-14'">
+					<v-card-title :class="$vuetify.breakpoint.smAndDown ? 'justify-center' : 'justify-start'">
+						<div class="text-sm-h3" >
+					
+							{{ $t("title.1") }}
+						</div>
+					</v-card-title>
+>>>>>>> Stashed changes
 
 					<v-card-titse class=" grey--text">
 						<div data-aos="fade-up" data-aos-offset="360" data-aos-duration="900"
