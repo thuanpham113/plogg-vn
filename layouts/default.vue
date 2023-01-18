@@ -1,12 +1,13 @@
 <template>
-	<v-app id="app" class="overflow-auto">
+	<v-app id="app" style="overflow:scroll">
 		<v-app-bar
-			:elevation="scrolled ? '60' : ''"
-			:color="scrolled ? 'white' : 'transparent'"
+			elevation="60"
+			elevate-on-scroll
+			color="white"
 			app
 			flat
 			clipped-left
-			height="80vh"
+			height="80"
 			class="d-flex flex-column"
 		>
 			<v-col
@@ -52,7 +53,6 @@
 			right	
 			overflow-hidden
 		>
-		<v-card height="80" flat color="transparent"></v-card>
 			<v-layout column>
 				<v-btn
 					v-for="(list, index) in lists"
@@ -139,7 +139,6 @@ export default {
 	data () {
         return{
 		drawer: false,
-		scrolled: false,
 		lists: [
 			{
 				title: this.$t("list.1"),
@@ -187,26 +186,7 @@ export default {
 		],
 	};
 },
-	beforeMount() {
-		window.addEventListener("scroll", this.handleScroll);
-	},
-	beforeDestroy() {
-		window.removeEventListener("scroll", this.handleScroll);
-	},
 	methods: {
-		handleScroll() {
-			if (
-				this.lastPosition < window.scrollY &&
-				this.limitPosition < window.scrollY
-			) {
-				this.scrolled = true;
-			}
-			if (this.lastPosition > window.scrollY) {
-				this.scrolled = false;
-			}
-			this.lastPosition = window.scrollY;
-			this.scrolled = window.scrollY > 0;
-		},
 		goToHome() {
 			this.$router.push("/pricing");
 		},
