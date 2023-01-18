@@ -2,7 +2,8 @@
 	<v-sheet class="py-5  justify-center">
 		<template>
 			<v-img max-height="800" src="/background.jpg">
-				<v-card-title class="justify-start">
+				<v-card-title
+					class="justify-start">
 					<div
 						class="h5 py-2 px-5 grey--text"
 						:class="
@@ -16,7 +17,7 @@
 				</v-card-title>
 
 				<v-col
-					:cols="$vuetify.breakpoint.smAndDown ? '' : '6'"
+					md="6"
 					:class="
 						$vuetify.breakpoint.smAndDown
 							? 'h6 font-weight-bold white--text text-center'
@@ -27,7 +28,7 @@
 				</v-col>
 
 				<v-col
-					:cols="$vuetify.breakpoint.smAndDown ? '' : '5'"
+					md="5"
 					:class="
 						$vuetify.breakpoint.smAndDown
 							? 'subtitle-1 text-center white--text'
@@ -38,11 +39,10 @@
 				</v-col>
 
 				<v-col
-					:cols="$vuetify.breakpoint.smAndDown ? '12' : '12'"
 					:class="
 						$vuetify.breakpoint.smAndDown
 							? 'd-flex justify-center'
-							: 'd-flex justify-start'
+							: ''
 					"
 				>
 					<v-hover v-slot="{ hover }">
@@ -75,15 +75,15 @@
 			</div>
 		</template>
 
-		<v-img class="mt-16 mx-16" aspect-ratio="4" src="Grap.png"> </v-img>
+		<v-img class="mt-16 mx-16" aspect-ratio="4" src="Grap.png" > </v-img>
 		<template>
-      <div  class="mt-16 text-center font-weight-bold text-sm-h5 text-md-h4">
+      <div  class="mt-16 text-center font-weight-bold text-md-h4">
           {{$t("title.4")}}
       </div>
-     
+
     </template>
 	</v-sheet>
-	
+
 </template>
 
 
