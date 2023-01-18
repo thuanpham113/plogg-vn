@@ -1,65 +1,95 @@
 <template>
-	<rely-layout-page>
+	<v-sheet>
 		<v-card height="50" flat color="transparent"></v-card>
-		<div class="text-center font-weight-bold text-h4 mt-16">
+		<div data-aos="flip-left" class="text-center font-weight-bold text-h4 mt-16">
 			{{ $t("add") }}
 		</div>
+		
 
-		<v-layout :column="$vuetify.breakpoint.smAndDown">
-			<v-col cols="12" md="6">
-				<v-layout column>
+		<v-row class="justify-md-space-around mx-16" :column="$vuetify.breakpoint.smAndDown">
+			<v-col 
+				data-aos="fade-right"
+     			data-aos-offset="300"
+     			data-aos-easing="ease-in-sine"  md="6">
+				<v-sheet
+				class="column">
 					<v-card
-						rounded="xl"
-						class="ma-16"
-					>
-						<v-img :class="$vuetify.breakpoint.smAndDown ? '': 'px-16'" src="/Industries/bank1.jpg"/>
-					</v-card>
-					<v-card
-						elevation="0"
-						class="text-center"
+							rounded="xl"
+							class="ma-16"
 						>
-						<v-card-text class="text-h6 black--text font-weight-bold">
-								{{ $t("title.1") }}
-							<div class="subtitle-2 grey--text">
-								{{ $t("form.1") }}
-							</div>
-						</v-card-text>
+						<v-img  :class="$vuetify.breakpoint.smAndDown ? '': 'px-16'" src="/Industries/bank1.jpg"/>
 					</v-card>
+					<v-card
+							elevation="0"
+							class="text-center"
+							>
+							<v-card-text class="text-h6 black--text font-weight-bold">
+									{{ $t("title.1") }}
+								<div class="subtitle-2 grey--text">
+									{{ $t("form.1") }}
+								</div>
+							</v-card-text>
+					</v-card>
+				</v-sheet>
+			</v-col>
+
+			<v-spacer />
+
+			<v-col 
+				data-aos="fade-right"
+     			data-aos-offset="300"
+     			data-aos-easing="ease-in-sine"  md="6">
+
+				<v-layout column>
+					<div 
+						data-aos="fade-right"
+						data-aos-duration="900">
+						<v-card
+							
+							rounded="xl"
+							class="ma-16"
+							>
+							<v-img :class="$vuetify.breakpoint.smAndDown ? '': 'px-16'" src="/Industries/bank4.jpg"/>
+						</v-card>
+				</div>
+
+					<div>
+						<v-card
+							data-aos="fade-left"
+							data-aos-duration="900" 
+							elevation="0"
+							class="text-center"
+							>
+							<v-card-text class="text-h6 black--text font-weight-bold">
+									{{ $t("title.2") }}
+								<div class="subtitle-2 grey--text">
+									{{ $t("form.2") }}
+								</div>
+							</v-card-text>
+						</v-card>
+					</div>
 				</v-layout>
 			</v-col>
-			<v-col cols="12" md="6">
-				<v-layout column>
-					<v-card
-						rounded="xl"
-						class="ma-16"
-						>
-						<v-img :class="$vuetify.breakpoint.smAndDown ? '': 'px-16'" src="/Industries/bank4.jpg"/>
-					</v-card>
-					<v-card
-						elevation="0"
-						class="text-center"
-						>
-						<v-card-text class="text-h6 black--text font-weight-bold">
-								{{ $t("title.2") }}
-							<div class="subtitle-2 grey--text">
-								{{ $t("form.2") }}
-							</div>
-						</v-card-text>
-					</v-card>
-				</v-layout>
-			</v-col>
-		</v-layout>
+	</v-row>
+		<v-spacer />
 
-		<v-layout :column="$vuetify.breakpoint.smAndDown">
-			<v-col cols="12" md="6">
+		<v-row 	class="justify-md-space-around mx-16" :column="$vuetify.breakpoint.smAndDown">
+			<v-col 
+				data-aos="fade-right"
+     			data-aos-offset="300"
+     			data-aos-easing="ease-in-sine"  cols="12" md="6">
 				<v-sheet>
 					<v-card
+						data-aos="fade-right"
+						data-aos-duration="900" 
 						rounded="xl"
 						class="ma-16"
 						>
 						<v-img :class="$vuetify.breakpoint.smAndDown ? '': 'px-16'" src="/Industries/bank2.jpg"/>
 					</v-card>
 					<v-card
+						data-aos="fade-left"
+						data-aos-duration="900" 
 						elevation="0"
 						class="text-center"
 						>
@@ -72,7 +102,11 @@
 					</v-card>
 				</v-sheet>
 			</v-col>
-			<v-col cols="12" md="6">
+			<v-spacer />
+			<v-col 
+				data-aos="fade-right"
+     			data-aos-offset="300"
+     			data-aos-easing="ease-in-sine"  md="6">
 				<v-sheet>
 					<v-card
 						rounded="xl"
@@ -93,12 +127,19 @@
 					</v-card>
 				</v-sheet>
 			</v-col>
-		</v-layout>
+		</v-row>
 
-		<v-layout :column="$vuetify.breakpoint.smAndDown">
-			<v-col cols="12" md="6">
+		<v-spacer />
+
+		<v-row 	class="justify-md-space-around mx-16" :column="$vuetify.breakpoint.smAndDown">
+			<v-col
+				data-aos="fade-right"
+     			data-aos-offset="300"
+     			data-aos-easing="ease-in-sine" cols="12" md="6">
 				<v-sheet>
-					<v-card rounded="xl" class="ma-16">
+					<v-card 
+						rounded="xl" 
+						class="ma-16">
 						<v-img :class="$vuetify.breakpoint.smAndDown ? '': 'px-16'" src="/Industries/bank3.jpg"/>
 					</v-card>
 					<v-card
@@ -114,14 +155,22 @@
 					</v-card>
 				</v-sheet>
 			</v-col>
-			<v-col cols="12" md="6">
+			<v-spacer />
+
+			<v-col 
+				data-aos="fade-right"
+     			data-aos-offset="300"
+     			data-aos-easing="ease-in-sine"  cols="12" md="6">
 				<v-sheet>
-					<v-card rounded="xl" class="ma-16">
+					<v-card 
+							rounded="xl"
+							class="ma-16">
 						<v-img :class="$vuetify.breakpoint.smAndDown ? '': 'px-16'" src="/Industries/bank6.jpg"/>
 					</v-card>
 					<v-card
 						elevation="0"
 						class="text-center"
+
 						>
 						<v-card-text class="text-h6 black--text font-weight-bold">
 								{{ $t("title.6") }}
@@ -132,7 +181,7 @@
 					</v-card>
 				</v-sheet>
 			</v-col>
-		</v-layout>
+		</v-row>
 
 		<v-card elevation="0" class="d-flex justify-center">
 			<v-hover v-slot="{ hover }">
@@ -144,21 +193,18 @@
 				</v-btn>
 			</v-hover>
 		</v-card>
-		<v-card-title class="d-flex justify-center">
-			<div class="text-subtitle-1 grey--text">
-				{{ $t("text") }}
-			</div>
-		</v-card-title>
-
-
-	</rely-layout-page>
+			<v-card-title class="d-flex justify-center">
+				<div class="text-subtitle-1 grey--text">
+					{{ $t("text") }}
+				</div>
+			</v-card-title>
+		</v-sheet>
 </template>
 
 <script>
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 export default {
-	name: "AdminsPage",
 	mounted() {
 		AOS.init();
 	}
@@ -166,10 +212,7 @@ export default {
 </script>
 
 <style>
-.v-sheet--offset {
-	top: -30px;
-	position: relative;
-}
+
 </style>
 <i18n>{
 	"en":{
