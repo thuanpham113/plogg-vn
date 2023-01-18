@@ -9,6 +9,7 @@
 			<v-col 
 				data-aos="fade-right"
      			data-aos-offset="300"
+				data-aos-duration="1000" 
      			data-aos-easing="ease-in-sine"  md="6">
 				<v-sheet
 				class="column">
@@ -35,8 +36,9 @@
 			<v-spacer />
 
 			<v-col 
-				data-aos="fade-right"
+				data-aos="fade-left"
      			data-aos-offset="300"
+				 data-aos-duration="1000" 
      			data-aos-easing="ease-in-sine"  md="6">
 
 				<v-layout column>
@@ -55,7 +57,7 @@
 					<div>
 						<v-card
 							data-aos="fade-left"
-							data-aos-duration="900" 
+							data-aos-duration="1000"
 							elevation="0"
 							class="text-center"
 							>
@@ -76,19 +78,20 @@
 			<v-col 
 				data-aos="fade-right"
      			data-aos-offset="300"
+				data-aos-duration="1000" 
      			data-aos-easing="ease-in-sine"  cols="12" md="6">
 				<v-sheet>
 					<v-card
 						data-aos="fade-right"
-						data-aos-duration="900" 
+						data-aos-duration="1000" 
 						rounded="xl"
 						class="ma-16"
 						>
 						<v-img :class="$vuetify.breakpoint.smAndDown ? '': 'px-16'" src="/Industries/bank2.jpg"/>
 					</v-card>
 					<v-card
-						data-aos="fade-left"
-						data-aos-duration="900" 
+						data-aos="fade-right"
+						data-aos-duration="1000" 
 						elevation="0"
 						class="text-center"
 						>
@@ -103,17 +106,22 @@
 			</v-col>
 			<v-spacer />
 			<v-col 
-				data-aos="fade-right"
+				data-aos="fade-left"
      			data-aos-offset="300"
-     			data-aos-easing="ease-in-sine"  md="6">
+				data-aos-duration="1000" 
+     			data-aos-easing="ease-in-sine"   md="6">
 				<v-sheet>
 					<v-card
+						data-aos="fade-left"
+						data-aos-duration="1000" 
 						rounded="xl"
 						class="ma-16"
 					>
 						<v-img :class="$vuetify.breakpoint.smAndDown ? '': 'px-16'" src="/Industries/bank5.jpg"/>
 					</v-card>
 					<v-card
+						data-aos="fade-left"
+						data-aos-duration="1000" 
 						elevation="0"
 						class="text-center"
 						>
@@ -134,14 +142,19 @@
 			<v-col
 				data-aos="fade-right"
      			data-aos-offset="300"
+				data-aos-duration="1000"  
      			data-aos-easing="ease-in-sine" cols="12" md="6">
 				<v-sheet>
 					<v-card 
+						data-aos="fade-right"
+						data-aos-duration="1000" 
 						rounded="xl" 
 						class="ma-16">
 						<v-img :class="$vuetify.breakpoint.smAndDown ? '': 'px-16'" src="/Industries/bank3.jpg"/>
 					</v-card>
 					<v-card
+						data-aos="fade-right"
+						data-aos-duration="1000" 
 						elevation="0"
 						class="text-center"
 						>
@@ -157,16 +170,21 @@
 			<v-spacer />
 
 			<v-col 
-				data-aos="fade-right"
+				data-aos="fade-left"
+				data-aos-duration="1000" 
      			data-aos-offset="300"
      			data-aos-easing="ease-in-sine"  cols="12" md="6">
 				<v-sheet>
 					<v-card 
+							data-aos="fade-left"
+							data-aos-duration="1000"  
 							rounded="xl"
 							class="ma-16">
 						<v-img :class="$vuetify.breakpoint.smAndDown ? '': 'px-16'" src="/Industries/bank6.jpg"/>
 					</v-card>
 					<v-card
+						data-aos="fade-left"
+						data-aos-duration="1000" 
 						elevation="0"
 						class="text-center"
 
