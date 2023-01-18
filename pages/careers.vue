@@ -15,9 +15,9 @@
 					<v-card-title class=" grey--text">
 						<div data-aos="fade-up" data-aos-offset="360" data-aos-duration="900"
 							data-aos-anchor-placement="top-bottom">
-							<v-col :class="$vuetify.breakpoint.smAndDown
-							? 'font-weight-bold text-center  '
-							: 'h6 mx-11 '">
+							<v-col md=11 :class="$vuetify.breakpoint.smAndDown
+							? 'font-weight-bold text-center'
+							: 'h6 ml-7 '">
 								{{ $t("title.2") }}
 							</v-col>
 						</div>
