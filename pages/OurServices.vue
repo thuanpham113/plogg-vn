@@ -71,8 +71,8 @@ export default {
 		return {
 			headers: [
 				{
-					img1: "/service.jpg",
-					img2: "/service1.jpg",
+					img1: "/OurServices/service.jpg",
+					img2: "/OurServices/service1.jpg",
 					text1: this.$t("form1.1"),
 					text1s: this.$t("form1.2"),
 					text2: this.$t("form1.3"),

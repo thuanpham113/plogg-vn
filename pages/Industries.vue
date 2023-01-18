@@ -1,13 +1,13 @@
 <template>
 	<v-sheet>
 		<v-card height="50" flat color="transparent"></v-card>
+
 		<div data-aos="flip-left" class="text-center font-weight-bold text-h4 mt-16">
 			{{ $t("add") }}
 		</div>
-		
 
 		<v-row class="justify-md-space-around mx-16" :column="$vuetify.breakpoint.smAndDown">
-			<v-col 
+			<v-col
 				data-aos="fade-right"
      			data-aos-offset="300"
      			data-aos-easing="ease-in-sine"  md="6">
@@ -33,30 +33,23 @@
 				</v-sheet>
 			</v-col>
 
-			<v-spacer />
-
-			<v-col 
-				data-aos="fade-right"
+			<v-col
+				data-aos="fade-left"
      			data-aos-offset="300"
      			data-aos-easing="ease-in-sine"  md="6">
 
 				<v-layout column>
-					<div 
-						data-aos="fade-right"
-						data-aos-duration="900">
+					<div>
 						<v-card
-							
 							rounded="xl"
 							class="ma-16"
 							>
 							<v-img :class="$vuetify.breakpoint.smAndDown ? '': 'px-16'" src="/Industries/bank4.jpg"/>
 						</v-card>
-				</div>
+					</div>
 
 					<div>
 						<v-card
-							data-aos="fade-left"
-							data-aos-duration="900" 
 							elevation="0"
 							class="text-center"
 							>
@@ -70,26 +63,22 @@
 					</div>
 				</v-layout>
 			</v-col>
-	</v-row>
-		<v-spacer />
+		</v-row>
+
 
 		<v-row 	class="justify-md-space-around mx-16" :column="$vuetify.breakpoint.smAndDown">
-			<v-col 
+			<v-col
 				data-aos="fade-right"
      			data-aos-offset="300"
      			data-aos-easing="ease-in-sine"  cols="12" md="6">
 				<v-sheet>
 					<v-card
-						data-aos="fade-right"
-						data-aos-duration="900" 
 						rounded="xl"
 						class="ma-16"
 						>
 						<v-img :class="$vuetify.breakpoint.smAndDown ? '': 'px-16'" src="/Industries/bank2.jpg"/>
 					</v-card>
 					<v-card
-						data-aos="fade-left"
-						data-aos-duration="900" 
 						elevation="0"
 						class="text-center"
 						>
@@ -102,9 +91,9 @@
 					</v-card>
 				</v-sheet>
 			</v-col>
-			<v-spacer />
-			<v-col 
-				data-aos="fade-right"
+
+			<v-col
+				data-aos="fade-left"
      			data-aos-offset="300"
      			data-aos-easing="ease-in-sine"  md="6">
 				<v-sheet>
@@ -129,7 +118,6 @@
 			</v-col>
 		</v-row>
 
-		<v-spacer />
 
 		<v-row 	class="justify-md-space-around mx-16" :column="$vuetify.breakpoint.smAndDown">
 			<v-col
@@ -137,8 +125,8 @@
      			data-aos-offset="300"
      			data-aos-easing="ease-in-sine" cols="12" md="6">
 				<v-sheet>
-					<v-card 
-						rounded="xl" 
+					<v-card
+						rounded="xl"
 						class="ma-16">
 						<v-img :class="$vuetify.breakpoint.smAndDown ? '': 'px-16'" src="/Industries/bank3.jpg"/>
 					</v-card>
@@ -155,14 +143,13 @@
 					</v-card>
 				</v-sheet>
 			</v-col>
-			<v-spacer />
 
-			<v-col 
-				data-aos="fade-right"
+			<v-col
+				data-aos="fade-left"
      			data-aos-offset="300"
      			data-aos-easing="ease-in-sine"  cols="12" md="6">
 				<v-sheet>
-					<v-card 
+					<v-card
 							rounded="xl"
 							class="ma-16">
 						<v-img :class="$vuetify.breakpoint.smAndDown ? '': 'px-16'" src="/Industries/bank6.jpg"/>
@@ -183,7 +170,8 @@
 			</v-col>
 		</v-row>
 
-		<v-card elevation="0" class="d-flex justify-center">
+
+		<v-card elevation="0" class="d-flex justify-center" data-aos="zoom-in">
 			<v-hover v-slot="{ hover }">
 				<v-btn
 					class="rounded-lg white--text"
@@ -193,12 +181,12 @@
 				</v-btn>
 			</v-hover>
 		</v-card>
-			<v-card-title class="d-flex justify-center">
-				<div class="text-subtitle-1 grey--text">
+		<v-card-title class="d-flex justify-center" >
+			<div class="text-subtitle-1 grey--text">
 					{{ $t("text") }}
-				</div>
-			</v-card-title>
-		</v-sheet>
+			</div>
+		</v-card-title>
+	</v-sheet>
 </template>
 
 <script>
