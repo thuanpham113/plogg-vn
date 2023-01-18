@@ -1,6 +1,5 @@
 <template>
 	<v-sheet>
-		<v-card height="50" flat color="transparent"></v-card>
 		<div data-aos="flip-left" class="text-center font-weight-bold text-h4 mt-16">
 			{{ $t("add") }}
 		</div>
