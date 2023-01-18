@@ -80,60 +80,59 @@
 import AOS from "aos";
 
 export default {
-	data() {
-		return {
-			headers: [
-				{
-					img1: "/OurServices/service.jpg",
-					img2: "/OurServices/service1.jpg",
-					text1: this.$t("form1.1"),
-					text1s: this.$t("form1.2"),
-					text2: this.$t("form1.3"),
-					text2s: this.$t("form1.4"),
-				},
-				{
-					img1: "/OurServices/service2.jpg",
-					img2: "/OurServices/service6.jpg",
-					text1: this.$t("form2.1"),
-					text1s: this.$t("form2.2"),
-					text2: this.$t("form2.3"),
-					text2s: this.$t("form2.4"),
-
-				},
-				{
-					img1: "/OurServices/service4.jpg",
-					img2: "/OurServices/service5.jpg",
-					text1: this.$t("form3.1"),
-					text1s: this.$t("form3.2"),
-					text2: this.$t("form3.3"),
-					text2s: this.$t("form3.4"),
-
-				}
-			],
-			scrollProcess:0,
-			timeout:undefined
-		}
-	},
-	mounted() {
-		AOS.init();
-	},
-	methods:{
-		onScroll(e){
-			console.log(e.target.scrollingElement.scrollTop);
-			clearTimeout(this.timeout)
-			this.timeout = setTimeout(()=>{
-				if (e.target.scrollingElement.scrollTop>120) {
-					e.target.scrollingElement.scrollTo({top:722,behavior:'smooth'})
-			}
-			},1000)
-		}
-	}
+  data() {
+    return {
+      headers: [
+        {
+          img: "/OurServices/service.jpg",
+          text1: this.$t("form1.1"),
+          text2: this.$t("form1.2"),
+          aos: "fade-up",
+        },
+        {
+          img: "/OurServices/service1.jpg",
+          text1: this.$t("form1.3"),
+          text2: this.$t("form1.4"),
+          float: "right",
+          aos: "fade-down",
+          easing: "linear",
+        },
+        {
+          img: "/OurServices/service2.jpg",
+          text1: this.$t("form2.1"),
+          text2: this.$t("form2.2"),
+          aos: "fade-up",
+        },
+        {
+          img: "/OurServices/service6.jpg",
+          text1: this.$t("form2.3"),
+          text2: this.$t("form2.4"),
+          float: "right",
+          aos: "fade-down",
+          easing: "linear",
+        },
+        {
+          img: "/OurServices/service4.jpg",
+          text1: this.$t("form3.1"),
+          text2: this.$t("form3.2"),
+          aos: "fade-up",
+        },
+        {
+          img: "/OurServices/service5.jpg",
+          text1: this.$t("form3.3"),
+          text2: this.$t("form3.4"),
+          float: "right",
+          aos: "fade-down",
+          easing: "linear",
+        },
+      ],
+    };
+  },
+  mounted() {
+    AOS.init();
+  },
 };
 </script>
-
-<style>
-
-</style>
 <i18n>
 {
     "en":{
