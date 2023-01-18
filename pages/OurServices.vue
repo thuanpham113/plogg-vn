@@ -5,7 +5,6 @@
 			<div class="font-weight-bold text-center" :class="$vuetify.breakpoint.smAndDown ? 'h6   ' : 'h4 '">
 				{{ $t("title") }}
 			</div>
-			</div>
 		</div>
 
 		<template>

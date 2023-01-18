@@ -12,7 +12,7 @@
 						</v-card-title>
 					</div>
 
-					<v-card-titse class=" grey--text">
+					<v-card-title class=" grey--text">
 						<div data-aos="fade-up" data-aos-offset="360" data-aos-duration="900"
 							data-aos-anchor-placement="top-bottom">
 							<v-col :class="$vuetify.breakpoint.smAndDown
@@ -21,7 +21,7 @@
 								{{ $t("title.2") }}
 							</v-col>
 						</div>
-					</v-card-titse>
+					</v-card-title>
 				</div>
 			</v-img>
 		</template>
@@ -39,12 +39,12 @@
 						<div data-aos="fade-up" data-aos-offset="120" data-aos-duration="900"  data-aos-once="true" data-aos-anchor-placement="top-bottom">
 						<v-col md=11 :class="$vuetify.breakpoint.smAndDown ? 'subtitle-1 text-center ' : 'h6 ml-7'">
 							{{ $t("title.4") }}
-						</v-col>	
+						</v-col>
 						</div>
 					</v-sheet>
 				</div>
 			</template>
-			
+
 
 			<template>
 				<div data-aos="fade-up" data-aos-offset="120" data-aos-duration="900"  data-aos-once="true" data-aos-anchor-placement="top-bottom">
