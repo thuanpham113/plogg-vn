@@ -59,11 +59,7 @@
       >
         <v-hover class=" " v-slot="{ hover }">
           <v-btn
-            :class="
-              $vuetify.breakpoint.smAndDown
-                ? 'rounded-lg white--text'
-                : 'rounded-lg white--text'
-            "
+		  	class="rounded-lg white--text"
             :color="hover ? 'grey darken-1' : 'cyan lighten-3'"
             :height="$vuetify.breakpoint.smAndDown ? '40' : '55'"
             :to="localePath(`/SalesTeam`)"

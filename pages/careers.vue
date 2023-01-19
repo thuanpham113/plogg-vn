@@ -2,11 +2,7 @@
 	<v-sheet>
 		<template>
 			<v-img max-height="500" src="/Background_careers.jpg">
-				<v-card
-					:height="$vuetify.breakpoint.smAndDown ? '' : '40'"
-					flat
-					color="transparent"
-				></v-card>
+			
 				<div class="pt-md-16 ma-md-14">
 					<div>
 						<v-card-title
