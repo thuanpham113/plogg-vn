@@ -1,87 +1,140 @@
 <template>
 	<v-sheet>
 		<template>
-			<v-img max-height="450" src="/Background_careers.jpg">
-				<v-card :height="$vuetify.breakpoint.smAndDown ? '' : '40'" flat color="transparent"></v-card>
+			<v-img max-height="500" src="/Background_careers.jpg">
+			
 				<div class="pt-md-16 ma-md-14">
-					<div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-						<v-card-title :class="$vuetify.breakpoint.smAndDown ? 'justify-center' : 'justify-start'">
-							<div class="text-sm-h5 text-md-h3 ml-10 font-weight-bold">
+					<div  data-aos="zoom-out-up"
+				>
+						<v-card-title
+							:class="
+								$vuetify.breakpoint.smAndDown
+									? 'justify-center pt-12'
+									: 'justify-start'
+							"
+						>
+							<div
+								class="text-sm-h5 text-md-h3 ml-10 font-weight-bold"
+							>
 								{{ $t("title.1") }}
 							</div>
 						</v-card-title>
 					</div>
 
-					<v-card-titse class=" grey--text">
-						<div data-aos="fade-up" data-aos-offset="360" data-aos-duration="900"
-							data-aos-anchor-placement="top-bottom">
-							<v-col :class="$vuetify.breakpoint.smAndDown
-							? 'font-weight-bold text-center  '
-							: 'h6 mx-11 '">
+					<v-sheet class="grey--text" color="transparent">
+						<div  data-aos="zoom-out-up">
+							<v-col
+								md="11"
+								:class="
+									$vuetify.breakpoint.smAndDown
+										? 'subtitle-1 text-center '
+										: 'h6 ml-10'
+								"
+							>
 								{{ $t("title.2") }}
 							</v-col>
 						</div>
-					</v-card-titse>
+					</v-sheet>
 				</div>
 			</v-img>
 		</template>
-		<v-sheet class="px-16 ">
-
+		<v-sheet class="px-16">
 			<template>
-				<div data-aos="fade-up" data-aos-offset="120" data-aos-duration="900"  data-aos-once="true" data-aos-anchor-placement="top-bottom">
-				<div class="mx-md-10">
-					<div :class="$vuetify.breakpoint.smAndDown
-					? 'h6 text-center font-weight-bold' : 'h4  font-weight-bold pl-2 py-9'">
-						{{ $t("title.3") }}
+				<div>
+					<div  data-aos="zoom-out-up" class="mx-md-10">
+						<div
+							:class="
+								$vuetify.breakpoint.smAndDown
+									? 'h6 text-center font-weight-bold mt-12'
+									: 'h4  font-weight-bold pl-2 py-9'
+							"
+						>
+							{{ $t("title.3") }}
+						</div>
 					</div>
-					</div>
-					<v-sheet class=" black--text">
-						<div data-aos="fade-up" data-aos-offset="120" data-aos-duration="900"  data-aos-once="true" data-aos-anchor-placement="top-bottom">
-						<v-col md=11 :class="$vuetify.breakpoint.smAndDown ? 'subtitle-1 text-center ' : 'h6 ml-7'">
-							{{ $t("title.4") }}
-						</v-col>	
+					<v-sheet class="black--text">
+						<div  data-aos="zoom-out-up">
+							<v-col
+								md="11"
+								:class="
+									$vuetify.breakpoint.smAndDown
+										? 'subtitle-1 text-center '
+										: 'h6 ml-7'
+								"
+							>
+								{{ $t("title.4") }}
+							</v-col>
 						</div>
 					</v-sheet>
 				</div>
 			</template>
-			
 
 			<template>
-				<div data-aos="fade-up" data-aos-offset="120" data-aos-duration="900"  data-aos-once="true" data-aos-anchor-placement="top-bottom">
-				<div class="mx-10">
-					<div
-						:class="$vuetify.breakpoint.smAndDown ? 'h6 text-center font-weight-bold' : 'h4 font-weight-bold py-10 '">
-						{{ $t("title.5") }}
+				<div  data-aos="zoom-out-up">
+					<div class="mx-10">
+						<div
+							:class="
+								$vuetify.breakpoint.smAndDown
+									? 'h6 text-center font-weight-bold mt-12'
+									: 'h4 font-weight-bold py-10 '
+							"
+						>
+							{{ $t("title.5") }}
+						</div>
 					</div>
 				</div>
+				<div  data-aos="zoom-out-up">
+					<v-sheet
+						v-for="(header, index) in headers"
+						:key="index"
+						:class="
+							$vuetify.breakpoint.smAndDown ? '' : 'justify-start'
+						"
+					>
+						<div
+							:class="
+								$vuetify.breakpoint.smAndDown
+									? 'subtitle-1 text-center '
+									: 'h6  px-10'
+							"
+						>
+							{{ header.Title }}
+						</div>
+					</v-sheet>
 				</div>
-				<div data-aos="fade-up" data-aos-offset="120" data-aos-duration="900"  data-aos-once="true" data-aos-anchor-placement="top-bottom">
-				<v-sheet v-for="(header, index) in headers" :key="index"
-					:class="$vuetify.breakpoint.smAndDown ? '' : 'justify-start'">
-					<div :class="$vuetify.breakpoint.smAndDown ? 'subtitle-1 text-center ' : 'h6  px-10'">
-						{{ header.Title }}
-					</div>
-				</v-sheet>
-				</div>
-
 			</template>
 			<template>
-				<div class="mx-10">
-					<div data-aos="fade-up" data-aos-offset="120" data-aos-duration="900"  data-aos-once="true" data-aos-anchor-placement="top-bottom">
-					<div :class="$vuetify.breakpoint.smAndDown
-					? 'h6 font-weight-bold text-center '
-					: 'h4 font-weight-bold py-10'">
-						{{ $t("title.6") }}
-					</div>
+				<div  data-aos="zoom-out-up" class="mx-10">
+					<div>
+						<div
+							:class="
+								$vuetify.breakpoint.smAndDown
+									? 'h6 font-weight-bold text-center mt-12 '
+									: 'h4 font-weight-bold py-10'
+							"
+						>
+							{{ $t("title.6") }}
+						</div>
 					</div>
 
-					<div v-for="(head, index) in heads" :key="index"
-						:class="$vuetify.breakpoint.smAndDown ? 'justify-center' : 'justify-start'">
-						<div :class="$vuetify.breakpoint.smAndDown
-						? 'subtitle-1 text-center '
-						: 'h6 mt-2 '">
-						<div data-aos="fade-up" data-aos-offset="120" data-aos-duration="900"  data-aos-once="true" data-aos-anchor-placement="top-bottom">
-							{{ head.Content }}
+					<div  data-aos="zoom-out-up"
+						v-for="(head, index) in heads"
+						:key="index"
+						:class="
+							$vuetify.breakpoint.smAndDown
+								? 'justify-center'
+								: 'justify-start'
+						"
+					>
+						<div
+							:class="
+								$vuetify.breakpoint.smAndDown
+									? 'subtitle-1 text-center '
+									: 'h6 mt-2 '
+							"
+						>
+							<div>
+								{{ head.Content }}
 							</div>
 						</div>
 					</div>
@@ -89,32 +142,32 @@
 			</template>
 		</v-sheet>
 
-		<div data-aos="fade-up" class="d-flex justify-center w-100 pt-5">
+		<div data-aos="zoom-in-down" class="d-flex justify-center w-100 pt-5">
 			<v-hover v-slot="{ hover }">
-				<v-btn class="rounded-lg white--text" :color="hover ? 'grey darken-1' : 'cyan lighten-3'"
-					:height="$vuetify.breakpoint.smAndDown ? '45' : '55'" :to="localePath(`/JoinUsHere`)">
+				<v-btn
+					class="rounded-lg white--text"
+					:color="hover ? 'grey darken-1' : 'cyan lighten-3'"
+					:height="$vuetify.breakpoint.smAndDown ? '45' : '55'"
+					:to="localePath(`/JoinUsHere`)"
+				>
 					<div class="font-weight-black h7">{{ $t("button") }}</div>
 				</v-btn>
 			</v-hover>
 		</div>
-
-
-
 	</v-sheet>
 </template>
 
 <script>
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default {
 	data() {
 		return {
+			
 			headers: [
 				{
-
 					Title: this.$t("form.1"),
-
 				},
 				{
 					Title: this.$t("form.2"),
@@ -130,13 +183,11 @@ export default {
 				},
 				{
 					Title: this.$t("form.6"),
-				}
+				},
 			],
 			heads: [
 				{
-
 					Content: this.$t("form1.1"),
-
 				},
 				{
 					Content: this.$t("form1.2"),
@@ -146,21 +197,24 @@ export default {
 				},
 				{
 					Content: this.$t("form1.4"),
-				}
+				},
 			],
-		}
+		};
 	},
 	mounted() {
-		console.log(this)
-		AOS.init
-	}
-
+	setTimeout(function() {
+    AOS.init({
+        once: true,
+    });
+}, 100);
+		
+		
+	},
 };
+
 </script>
 
-<style>
-
-</style>
+<style></style>
 <i18n>{
     "en":{
 
@@ -217,4 +271,3 @@ export default {
     }
 }
 </i18n>
-

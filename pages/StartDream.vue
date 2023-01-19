@@ -1,10 +1,14 @@
 <template>
 	<v-sheet class="py-5  justify-center">
-		<v-card :height="$vuetify.breakpoint.smAndDown ? '' : '80'" flat color="transparent"></v-card>
-
-		<template>
+		<template 
+>
 			<v-img max-height="800" src="/background.jpg">
-				<v-card-title class="justify-start">
+				<div 
+				data-aos="fade-up"
+     			data-aos-duration="900"
+				>
+				<v-card-title
+					class="justify-start">
 					<div
 						class="h5 py-2 px-5 grey--text"
 						:class="
@@ -16,9 +20,12 @@
 						{{ $t("title.1") }}
 					</div>
 				</v-card-title>
+			</div>
 
-				<v-col
-					:cols="$vuetify.breakpoint.smAndDown ? '' : '6'"
+				<v-col 
+					data-aos="fade-up"
+     				data-aos-duration="900"
+					md="6"
 					:class="
 						$vuetify.breakpoint.smAndDown
 							? 'h6 font-weight-bold white--text text-center'
@@ -29,7 +36,9 @@
 				</v-col>
 
 				<v-col
-					:cols="$vuetify.breakpoint.smAndDown ? '' : '5'"
+					data-aos="fade-up"
+					data-aos-duration="900"
+					md="5"
 					:class="
 						$vuetify.breakpoint.smAndDown
 							? 'subtitle-1 text-center white--text'
@@ -39,12 +48,13 @@
 					{{ $t("title.3") }}
 				</v-col>
 
-				<v-col
-					:cols="$vuetify.breakpoint.smAndDown ? '12' : '12'"
+				<v-col  
+					data-aos="fade-up"
+					data-aos-duration="900"
 					:class="
 						$vuetify.breakpoint.smAndDown
 							? 'd-flex justify-center'
-							: 'd-flex justify-start'
+							: ''
 					"
 				>
 					<v-hover v-slot="{ hover }">
@@ -67,6 +77,8 @@
 		</template>
 		<template>
 			<div
+				data-aos="fade-up"
+     			data-aos-duration="900"
 				v-for="(header, index) in headers"
 				:key="index"
 				:class="header.class"
@@ -77,19 +89,24 @@
 			</div>
 		</template>
 
-		<v-img class="mt-16 mx-16" aspect-ratio="4" src="Grap.png"> </v-img>
+		<v-img  
+			data-aos="fade-up"
+     		data-aos-duration="900" class="mt-16 mx-16" aspect-ratio="4" src="Grap.png" > </v-img>
 		<template>
-      <div  class="mt-16 text-center font-weight-bold text-sm-h5 text-md-h4">
+      <div 
+	  		data-aos="fade-up"
+     		data-aos-duration="900" class="mt-16 text-center font-weight-bold text-md-h4">
           {{$t("title.4")}}
       </div>
-     
+
     </template>
 	</v-sheet>
-	
+
 </template>
 
 
 <script>
+
 const gradients = [
 	["#222"],
 	["#42b3f4"],
@@ -98,6 +115,7 @@ const gradients = [
 	["#00c6ff", "#F0F", "#FF0"],
 	["#f72047", "#ffd200", "#1feaea"],
 ];
+import AOS from "aos";
 
 export default {
 	data() {
@@ -131,8 +149,17 @@ export default {
 					class: "text-center text-md-h6",
 				},
 			],
+			
 		};
+		
 	},
+	mounted() {
+	setTimeout(function() {
+    AOS.init({
+        	once: true,
+    	});
+	}, 100);
+	},	
 };
 </script>
 <i18n>

@@ -1,8 +1,9 @@
 <template>
-	<v-app id="app" class="overflow-auto">
+	<v-app id="app" style="overflow:scroll">
 		<v-app-bar
-			:elevation="scrolled ? '60' : ''"
-			:color="scrolled ? 'white' : 'transparent'"
+			elevation="60"
+			elevate-on-scroll
+			color="white"
 			app
 			flat
 			clipped-left
@@ -25,7 +26,9 @@
 					@click="drawer = true"
 				/>
 			</v-col>
+
 			<div class="d-none align-center justify-space-around d-md-flex">
+				
 				<v-btn
 					v-for="(list, index) in lists"
 					:key="index"
@@ -52,8 +55,8 @@
 			right	
 			overflow-hidden
 		>
-		<v-card height="80" flat color="transparent"></v-card>
 			<v-layout column>
+				<v-card height="80" flat color="transparent"></v-card>
 				<v-btn
 					v-for="(list, index) in lists"
 					:key="index"
@@ -74,14 +77,9 @@
 			</v-layout>
 		</v-navigation-drawer>
 		
-		<v-main v-if="$vuetify.breakpoint.smAndDown">
-			<v-container fluid class="pa-0" max-height="600">
-				<Nuxt />
-			</v-container>
-		</v-main>
-		<v-container v-else fluid class="pa-0" max-height="600">
+		<v-main class="mt-16 pa-0">
 			<Nuxt />
-		</v-container>
+		</v-main>
 		<v-footer
 			color="white"
 			class="white--text font-weight-light"
@@ -144,7 +142,6 @@ export default {
 	data () {
         return{
 		drawer: false,
-		scrolled: false,
 		lists: [
 			{
 				title: this.$t("list.1"),
@@ -192,26 +189,7 @@ export default {
 		],
 	};
 },
-	beforeMount() {
-		window.addEventListener("scroll", this.handleScroll);
-	},
-	beforeDestroy() {
-		window.removeEventListener("scroll", this.handleScroll);
-	},
 	methods: {
-		handleScroll() {
-			if (
-				this.lastPosition < window.scrollY &&
-				this.limitPosition < window.scrollY
-			) {
-				this.scrolled = true;
-			}
-			if (this.lastPosition > window.scrollY) {
-				this.scrolled = false;
-			}
-			this.lastPosition = window.scrollY;
-			this.scrolled = window.scrollY > 0;
-		},
 		goToHome() {
 			this.$router.push("/pricing");
 		},
