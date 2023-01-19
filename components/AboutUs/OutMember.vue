@@ -12,7 +12,7 @@
                 <template #default="{ hover }">
                     <v-card  data-aos="zoom-out-down"  data-aos-duration="1000" class="rounded-xl"
                     :class="$vuetify.breakpoint.smAndDown
-                            ? 'mt-2'
+                            ? ' my-4 mx-auto'
                             : ' mx-auto ma-12 '" >
                         <v-img contain height="300px" width="400px" :src="form.imgs" />
                         <v-card-text class="text-center font-weight-bold">

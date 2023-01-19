@@ -9,7 +9,7 @@
 						<v-card-title
 							:class="
 								$vuetify.breakpoint.smAndDown
-									? 'justify-center'
+									? 'justify-center pt-12'
 									: 'justify-start'
 							"
 						>
@@ -45,7 +45,7 @@
 						<div
 							:class="
 								$vuetify.breakpoint.smAndDown
-									? 'h6 text-center font-weight-bold'
+									? 'h6 text-center font-weight-bold mt-12'
 									: 'h4  font-weight-bold pl-2 py-9'
 							"
 						>
@@ -75,7 +75,7 @@
 						<div
 							:class="
 								$vuetify.breakpoint.smAndDown
-									? 'h6 text-center font-weight-bold'
+									? 'h6 text-center font-weight-bold mt-12'
 									: 'h4 font-weight-bold py-10 '
 							"
 						>
@@ -109,7 +109,7 @@
 						<div
 							:class="
 								$vuetify.breakpoint.smAndDown
-									? 'h6 font-weight-bold text-center '
+									? 'h6 font-weight-bold text-center mt-12 '
 									: 'h4 font-weight-bold py-10'
 							"
 						>
