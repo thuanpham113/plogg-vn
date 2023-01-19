@@ -10,7 +10,7 @@
             src="/OurServices//service.jpg"
         />
 
-        <div data-aos="zoom-in-left"
+        <div data-aos="zoom-in-left "  data-aos-duration="900"
             :class="[
                 'd-flex flex-column',
                 $vuetify.breakpoint.smAndDown
@@ -29,6 +29,7 @@
             </div>
 
             <div data-aos="zoom-in-left"
+            data-aos-duration="900"
                 :class="
                     $vuetify.breakpoint.smAndDown
                         ? 'mt-2  text-center grey--text'

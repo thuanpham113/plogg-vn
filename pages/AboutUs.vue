@@ -14,7 +14,8 @@
 			src="/teamplogg.jpg"
 		/>
 		<v-sheet :class="$vuetify.breakpoint.smAndDown ? 'mx-5' : 'px-16'">
-			<template>
+			<template >
+				<div data-aos="zoom-in" data-aos-duration="900">
 					<div
 					class="mt-16"
 						:class="$vuetify.breakpoint.smAndDown
@@ -28,9 +29,11 @@
 						:'text-h5 grey--text'">
 							{{ $t("form.1") }}
 					</v-col>
+					</div>
 			</template>
 
 			<template>
+				<div  data-aos="zoom-in" data-aos-duration="500">
 					<div
 					class="mt-16"
 						:class="$vuetify.breakpoint.smAndDown
@@ -44,6 +47,7 @@
 						:'text-h5 grey--text'">
 							{{ $t("form.2") }}
 					</v-col>
+					</div>
 			</template>
 
 			<about-us-title-item/>
@@ -59,7 +63,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 export default {
 	mounted() {
-		AOS.init();
+		AOS.init({
+  offset: 20,
+});
+		
+		
 	},
 };
 </script>

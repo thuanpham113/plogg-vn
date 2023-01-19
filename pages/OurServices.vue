@@ -57,7 +57,7 @@
         :cols="$vuetify.breakpoint.smAndDown ? '12' : '12'"
         class="d-flex justify-center"
       >
-        <v-hover class=" " v-slot="{ hover }">
+        <v-hover  v-slot="{ hover }">
           <v-btn
 		  	class="rounded-lg white--text"
             :color="hover ? 'grey darken-1' : 'cyan lighten-3'"
@@ -83,50 +83,56 @@ export default {
           img: "/OurServices/service.jpg",
           text1: this.$t("form1.1"),
           text2: this.$t("form1.2"),
-          aos: "fade-up",
+          aos: "fade-left",
         },
         {
           img: "/OurServices/service1.jpg",
           text1: this.$t("form1.3"),
           text2: this.$t("form1.4"),
           float: "right",
-          aos: "fade-down",
+          aos: "fade-right",
           easing: "linear",
         },
         {
           img: "/OurServices/service2.jpg",
           text1: this.$t("form2.1"),
           text2: this.$t("form2.2"),
-          aos: "fade-up",
+          aos: "fade-left",
         },
         {
           img: "/OurServices/service6.jpg",
           text1: this.$t("form2.3"),
           text2: this.$t("form2.4"),
           float: "right",
-          aos: "fade-down",
+          aos: "fade-right",
           easing: "linear",
         },
         {
           img: "/OurServices/service4.jpg",
           text1: this.$t("form3.1"),
           text2: this.$t("form3.2"),
-          aos: "fade-up",
+          aos: "fade-left",
         },
         {
           img: "/OurServices/service5.jpg",
           text1: this.$t("form3.3"),
           text2: this.$t("form3.4"),
           float: "right",
-          aos: "fade-down",
+          aos: "fade-right",
           easing: "linear",
         },
       ],
     };
   },
   mounted() {
-    AOS.init();
-  },
+	setTimeout(function() {
+    AOS.init({
+        once: true,
+    });
+},50);
+		
+		
+	},
 };
 </script>
 <i18n>

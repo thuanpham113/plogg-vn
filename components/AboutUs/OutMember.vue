@@ -10,7 +10,7 @@
         <v-row>
             <v-hover v-for="(form, index) in forms" :key="index">
                 <template #default="{ hover }">
-                    <v-card class="rounded-xl"
+                    <v-card  data-aos="zoom-out-down"  data-aos-duration="1000" class="rounded-xl"
                     :class="$vuetify.breakpoint.smAndDown
                             ? 'mt-2'
                             : ' mx-auto ma-12 '" >

@@ -4,7 +4,8 @@
 			<v-img max-height="500" src="/Background_careers.jpg">
 			
 				<div class="pt-md-16 ma-md-14">
-					<div>
+					<div  data-aos="zoom-out-up"
+				>
 						<v-card-title
 							:class="
 								$vuetify.breakpoint.smAndDown
@@ -21,7 +22,7 @@
 					</div>
 
 					<v-sheet class="grey--text" color="transparent">
-						<div>
+						<div  data-aos="zoom-out-up">
 							<v-col
 								md="11"
 								:class="
@@ -40,7 +41,7 @@
 		<v-sheet class="px-16">
 			<template>
 				<div>
-					<div class="mx-md-10">
+					<div  data-aos="zoom-out-up" class="mx-md-10">
 						<div
 							:class="
 								$vuetify.breakpoint.smAndDown
@@ -52,7 +53,7 @@
 						</div>
 					</div>
 					<v-sheet class="black--text">
-						<div>
+						<div  data-aos="zoom-out-up">
 							<v-col
 								md="11"
 								:class="
@@ -69,7 +70,7 @@
 			</template>
 
 			<template>
-				<div>
+				<div  data-aos="zoom-out-up">
 					<div class="mx-10">
 						<div
 							:class="
@@ -82,7 +83,7 @@
 						</div>
 					</div>
 				</div>
-				<div>
+				<div  data-aos="zoom-out-up">
 					<v-sheet
 						v-for="(header, index) in headers"
 						:key="index"
@@ -103,7 +104,7 @@
 				</div>
 			</template>
 			<template>
-				<div class="mx-10">
+				<div  data-aos="zoom-out-up" class="mx-10">
 					<div>
 						<div
 							:class="
@@ -116,7 +117,7 @@
 						</div>
 					</div>
 
-					<div
+					<div  data-aos="zoom-out-up"
 						v-for="(head, index) in heads"
 						:key="index"
 						:class="
@@ -141,7 +142,7 @@
 			</template>
 		</v-sheet>
 
-		<div class="d-flex justify-center w-100 pt-5">
+		<div data-aos="zoom-in-down" class="d-flex justify-center w-100 pt-5">
 			<v-hover v-slot="{ hover }">
 				<v-btn
 					class="rounded-lg white--text"
@@ -163,6 +164,7 @@ import "aos/dist/aos.css";
 export default {
 	data() {
 		return {
+			
 			headers: [
 				{
 					Title: this.$t("form.1"),
@@ -200,9 +202,16 @@ export default {
 		};
 	},
 	mounted() {
-		AOS.init;
+	setTimeout(function() {
+    AOS.init({
+        once: true,
+    });
+}, 100);
+		
+		
 	},
 };
+
 </script>
 
 <style></style>

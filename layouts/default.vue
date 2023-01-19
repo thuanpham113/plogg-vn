@@ -140,10 +140,7 @@ export default {
         return{
 		drawer: false,
 		lists: [
-			{
-				title: this.$t("list.1"),
-				link: "/AboutUs",
-			},
+			
 			{
 				title: this.$t("list.1"),
 				link: "/AboutUs",

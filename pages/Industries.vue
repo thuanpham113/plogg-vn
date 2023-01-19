@@ -184,7 +184,7 @@
       </v-col>
     </v-row>
 
-    <v-card elevation="0" class="d-flex justify-center">
+    <v-card data-aos="zoom-in-down" elevation="0" class="d-flex justify-center">
       <v-hover v-slot="{ hover }">
         <v-btn
           class="rounded-lg white--text"
@@ -196,7 +196,7 @@
         </v-btn>
       </v-hover>
     </v-card>
-    <v-card-title class="d-flex justify-center">
+    <v-card-title data-aos="zoom-in-down" class="d-flex justify-center">
       <div class="text-subtitle-1 grey--text">
         {{ $t("text") }}
       </div>
@@ -209,8 +209,14 @@ import AOS from "aos";
 
 export default {
   mounted() {
-    AOS.init();
-  },
+	setTimeout(function() {
+    AOS.init({
+        once: true,
+    });
+}, 100);
+		
+		
+	},
 };
 </script>
 
