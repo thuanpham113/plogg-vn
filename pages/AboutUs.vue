@@ -1,33 +1,46 @@
 <template>
     <v-sheet>
-        <v-card flat color="transparent" :height="$vuetify.breakpoint.smAndDown ? '' : '80 '"></v-card>
+        <v-card flat color="transparent" :height="$vuetify.breakpoint.smAndDown ? '' : '80 '" ></v-card>
         <v-layout :class="$vuetify.breakpoint.smAndDown ? '' : 'py-5 px-16 mx-15'">
             <template>
-                <div>
-                    <v-col>
-                        <v-layout justify-center v-if="$vuetify.breakpoint.smAndDown">
-                            <img contain aspect-ratio="1" :width="$vuetify.breakpoint.smAndDown ? '200' : ''" :class="$vuetify.breakpoint.smAndDown ? 'top-side justify-center' : ''
+                <div  >
+                    <v-col >
+                        <v-layout 
+                            justify-center data-aos="fade-down" 
+                            v-if="$vuetify.breakpoint.smAndDown" >
+                                <img
+                                contain
+                                aspect-ratio="1"
+                                :width="$vuetify.breakpoint.smAndDown ? '200' : ''"
+                                :class="$vuetify.breakpoint.smAndDown ? 'top-side justify-center' : ''
                                 " src="/logowe.jpg" />
                         </v-layout>
                     </v-col>
 
-                    <v-col md="9" v-if="$vuetify.breakpoint.mdAndUp">
-                        <div data-aos="zoom-in-left" data-aos-duration="500" data-aos-offset="120"
-                            data-aos-easing="ease-in-side">
-                            <img contain aspect-ratio="1" :width="$vuetify.breakpoint.smAndDown ? ' 200' : ''" :class="$vuetify.breakpoint.smAndDown ? '' : 'left-side'
+                    <v-col  md="9" v-if="$vuetify.breakpoint.mdAndUp">
+                        <img contain aspect-ratio="1"
+                            :width="$vuetify.breakpoint.smAndDown ? ' 200' : ''"
+                            :class="$vuetify.breakpoint.smAndDown ? '' : 'left-side'
                             " src="/logowe.jpg" />
-                        </div>
                     </v-col>
 
 
-                    <div data-aos="fade-down" data-aos-offset="120" data-aos-duration="900" data-aos-delay="500" :class="$vuetify.breakpoint.smAndDown
+                    <div 
+                        data-aos="fade-down"  
+                        data-aos-duration="900" 
+                        :class="$vuetify.breakpoint.smAndDown
                             ? 'h6 text-center font-weight-bold '
-                    : 'h4 pl-10 text-wrap font-weight-bold'">
+                            : 'h4 pl-10 text-wrap font-weight-bold'"
+                            >
                         {{ $t("title.1") }}
                     </div>
 
-                    <div data-aos="fade-down-right" data-aos-duration="900" data-aos-delay="700" class="content">
-                        <p :class="$vuetify.breakpoint.smAndDown ?
+                    <div 
+                        data-aos="fade-down-right" 
+                        data-aos-duration="900" 
+                        class="content">
+                         <p
+                            :class="$vuetify.breakpoint.smAndDown ?
                             'text-center grey--text subtitle-1 mx-6' : ' h6 grey--text mt-10 ma-12'">
                             {{ $t("title.2") }}
                         </p>
@@ -36,27 +49,24 @@
             </template>
         </v-layout>
 
-        <div data-aos="fade-down" data-aos-duration="900"  data-aos-once="true">
+
         <v-img contain :width="$vuetify.breakpoint.smAndDown ? '100%' : '100vw'" src="/teamplogg.jpg" />
-        </div>
         <v-sheet :class="$vuetify.breakpoint.smAndDown ? 'mx-5' : 'px-16'">
             <template>
-                <div data-aos="fade-down" data-aos-duration="900" data-aos-delay="500" data-aos-once="true">
-                    <div v-for="(head, index) in heads" :key="index" :class="head.class">
+                <div v-for="(head, index) in heads" :key="index"
+						:class="head.class"
+                        >
                         <v-col :cols="head.col">
 						<div>
 							{{ head.text }}
 						</div>
                         </v-col>
 					</div>
-                </div>
             </template>
 
             <template>
                 <v-sheet class="d-flex flex-column flex-md-row align-center justify-center my-9 mt-16">
-
-                    <v-img data-aos="flip-up" data-aos-once="true" data-aos-duration="1500" data-aos-delay="400"
-                        :max-width="$vuetify.breakpoint.smAndDown ? '60%' : '35%'" contain
+                    <v-img  :max-width="$vuetify.breakpoint.smAndDown ? '60%' : '35%'" contain
                         src="/OurServices//service.jpg" />
 
                     <div :class="['d-flex flex-column',
@@ -64,7 +74,6 @@
                             ? 'black--text'
                             : 'black--text align-end w-55 '
                     ]">
-                        <div data-aos="fade-left" data-aos-duration="1200" data-aos-once="true" data-aos-delay="900">
                         <div :class="
                             $vuetify.breakpoint.smAndDown
                                 ? 'h5  text-center font-weight-bold'
@@ -72,8 +81,7 @@
                         ">
                             {{ $t("title.7") }}
                         </div>
-                        </div>
-                        <div data-aos="fade-left" data-aos-duration="900" data-aos-once="true" data-aos-delay="1000">
+
                         <div :class="
                             $vuetify.breakpoint.smAndDown
                                 ? 'mt-2  text-center grey--text'
@@ -82,13 +90,11 @@
                             {{ $t("title.8") }}
                         </div>
                     </div>
-                    </div>
                 </v-sheet>
             </template>
 
             <template>
                 <v-sheet :class="$vuetify.breakpoint.smAndDown ? 'mx-2' : ' mx-8 pl-2 py-5'" max-width="100%">
-                    <div data-aos="fade-right" data-aos-duration="900" data-aos-once="true" data-aos-delay="1000">
                     <div :class="
                         $vuetify.breakpoint.smAndDown
                             ? 'h5 mt-2 font-weight-bold text-center'
@@ -96,11 +102,17 @@
                     ">
                         {{ $t("title.9") }}
                     </div>
-                    </div>
-                    <v-slide-group center-active show-arrows v-model="current"
-                        :class="$vuetify.breakpoint.smAndDown ? '' : 'pa-5 mt-12'">
+                    <v-slide-group
+                         center-active 
+                         show-arrows
+                         v-model="current" 
+                         :class="$vuetify.breakpoint.smAndDown ? '' : 'pa-5 mt-12'"
+                        >
                             <v-slide-item disabled v-for="(header, index) in headers" :key="index">
-                            <v-card elevation="0" height="200" width="400">
+                                <v-card 
+                                    elevation="0" 
+                                    height="200" 
+                                    width="400">
                                         <v-img contain :src="header.imgs" />
                                 </v-card>
                             </v-slide-item>
@@ -109,7 +121,6 @@
             </template>
         <template>
             <rely-layout-page>
-                    <div data-aos="fade-right" data-aos-duration="1200" data-aos-once="true" data-aos-delay="1200">
                 <div :class="
                     $vuetify.breakpoint.smAndDown
                         ? 'h5 font-weight-bold text-center py-9'
@@ -117,13 +128,18 @@
                 ">
                     {{ $t("title.10") }}
                 </div>
-                    </div>
                 <v-row>
                     <v-hover v-for="(form, index) in forms" :key="index">
-                            <template #default="{ hover }">
-                                <v-card data-aos="flip-down" data-aos-duration="1200" data-aos-delay="900" data-aos-once="true" :class="$vuetify.breakpoint.smAndDown ? '' : ' mx-auto ma-12 '"
+                        <template #default="{ hover }" >
+                            <v-card
+                                :class="$vuetify.breakpoint.smAndDown ? '' : ' mx-auto ma-12 '"
                                  class="rounded-xl">
-                                    <v-img contains height="300px" width="400px" :src="form.imgs" />
+                                <v-img 
+                                    contains 
+                                    height="300px" 
+                                    width="400px" 
+                                    :src="form.imgs"
+                                    />
                                         <v-card-text class="text-center font-weight-bold">
                                             <h2 class="text-h5 black--text">
                                                 {{ form.Name }}
@@ -133,7 +149,7 @@
                                         
                                     <v-fade-transition>
                                         <v-overlay v-if="hover" absolute color="#036358">
-                                            <v-btn :href="form.links">{{ $t("see") }}</v-btn>
+                                            <v-btn :href="form.links">{{ $t("see")}}</v-btn>
                                         </v-overlay>
                                     </v-fade-transition>
                             </v-card>
@@ -147,11 +163,11 @@
 </template>
 
 <script>
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default {
-    data() {
-        return {
+    data () {
+        return{
 
             forms: [
                 {
@@ -275,19 +291,17 @@ export default {
     },
     mounted() {
 		AOS.init();
-		
-	}
+	},
 };
 </script>
 
 <style lang="scss">
 .left-side {
-    float: right;
-    width: 50%;
-    height: 50%;
+	float: right;
+	width: 50%;
+	height: 50%;
 }
 </style>
-
 
 <i18n>
    {

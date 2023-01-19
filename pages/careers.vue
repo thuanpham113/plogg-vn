@@ -2,6 +2,7 @@
 	<v-sheet>
 		<template>
 			<v-img max-height="450" src="/Background_careers.jpg">
+				<v-card :height="$vuetify.breakpoint.smAndDown ? '' : '40'" flat color="transparent"></v-card>
 				<div class="pt-md-16 ma-md-14">
 					<div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
 						<v-card-title :class="$vuetify.breakpoint.smAndDown ? 'justify-center' : 'justify-start'">
