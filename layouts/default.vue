@@ -7,7 +7,7 @@
 			app
 			flat
 			clipped-left
-			height="80"
+			height="80vh"
 			class="d-flex flex-column"
 		>
 			<v-col
@@ -26,7 +26,9 @@
 					@click="drawer = true"
 				/>
 			</v-col>
+
 			<div class="d-none align-center justify-space-around d-md-flex">
+				
 				<v-btn
 					v-for="(list, index) in lists"
 					:key="index"
@@ -45,15 +47,16 @@
 				<kq-button-locale color="black" />
 			</v-col>
 		</v-app-bar>
-
+	
 		<v-navigation-drawer
 			v-model="drawer"
 			color="white"
 			fixed
-			right
+			right	
 			overflow-hidden
 		>
 			<v-layout column>
+				<v-card height="80" flat color="transparent"></v-card>
 				<v-btn
 					v-for="(list, index) in lists"
 					:key="index"
@@ -62,7 +65,7 @@
 					:to="localePath(list.link)"
 					text
 					height="8vh"
-				>
+				>	
 					<div class=" font-weight-bold">
 						{{ list.title }}
 					</div>
@@ -73,7 +76,7 @@
 				/>
 			</v-layout>
 		</v-navigation-drawer>
-
+		
 		<v-main class="mt-16 pa-0">
 			<Nuxt />
 		</v-main>
@@ -140,7 +143,6 @@ export default {
         return{
 		drawer: false,
 		lists: [
-			
 			{
 				title: this.$t("list.1"),
 				link: "/AboutUs",
@@ -157,7 +159,6 @@ export default {
 				title: this.$t("list.4"),
 				link: "/careers",
 			},
-
 		],
 		texts: [
 			{ title2: this.$t("title2") },
@@ -200,7 +201,7 @@ export default {
 	background: white !important;
 }
 .v-app-bar {
-	z-index: 100
+	z-index: 100	
 }
 </style>
 
