@@ -54,8 +54,7 @@
 
           <div>
             <v-card
-              data-aos="fade-left"
-              data-aos-duration="900"
+
               elevation="0"
               class="text-center"
             >
@@ -214,8 +213,8 @@ export default {
         once: true,
     });
 }, 100);
-		
-		
+
+
 	},
 };
 </script>

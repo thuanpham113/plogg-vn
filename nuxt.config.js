@@ -74,10 +74,6 @@ export default {
 		vueI18nLoader: true,
 		locales: ["en", "fr"],
 		defaultLocale: "en",
-		vueI18n: {
-			fallbackLocale: "en",
-			messages: { en, fr },
-		},
 	},
 
 	// Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
