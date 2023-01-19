@@ -12,7 +12,7 @@
                 <template #default="{ hover }">
                     <v-card class="rounded-xl"
                     :class="$vuetify.breakpoint.smAndDown
-                            ? ''
+                            ? 'mt-2'
                             : ' mx-auto ma-12 '" >
                         <v-img contain height="300px" width="400px" :src="form.imgs" />
                         <v-card-text class="text-center font-weight-bold">
@@ -148,14 +148,13 @@ export default {
             "director":"Executive Director",
             "develop":"Software Development Directors"
         },
-        
+
         "fr": {
             "title" : "Nos membres",
             "see":"Voir plus d'informations",
             "director":"Directeur exécutif",
             "develop":"Directeurs du développement logiciel"
         }
- 
+
      }
  </i18n>
- 

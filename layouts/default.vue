@@ -45,12 +45,12 @@
 				<kq-button-locale color="black" />
 			</v-col>
 		</v-app-bar>
-	
+
 		<v-navigation-drawer
 			v-model="drawer"
 			color="white"
 			fixed
-			right	
+			right
 			overflow-hidden
 		>
 			<v-layout column>
@@ -62,7 +62,7 @@
 					:to="localePath(list.link)"
 					text
 					height="8vh"
-				>	
+				>
 					<div class=" font-weight-bold">
 						{{ list.title }}
 					</div>
@@ -73,7 +73,7 @@
 				/>
 			</v-layout>
 		</v-navigation-drawer>
-		
+
 		<v-main class="mt-16 pa-0">
 			<Nuxt />
 		</v-main>
@@ -145,6 +145,10 @@ export default {
 				link: "/AboutUs",
 			},
 			{
+				title: this.$t("list.1"),
+				link: "/AboutUs",
+			},
+			{
 				title: this.$t("list.2"),
 				link: "/industries",
 			},
@@ -156,6 +160,7 @@ export default {
 				title: this.$t("list.4"),
 				link: "/careers",
 			},
+
 		],
 		texts: [
 			{ title2: this.$t("title2") },
@@ -198,7 +203,7 @@ export default {
 	background: white !important;
 }
 .v-app-bar {
-	z-index: 100	
+	z-index: 100
 }
 </style>
 
