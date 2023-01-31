@@ -13,12 +13,12 @@
                 v-model="form.firstname"
                 class="mr-10"
                 :label="$t('first')"
-                :rules="[rules.required]"
+                :rules="[$rules.required]"
               />
               <v-text-field
                 v-model="form.lastname"
                 :label="$t('last')"
-                :rules="[rules.required]"
+                :rules="[$rules.required]"
               />
           </v-row>
 
@@ -27,12 +27,12 @@
                 v-model="form.email"
                 class="mr-10"
                 :label="$t('email')"
-                :rules="[rules.required, rules.email]"
+                :rules="[$rules.required, $rules.email]"
               />
               <v-text-field
                 v-model="form.phone"
                 :label="$t('phone')"
-                :rules="[rules.required, rules.phone]"
+                :rules="[$rules.required, $rules.phone]"
               />
              
             </v-row>
@@ -41,7 +41,7 @@
               v-model="form.title"
               label="Job title"
               class="mx-16 mt-3"
-              :rules="[rules.required]"
+              :rules="[$rules.required]"
             />
         </v-sheet>
           <v-file-input
@@ -50,7 +50,7 @@
             prepend-icon
             dense
             :label="$t('update')"
-            :rules="[rules.required]"
+            :rules="[$rules.required]"
           />
 
         <v-sheet>
@@ -91,22 +91,13 @@ export default {
       loading: false,
       snackbar: false,
       timeout: 2000,
-      rules: {
-        required: (value) => !!value || this.$t("required"),
-
-        email: (value) => {
-          const pattern =
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-          return pattern.test(value) || "Invalid e-mail.";
-        },
-      },
       form: {
         firstname: "",
         lastname: "",
         phone: "",
         email: "",
         title: "",
-        media: true
+        media: undefined
       },
     };
   },
