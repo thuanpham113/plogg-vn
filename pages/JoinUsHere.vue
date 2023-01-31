@@ -32,20 +32,21 @@
               <v-text-field
                 v-model="form.phone"
                 :label="$t('phone')"
-                :rules="[$rules.required, $rules.phone]"
+                :rules="[rules.required, rules.phone]"
               />
+             
             </v-row>
 
             <v-text-field
               v-model="form.title"
               label="Job title"
-              class="mx-16"
+              class="mx-16 mt-3"
               :rules="[rules.required]"
             />
         </v-sheet>
           <v-file-input
             v-model="form.media"
-            class="mx-16 mt-3"
+            class="mx-16 mt-4"
             prepend-icon
             dense
             :label="$t('update')"

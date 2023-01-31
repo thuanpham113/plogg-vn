@@ -2,8 +2,8 @@
 	<v-sheet 
 		:class="
 			$vuetify.breakpoint.smAndDown
-				? 'd-flex flex-column flex-md-row align-center justify-center my-16'
-				: 'd-column-reverse align-center justify-end d-flex flex-row-reverse my-16'
+				? 'd-flex flex-column flex-md-row align-center my-16 '
+				: 'd-column-reverse align-center justify-end d-flex flex-row-reverse py-16'
 		"
 	>
 		<v-img

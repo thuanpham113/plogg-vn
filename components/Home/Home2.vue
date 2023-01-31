@@ -1,6 +1,6 @@
 <template>
 	<v-sheet
-		class="d-flex flex-column flex-md-row align-center justify-center my-16">
+		class="d-flex flex-column flex-md-row align-center pb-15 py-16">
 		<v-img 
 			data-aos="fade-right"
 			data-aos-duration="900"
