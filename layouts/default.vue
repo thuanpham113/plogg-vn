@@ -212,7 +212,7 @@ export default {
 {
 	"en": {
 		"text":{
-		"1":"Wosks",
+		"1":"Works",
 		"2":"Concepts",
 		"3":"Archive",
 		"4":"Personal",
