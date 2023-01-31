@@ -83,7 +83,7 @@
 				</div>
 			</template>
 			<template>
-				<div data-aos="zoom-out-up" class="mx-10" data-aos-delay="600">
+				<div data-aos="zoom-out-up" class="mx-10" data-aos-delay="300">
 					<div>
 						<div :class="
 							$vuetify.breakpoint.smAndDown
@@ -115,7 +115,7 @@
 
 		<div data-aos="zoom-in-down" class="d-flex justify-center w-100 pt-5">
 			<v-hover v-slot="{ hover }">
-				<v-btn class="rounded-lg white--text" :color="hover ? 'grey darken-1' : 'cyan lighten-3'"
+				<v-btn class="rounded-lg white--text" :color="hover ? 'grey darken-1' : 'cyan lighten-10'"
 					:height="$vuetify.breakpoint.smAndDown ? '45' : '55'" :to="localePath(`/JoinUsHere`)">
 					<div class="font-weight-black h7">{{ $t("button") }}</div>
 				</v-btn>
@@ -220,7 +220,7 @@ export default {
 		"3" : "Pourquoi devriez-vous nous rejoindre?",
 		"4" : "En rejoignant l'équipe de Plogg, vous serez impliqué dans un environnement de travail dynamique, agréable et créatif. Les membres de Plogg Vietnam sont des jeunes passionnés par les technologies de l'information. Chez Plogg Vietnam, chaque individu apporte une partie de ses connaissances, de sa créativité et de son talent pour aider l'entreprise à se développer dans son ensemble. Plus qu'un simple lieu de travail, notre entreprise est aussi une maison accueillante, où vous pouvez approfondir vos connaissances et apprendre de nouvelles choses ensemble.",
 		"5" : "Que pouvez-vous obtenir lorsque vous nous rejoignez?",
-		"6" : "What you can get when you join us?"
+		"6" : "Nous recherchons..."
 		},
 	"form":{
 		"1" : "Vous travaillerez dans un environnement unique.",

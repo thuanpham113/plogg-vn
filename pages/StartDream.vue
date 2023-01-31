@@ -68,7 +68,8 @@
 								$vuetify.breakpoint.smAndDown ? '50' : '55'
 							"
 							:color="hover ? 'grey darken-1' : 'cyan lighten-3'"
-						>
+							:to="localePath(`/JoinUsHere`)">
+
 							<div>{{ $t("button") }}</div>
 						</v-btn>
 					</v-hover>

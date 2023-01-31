@@ -55,7 +55,7 @@
 				<v-hover v-slot="{ hover }">
 					<v-btn
 					    class="rounded-lg white--text"
-						:color="hover ? 'grey darken-1' : 'cyan lighten-3'"
+						:color="hover ? 'grey darken-1' : 'cyan lighten-10'"
 						:height="$vuetify.breakpoint.smAndDown ? '45' : '55'"
 						:to="localePath(`/StartDream`)"
 						

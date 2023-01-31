@@ -35,7 +35,7 @@
 					<v-hover class=" " v-slot="{ hover }">
 						<v-btn
 							class="rounded-lg white--text"
-							:color="hover ? 'grey darken-1' : 'cyan lighten-3'"
+							:color="hover ? 'grey darken-1' : 'cyan lighten-10'"
 							:height="$vuetify.breakpoint.smAndDown ? '40' : '55'"
 							dense
 							href="/AboutUs"

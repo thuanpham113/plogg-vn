@@ -44,7 +44,6 @@
 
           <v-textarea
             class="mx-16 mt-3 mb-16"
-            label="How can we help you?"
             :label="$t('how')"
             v-model="form.description"
             :rules="[rules.required]"
@@ -155,14 +154,16 @@ export default {
     "how":"How can we help you?"
     	},
 "fr":{
-    "notification":"Soumis avec succès",
-    "title":{
-        "1":"Contactez notre équipe commerciale"
-    },
-    "button":{
-        "1":"Cliquez ici pour soumettre"
-    }
-
+  "notification":"Soumis avec succès",
+    "title":"Contactez notre équipe commerciale",
+    "button":"Cliquez ici pour soumettre",
+	  "first":"Prénom",
+	  "last":"Nom de famille",
+    "business":"E-mail professionnel",
+    "company":"Nom de la compagnie",
+	  "required":"Obligatoire",
+    "how":"Comment pouvons-nous vous aider?"
+   
 }
 }
 </i18n>

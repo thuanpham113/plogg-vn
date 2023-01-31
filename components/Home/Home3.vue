@@ -59,7 +59,7 @@
 									? 'rounded-lg white--text'
 									: 'rounded-lg white--text'
 							"
-							:color="hover ? 'grey darken-1' : 'cyan lighten-3'"
+							:color="hover ? 'grey darken-1' : 'cyan lighten-10'"
 							:height="$vuetify.breakpoint.smAndDown ? '45' : '55'"
 							:to="localePath(`/BuildWord`)"
 						>
