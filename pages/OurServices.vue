@@ -1,148 +1,123 @@
 <template>
 	<v-sheet class="mt-10">
-	  <div data-aos="flip-left" data-aos-duration="900">
-		<div class="font-weight-bold text-center" :class="$vuetify.breakpoint.smAndDown ? 'h6':'h4'">
-		  {{ $t("title") }}
+		<div data-aos="flip-left" data-aos-offset="120">
+			<div class="font-weight-bold text-center" :class="$vuetify.breakpoint.smAndDown ? 'h6' : 'h4'">
+				{{ $t("title") }}
+			</div>
 		</div>
-	  </div>
-	  <service-item-card
-		v-for="(header, index) in headers"
-		:key="index"
-		:title="header.text1"
-		:aos="header.aos"
-		:easing="header.easing"
-	  >
-		<template v-if="header.float === 'right'">
-		  <v-img
-			contain
-			aspect-ratio="1"
-			:width="$vuetify.breakpoint.smAndDown ? '100%' : '50%'"
-			:src="header.img"
-		  />
-		  <v-col md="8">
-			<div
-			  :class="
-				$vuetify.breakpoint.smAndDown
-				  ? 'text-center subtitle-2'
-				  : 'h6 ma-16  py-16 '
-			  "
-			>
-			  {{ header.text2 }}
-			</div>
-		  </v-col>
+		<service-item-card v-for="(header, index) in headers" :key="index" :title="header.text1" :aos="header.aos"
+			:easing="header.easing">
+			<template v-if="header.float === 'right'">
+				<v-img contain aspect-ratio="1" :width="$vuetify.breakpoint.smAndDown ? '100%' : '50%'"
+					:src="header.img" />
+				<v-col md="8">
+					<div :class="
+						$vuetify.breakpoint.smAndDown
+							? 'text-center subtitle-2'
+							: 'h6 ma-16  py-16 '
+					">
+						{{ header.text2 }}
+					</div>
+				</v-col>
+			</template>
+			<template v-else>
+				<v-col md="8">
+					<div :class="
+						$vuetify.breakpoint.smAndDown
+							? 'text-center subtitle-2'
+							: 'h6 ma-16  py-16 '
+					">
+						{{ header.text2 }}
+					</div>
+				</v-col>
+				<v-img contain aspect-ratio="1" :width="$vuetify.breakpoint.smAndDown ? '100%' : '50%'"
+					:src="header.img" />
+			</template>
+		</service-item-card>
+		<template>
+			<v-col data-aos="fade-up" :cols="$vuetify.breakpoint.smAndDown ? '12' : '12'" class="d-flex justify-center">
+				<v-hover v-slot="{ hover }">
+					<v-btn class="rounded-lg white--text" :color="hover ? 'grey darken-1' : 'cyan lighten-3'"
+						:height="$vuetify.breakpoint.smAndDown ? '40' : '55'" :to="localePath(`/SalesTeam`)">
+						<div class="text-md-h6 text-sm-h8">{{ $t("button.2") }}</div>
+					</v-btn>
+				</v-hover>
+			</v-col>
 		</template>
-		<template v-else>
-		  <v-col md="8">
-			<div
-			  :class="
-				$vuetify.breakpoint.smAndDown
-				  ? 'text-center subtitle-2'
-				  : 'h6 ma-16  py-16 '
-			  "
-			>
-			  {{ header.text2 }}
-			</div>
-		  </v-col>
-		  <v-img
-			contain
-			aspect-ratio="1"
-			:width="$vuetify.breakpoint.smAndDown ? '100%' : '50%'"
-			:src="header.img"
-		  />
-		</template>
-	  </service-item-card>
-	  <template>
-		<v-col
-		  data-aos="fade-up"
-		  :cols="$vuetify.breakpoint.smAndDown ? '12' : '12'"
-		  class="d-flex justify-center"
-		>
-		  <v-hover  v-slot="{ hover }">
-			<v-btn
-				class="rounded-lg white--text"
-			  :color="hover ? 'grey darken-1' : 'cyan lighten-3'"
-			  :height="$vuetify.breakpoint.smAndDown ? '40' : '55'"
-			  :to="localePath(`/SalesTeam`)"
-			>
-			  <div class="text-md-h6 text-sm-h8">{{ $t("button.2") }}</div>
-			</v-btn>
-		  </v-hover>
-		</v-col>
-	  </template>
 	</v-sheet>
-  </template>
-  
-  <script>
-  import AOS from "aos";
-  
-  export default {
+</template>
+
+<script>
+import AOS from "aos";
+
+export default {
 	data() {
-	  return {
-		headers: [
-		  {
-			img: "/OurServices/service.jpg",
-			text1: this.$t("form1.1"),
-			text2: this.$t("form1.2"),
-			aos: "fade-left",
-		  },
-		  {
-			img: "/OurServices/service1.jpg",
-			text1: this.$t("form1.3"),
-			text2: this.$t("form1.4"),
-			float: "right",
-			aos: "fade-right",
-			easing: "linear",
-		  },
-		  {
-			img: "/OurServices/service2.jpg",
-			text1: this.$t("form2.1"),
-			text2: this.$t("form2.2"),
-			aos: "fade-left",
-		  },
-		  {
-			img: "/OurServices/service6.jpg",
-			text1: this.$t("form2.3"),
-			text2: this.$t("form2.4"),
-			float: "right",
-			aos: "fade-right",
-			easing: "linear",
-		  },
-		  {
-			img: "/OurServices/service4.jpg",
-			text1: this.$t("form3.1"),
-			text2: this.$t("form3.2"),
-			aos: "fade-left",
-		  },
-		  {
-			img: "/OurServices/service5.jpg",
-			text1: this.$t("form3.3"),
-			text2: this.$t("form3.4"),
-			float: "right",
-			aos: "fade-right",
-			easing: "linear",
-		  },
-		],
-	  };
+		return {
+			headers: [
+				{
+					img: "/OurServices/service.jpg",
+					text1: this.$t("form1.1"),
+					text2: this.$t("form1.2"),
+					aos: "fade-left",
+				},
+				{
+					img: "/OurServices/service1.jpg",
+					text1: this.$t("form1.3"),
+					text2: this.$t("form1.4"),
+					float: "right",
+					aos: "fade-right",
+					easing: "linear",
+				},
+				{
+					img: "/OurServices/service2.jpg",
+					text1: this.$t("form2.1"),
+					text2: this.$t("form2.2"),
+					aos: "fade-left",
+				},
+				{
+					img: "/OurServices/service6.jpg",
+					text1: this.$t("form2.3"),
+					text2: this.$t("form2.4"),
+					float: "right",
+					aos: "fade-right",
+					easing: "linear",
+				},
+				{
+					img: "/OurServices/service4.jpg",
+					text1: this.$t("form3.1"),
+					text2: this.$t("form3.2"),
+					aos: "fade-left",
+				},
+				{
+					img: "/OurServices/service5.jpg",
+					text1: this.$t("form3.3"),
+					text2: this.$t("form3.4"),
+					float: "right",
+					aos: "fade-right",
+					easing: "linear",
+				},
+			],
+		};
 	},
 	mounted() {
-	  setTimeout(function() {
-	  AOS.init({
-		  once: true,
-	  });
-  },50);
-		  
-		  
-	  },
-  };
-  </script>
-  <i18n>
-  {
+		setTimeout(function () {
+			AOS.init({
+				once: true,
+			});
+		}, 50);
+
+
+	},
+};
+</script>
+<i18n>
+{
 	  "en":{
 		  "title" : "Hi, what services are you looking for?",
 		  "button":{
 			"2": "Request our services"
 			},
-  
+
 		  "form1":{
 			  "1" : "Backend As A Serivce",
 			  "2" : "A cloud service model allows developers to operate behind-the-scenes aspects of a website or an application on a flexible and transferrable infrastructure. Plogg Vietnam provide pre-written software for activities that take place on servers, such as user authentication, database management, remote updating, and push notifications, as well as cloud storage and hosting.",
@@ -161,14 +136,14 @@
 			  "3" : "Data & Analytics",
 			  "4" : "Building an infrastructure for data aggregation, analysis, and reporting is what data analytics entails. Plogg Vietnam, a professional provider of data analytics services, offers specialized business analytics solutions to meet both simple and complicated needs."
 		  }
-  
+
 	  },
 	  "fr":{
 		  "title" : "Bonjour, quels services recherchez-vous?",
 		  "button":{
 						"2" : "Sollicitez nos services"
 					 },
-  
+
 		  "form1":{
 			  "1" : "Backend en tant que service",
 			  "2" : "Un modèle de service cloud permet aux développeurs d'exploiter les aspects cachés d'un site Web ou d'une application sur une infrastructure flexible et transférable. Plogg Vietnam fournit des logiciels pré-écrits pour les activités qui se déroulent sur des serveurs, telles que l'authentification des utilisateurs, la gestion de bases de données, la mise à jour à distance et les notifications push, ainsi que le stockage et l'hébergement dans le cloud.",
@@ -187,8 +162,7 @@
 			  "3" : "Analyse des données",
 			  "4" :"La création d'une infrastructure pour l'agrégation, l'analyse et la création de rapports de données est ce que l'analyse de données implique. Plogg Vietnam, un fournisseur professionnel de services d'analyse de données, propose des solutions d'analyse d'entreprise spécialisées pour répondre aux besoins simples et complexes."
 		  }
-  
+
 	  }
-  }
-  </i18n>
-  
+}
+</i18n>

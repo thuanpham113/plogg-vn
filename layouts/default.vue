@@ -115,11 +115,11 @@
 						cols="12"
 						md="2"
 						sm="5"
-						class="d-flex flex-column pb-10"
+						class="d-flex flex-column pb-10 "
 						fill-height
 					>
 						<div class="mb-2 font-weight-bold black--text h7">
-							{{ head.title }}
+							{{ head.title }} 
 						</div>
 						<div class="black--text">{{ head.subtitle }}</div>
 						<div class="my-2 black--text">{{ head.text }}</div>
@@ -130,7 +130,7 @@
 				<v-divider />
 
 				<v-col class="d-flex justify-start grey--text"
-					>(C) Plogg Viet Nam 2022</v-col
+					>(C) Plogg Viet Nam 2023</v-col
 				>
 			</v-layout>
 		</v-footer>
