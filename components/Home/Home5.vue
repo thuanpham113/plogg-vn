@@ -34,7 +34,7 @@
 											$vuetify.breakpoint.smAndDown
 											? 'rounded-lg white--text'
 											: 'rounded-lg white--text'" 
-												:color="hover ? 'grey darken-1' : 'cyan lighten-3'"
+												:color="hover ? 'grey darken-1' : 'cyan lighten-10'"
 												:height="$vuetify.breakpoint.smAndDown ? '40' : '55'"
 												:to="localePath(`/JoinUsHere`)">
 												<div class="font-weight-black h7">{{ $t("button.2") }}</div>

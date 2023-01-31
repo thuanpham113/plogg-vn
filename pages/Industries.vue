@@ -15,7 +15,7 @@
           <v-card elevation="0" class="text-center">
             <v-card-text class="text-h6 black--text font-weight-bold">
               {{ $t("title.1") }}
-              <div class="subtitle-2 grey--text">
+              <div class="subtitle-1 grey--text">
                 {{ $t("form.1") }}
               </div>
             </v-card-text>
@@ -37,7 +37,7 @@
             <v-card elevation="0" class="text-center">
               <v-card-text class="text-h6 black--text font-weight-bold">
                 {{ $t("title.2") }}
-                <div class="subtitle-2 grey--text">
+                <div class="subtitle-1 grey--text">
                   {{ $t("form.2") }}
                 </div>
               </v-card-text>
@@ -57,7 +57,7 @@
           <v-card elevation="0" class="text-center">
             <v-card-text class="text-h6 black--text font-weight-bold">
               {{ $t("title.3") }}
-              <div class="subtitle-2 grey--text">
+              <div class="subtitle-1 grey--text">
                 {{ $t("form.3") }}
               </div>
             </v-card-text>
@@ -73,7 +73,7 @@
           <v-card elevation="0" class="text-center">
             <v-card-text class="text-h6 black--text font-weight-bold">
               {{ $t("title.4") }}
-              <div class="subtitle-2 grey--text">
+              <div class="subtitle-1 grey--text">
                 {{ $t("form.4") }}
               </div>
             </v-card-text>
@@ -93,7 +93,7 @@
           <v-card elevation="0" class="text-center">
             <v-card-text class="text-h6 black--text font-weight-bold">
               {{ $t("title.5") }}
-              <div class="subtitle-2 grey--text">
+              <div class="subtitle-1 grey--text">
                 {{ $t("form.5") }}
               </div>
             </v-card-text>
@@ -110,7 +110,7 @@
           <v-card elevation="0" class="text-center">
             <v-card-text class="text-h6 black--text font-weight-bold">
               {{ $t("title.6") }}
-              <div class="subtitle-2 grey--text">
+              <div class="subtitle-1 grey--text">
                 {{ $t("form.6") }}
               </div>
             </v-card-text>
@@ -121,7 +121,7 @@
 
     <v-card data-aos="zoom-in-down" elevation="0" class="d-flex justify-center">
       <v-hover v-slot="{ hover }">
-        <v-btn class="rounded-lg white--text" :color="hover ? 'grey' : 'cyan lighten-10'"
+        <v-btn class="rounded-lg white--text my-6" :color="hover ? 'grey' : 'cyan lighten-10'"
           :height="$vuetify.breakpoint.smAndDown ? '30' : '60'" :to="localePath(`/Collaborate`)">
           <div  class="font-weight-boder text-md-h6 text-sm-h8">{{ $t("button") }}</div>
         </v-btn>

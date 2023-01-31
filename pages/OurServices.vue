@@ -37,7 +37,7 @@
 		<template>
 			<v-col data-aos="fade-up" :cols="$vuetify.breakpoint.smAndDown ? '12' : '12'" class="d-flex justify-center">
 				<v-hover v-slot="{ hover }">
-					<v-btn class="rounded-lg white--text" :color="hover ? 'grey darken-1' : 'cyan lighten-3'"
+					<v-btn class="rounded-lg white--text" :color="hover ? 'grey darken-1' : 'cyan lighten-10'"
 						:height="$vuetify.breakpoint.smAndDown ? '40' : '55'" :to="localePath(`/SalesTeam`)">
 						<div class="text-md-h6 text-sm-h8">{{ $t("button.2") }}</div>
 					</v-btn>
