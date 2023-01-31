@@ -94,7 +94,7 @@ export default {
 		"2":"Turn your ideas into the 3D graphic designs that "
 		},
 		"button":{
-		"1":"Built your world"
+		"1":"Build your world"
 		},
 		"graphic":"3D graphic design"
 
