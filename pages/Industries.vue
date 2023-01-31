@@ -6,22 +6,11 @@
       </div>
     </div>
 
-    <v-row
-      class="justify-md-space-around mx-16"
-      :column="$vuetify.breakpoint.smAndDown"
-    >
-      <v-col
-        data-aos="fade-right"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
-        md="6"
-      >
+    <v-row class="justify-md-space-around mx-16" :column="$vuetify.breakpoint.smAndDown">
+      <v-col data-aos="fade-right" data-aos-offset="300" data-aos-delay="200" data-aos-easing="ease-in-sine" md="6">
         <v-sheet class="column">
           <v-card rounded="xl" class="ma-16">
-            <v-img
-              :class="$vuetify.breakpoint.smAndDown ? '' : 'px-16'"
-              src="/Industries/bank1.jpg"
-            />
+            <v-img :class="$vuetify.breakpoint.smAndDown ? '' : 'px-16'" src="/Industries/bank1.jpg" />
           </v-card>
           <v-card elevation="0" class="text-center">
             <v-card-text class="text-h6 black--text font-weight-bold">
@@ -36,28 +25,16 @@
 
       <v-spacer />
 
-      <v-col
-        data-aos="fade-left"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
-        md="6"
-      >
+      <v-col data-aos="fade-left" data-aos-offset="300" data-aos-delay="200" data-aos-easing="ease-in-sine" md="6">
         <v-layout column>
           <div>
             <v-card rounded="xl" class="ma-16">
-              <v-img
-                :class="$vuetify.breakpoint.smAndDown ? '' : 'px-16'"
-                src="/Industries/bank4.jpg"
-              />
+              <v-img :class="$vuetify.breakpoint.smAndDown ? '' : 'px-16'" src="/Industries/bank4.jpg" />
             </v-card>
           </div>
 
           <div>
-            <v-card
-
-              elevation="0"
-              class="text-center"
-            >
+            <v-card elevation="0" class="text-center">
               <v-card-text class="text-h6 black--text font-weight-bold">
                 {{ $t("title.2") }}
                 <div class="subtitle-2 grey--text">
@@ -71,23 +48,11 @@
     </v-row>
     <v-spacer />
 
-    <v-row
-      class="justify-md-space-around mx-16"
-      :column="$vuetify.breakpoint.smAndDown"
-    >
-      <v-col
-        data-aos="fade-right"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
-        cols="12"
-        md="6"
-      >
+    <v-row class="justify-md-space-around mx-16" :column="$vuetify.breakpoint.smAndDown">
+      <v-col data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" cols="12" md="6">
         <v-sheet>
           <v-card rounded="xl" class="ma-16">
-            <v-img
-              :class="$vuetify.breakpoint.smAndDown ? '' : 'px-16'"
-              src="/Industries/bank2.jpg"
-            />
+            <v-img :class="$vuetify.breakpoint.smAndDown ? '' : 'px-16'" src="/Industries/bank2.jpg" />
           </v-card>
           <v-card elevation="0" class="text-center">
             <v-card-text class="text-h6 black--text font-weight-bold">
@@ -100,18 +65,10 @@
         </v-sheet>
       </v-col>
       <v-spacer />
-      <v-col
-        data-aos="fade-left"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
-        md="6"
-      >
+      <v-col data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" md="6">
         <v-sheet>
           <v-card rounded="xl" class="ma-16">
-            <v-img
-              :class="$vuetify.breakpoint.smAndDown ? '' : 'px-16'"
-              src="/Industries/bank5.jpg"
-            />
+            <v-img :class="$vuetify.breakpoint.smAndDown ? '' : 'px-16'" src="/Industries/bank5.jpg" />
           </v-card>
           <v-card elevation="0" class="text-center">
             <v-card-text class="text-h6 black--text font-weight-bold">
@@ -127,23 +84,11 @@
 
     <v-spacer />
 
-    <v-row
-      class="justify-md-space-around mx-16"
-      :column="$vuetify.breakpoint.smAndDown"
-    >
-      <v-col
-        data-aos="fade-right"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
-        cols="12"
-        md="6"
-      >
+    <v-row class="justify-md-space-around mx-16" :column="$vuetify.breakpoint.smAndDown">
+      <v-col data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" cols="12" md="6">
         <v-sheet>
           <v-card rounded="xl" class="ma-16">
-            <v-img
-              :class="$vuetify.breakpoint.smAndDown ? '' : 'px-16'"
-              src="/Industries/bank3.jpg"
-            />
+            <v-img :class="$vuetify.breakpoint.smAndDown ? '' : 'px-16'" src="/Industries/bank3.jpg" />
           </v-card>
           <v-card elevation="0" class="text-center">
             <v-card-text class="text-h6 black--text font-weight-bold">
@@ -157,19 +102,10 @@
       </v-col>
       <v-spacer />
 
-      <v-col
-        data-aos="fade-left"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
-        cols="12"
-        md="6"
-      >
+      <v-col data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" cols="12" md="6">
         <v-sheet>
           <v-card rounded="xl" class="ma-16">
-            <v-img
-              :class="$vuetify.breakpoint.smAndDown ? '' : 'px-16'"
-              src="/Industries/bank6.jpg"
-            />
+            <v-img :class="$vuetify.breakpoint.smAndDown ? '' : 'px-16'" src="/Industries/bank6.jpg" />
           </v-card>
           <v-card elevation="0" class="text-center">
             <v-card-text class="text-h6 black--text font-weight-bold">
@@ -185,19 +121,15 @@
 
     <v-card data-aos="zoom-in-down" elevation="0" class="d-flex justify-center">
       <v-hover v-slot="{ hover }">
-        <v-btn
-          class="rounded-lg white--text"
-          :color="hover ? 'grey' : 'cyan lighten-3'"
-          :height="$vuetify.breakpoint.smAndDown ? '30' : '60'"
-          :to="localePath(`/Collaborate`)"
-        >
-          <div>{{ $t("button") }}</div>
+        <v-btn class="rounded-lg white--text" :color="hover ? 'grey' : 'cyan lighten-10'"
+          :height="$vuetify.breakpoint.smAndDown ? '30' : '60'" :to="localePath(`/Collaborate`)">
+          <div  class="font-weight-boder text-md-h6 text-sm-h8">{{ $t("button") }}</div>
         </v-btn>
       </v-hover>
     </v-card>
     <v-card-title data-aos="zoom-in-down" class="d-flex justify-center">
-      <div class="text-subtitle-1 grey--text">
-        {{ $t("text") }}
+      <div class="text-subtitle-1 grey--text text-md-h5">
+        {{ $t("text") }} 
       </div>
     </v-card-title>
   </v-sheet>
@@ -208,18 +140,20 @@ import AOS from "aos";
 
 export default {
   mounted() {
-	setTimeout(function() {
-    AOS.init({
+    setTimeout(function () {
+      AOS.init({
         once: true,
-    });
-}, 100);
+      });
+    }, 100);
 
 
-	},
+  },
 };
 </script>
 
-<style></style>
+<style>
+
+</style>
 <i18n>{
 	"en":{
 			"add": "We Are the Big Players in Technology Services for Your Field",

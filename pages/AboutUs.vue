@@ -7,21 +7,22 @@
 		</v-layout>
 
 		<v-img
-			data-aos="flip-up"
-			data-aos-duration="500"
+			data-aos="fade-down"
+			data-aos-duration="1000"
+			data-aos-delay="800"
 			contain
 			:width="$vuetify.breakpoint.smAndDown ? '100%' : '100vw'"
 			src="/teamplogg.jpg"
 		/>
 		<v-sheet :class="$vuetify.breakpoint.smAndDown ? 'mx-5' : 'px-16'">
 			<template >
-				<div data-aos="zoom-in" data-aos-duration="900">
+				<div data-aos="fade-down" data-aos-duration="1700" data-aos-easing="linear" data-aos-delay="400">
 					<div
 					class="mt-16"
 						:class="$vuetify.breakpoint.smAndDown
 						?'text-center text-h4 font-weight-bold'
 						:'text-h2 font-weight-bold'">
-							{{ $t("ploggteam") }}
+							{{ $t("ploggteam") }} 
 					</div>
 					<v-col md="11"
 						:class="$vuetify.breakpoint.smAndDown
@@ -33,7 +34,7 @@
 			</template>
 
 			<template>
-				<div  data-aos="zoom-in" data-aos-duration="500">
+				<div  data-aos="fade-down" data-aos-duration="500" data-aos-delay="500">
 					<div
 					class="mt-16"
 						:class="$vuetify.breakpoint.smAndDown
