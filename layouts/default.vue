@@ -112,18 +112,19 @@
 					<v-col
 						v-for="(head, index) in heads"
 						:key="index"
-						cols="12"
 						md="2"
 						sm="5"
 						class="d-flex flex-column pb-10"
 						fill-height
 					>
-						<div class="mb-2 font-weight-bold black--text h7">
+						<div class=" font-weight-bold black--text h7">
 							{{ head.title }}
 						</div>
+						
 						<div class="black--text">{{ head.subtitle }}</div>
-						<div class="my-2 black--text">{{ head.text }}</div>
+						<div class="black--text">{{ head.text }}</div>
 						<div class="black--text">{{ head.sub }}</div>
+						
 					</v-col>
 				</v-layout>
 
@@ -175,10 +176,11 @@ export default {
 				text: this.$t("careers"),
 				sub:this.$t("sub"),
 			},
-			{
+			{ 
 				title: this.$t("title1"),
 				subtitle: this.$t("subtitle1"),
-				text: this.$t("policy"),
+				sub: this.$t("policy"),
+				text:this.$t("subs"),
 			},
 			{
 				title: this.$t("support"),
@@ -227,6 +229,7 @@ export default {
 		"subtitle":"About us",
 		"careers":"Careers",
 		"sub":"Collaborate",
+		"subs":"Terms & Conditions",
 		"title1":"Legal",
 		"subtitle1":"Terms of service",
 		"policy":"Privacy policy",
@@ -256,6 +259,7 @@ export default {
 		"subtitle":"À propos de nous",
 		"careers":"Carrières",
 		"sub":"Collaborer",
+		"subs":"Termes et Conditions",
 		"title1":"Juridique",
 		"subtitle1":"Conditions d'utilisation",
 		"policy":"Politique de confidentialité",

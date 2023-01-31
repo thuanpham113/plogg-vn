@@ -1,5 +1,6 @@
 <template>
 	<v-sheet
+		 class="my-8"
 		:class="$vuetify.breakpoint.smAndDown ? 'd-flex  flex-column   align-center':'d-flex align-center vh100'">
 		<div 
 			column

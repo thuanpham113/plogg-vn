@@ -43,7 +43,7 @@
           </v-row>
 
           <v-textarea
-            class="mx-16 mb-16"
+            class="mx-16 mt-3 mb-16"
             label="How can we help you?"
             :label="$t('how')"
             v-model="form.description"
