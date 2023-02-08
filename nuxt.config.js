@@ -62,6 +62,7 @@ export default {
 		// https://go.nuxtjs.dev/axios
 		"@nuxtjs/axios",
 		"@nuxtjs/i18n",
+		'@nuxtjs/firebase',
 	],
 
 	// Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -74,6 +75,10 @@ export default {
 		vueI18nLoader: true,
 		locales: ["en", "fr"],
 		defaultLocale: "en",
+		vueI18n: {
+			fallbackLocale: "en",
+			messages: { en, fr },
+		},
 	},
 
 	// Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
@@ -102,5 +107,19 @@ export default {
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {
 		postcss: null,
+	},
+	firebase:{
+		config:{
+			apiKey: "AIzaSyB6vou5kqAslDU8GC4o83EAmWoc45oTJec",
+			authDomain: "plogg-cv.firebaseapp.com",
+			projectId: "plogg-cv",
+			storageBucket: "plogg-cv.appspot.com",
+			messagingSenderId: "606117874676",
+			appId: "1:606117874676:web:ef73b47dced664be4507a1",
+			measurementId: "G-HL36M98MLS"
+		},
+		services:{
+			storage: true
+		}
 	},
 }
